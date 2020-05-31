@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{76E533AE-0A0D-3868-9E07-5EEFEFE279EC}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-build/googlemock/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\cmake\gmock.pc.in;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\cmake\gmock_main.pc.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-build/googlemock/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\cmake\gmock.pc.in;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\cmake\gmock_main.pc.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-build/googlemock/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\cmake\gmock.pc.in;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\cmake\gmock_main.pc.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-build/googlemock/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\cmake\gmock.pc.in;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googlemock\cmake\gmock_main.pc.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\ZERO_CHECK.vcxproj">
+      <Project>{F3889FAC-CF43-36AD-96C6-8416998E03FD}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googlemock\gmock.vcxproj">
+      <Project>{71F4A00F-23CE-31B5-9E5D-25FC304B981B}</Project>
+      <Name>gmock</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googlemock\gmock_main.vcxproj">
+      <Project>{86D3C70F-739E-3FFA-9AC1-8AB81A9ED609}</Project>
+      <Name>gmock_main</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googletest\gtest.vcxproj">
+      <Project>{E6E78968-8316-35F5-99A9-79FBBA4F1AD7}</Project>
+      <Name>gtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googletest\gtest_main.vcxproj">
+      <Project>{9BA492BD-DB25-36AD-A96F-987377096B8E}</Project>
+      <Name>gtest_main</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

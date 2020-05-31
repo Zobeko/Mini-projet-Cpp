@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src\pugixml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src\pugixml.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src\pugiconfig.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{380330CE-FB20-3CDB-A159-5F70AEA953DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E8812108-DAE1-3BFD-806A-84FAD1784C01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

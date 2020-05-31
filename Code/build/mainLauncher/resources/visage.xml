@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- Dans cette version de format, les coordonnees (x,y) sont exprimees dans un -->
+<!-- repere dont le centre est au centre de l'ecran, les valeurs positives de x -->
+<!-- etant vers la droite, les valeurs positives de y etant vers le haut.       --> 
+<Drawing>
+    <!-- Le noeud suivant cree un cercle dont le centre est en (0,0), -->
+    <!-- de rayon 200, de couleur noir, qui a pour etiquette          -->
+    <!-- "contourVisage"                                              -->
+    <Circle label="contourVisage" x="0" y="0" r="200" color="Black"/>
+    <Circle label="nez" x="0" y="0" r="20" color="Red"/>
+    <!-- Le noeud suivant cree un groupe "oreilles" positionne en (0,210) -->
+    <Group label="oreilles" x="0" y="210">
+	<Group label="oreille" x="-210" y="0">
+	    <Circle label="c1" x="0" y="0" r="100" color="Black"/>
+	    <Circle label="c2" x="0" y="0" r="70" color="Magenta"/>
+	</Group>
+	<Group label="oreille2" x="210" y="0">
+	    <Circle label="c1" x="0" y="0" r="100" color="Black"/>
+	    <Circle label="c2" x="0" y="0" r="70" color="Magenta"/>
+	</Group>
+    </Group>
+</Drawing>

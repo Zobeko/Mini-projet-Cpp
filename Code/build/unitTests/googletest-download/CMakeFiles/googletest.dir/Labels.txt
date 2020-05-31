@@ -1,0 +1,14 @@
+# Target labels
+ googletest
+# Source files and their labels
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/googletest
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/4940cc824aa50dd506b6794073d06407/googletest.rule
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/09e3e0b866d4badd549a5460d881add1/googletest-complete.rule
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/8c1ce172d6b4527331f3e65eec0f2ad0/googletest-install.rule
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/8c1ce172d6b4527331f3e65eec0f2ad0/googletest-mkdir.rule
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/8c1ce172d6b4527331f3e65eec0f2ad0/googletest-download.rule
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/8c1ce172d6b4527331f3e65eec0f2ad0/googletest-update.rule
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/8c1ce172d6b4527331f3e65eec0f2ad0/googletest-patch.rule
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/8c1ce172d6b4527331f3e65eec0f2ad0/googletest-configure.rule
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/8c1ce172d6b4527331f3e65eec0f2ad0/googletest-build.rule
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/8c1ce172d6b4527331f3e65eec0f2ad0/googletest-test.rule

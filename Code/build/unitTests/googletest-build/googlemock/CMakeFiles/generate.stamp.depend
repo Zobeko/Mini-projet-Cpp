@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/cmake.verify_globs
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-src/googlemock/CMakeLists.txt
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-src/googlemock/cmake/gmock.pc.in
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-src/googlemock/cmake/gmock_main.pc.in
+F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/CheckCSourceCompiles.cmake
+F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/CheckIncludeFile.cmake
+F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/CheckLibraryExists.cmake
+F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake
+F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/FindPackageMessage.cmake
+F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/FindThreads.cmake

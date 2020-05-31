@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/cmake.verify_globs
+D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt
+F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/FindOpenGL.cmake
+F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake
+F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/FindPackageMessage.cmake

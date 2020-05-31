@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-subbuild\CMakeFiles\2ee38683a39dae7db6ef65d840b20e10\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{9AE10D52-310E-3029-BAE5-8BF8916364DC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

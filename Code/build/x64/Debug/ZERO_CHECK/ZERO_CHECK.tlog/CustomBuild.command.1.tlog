@@ -1,0 +1,10 @@
+^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\CMAKEFILES\14EBC61FEE8CA5839121DF4C6A66B03A\GENERATE.STAMP.RULE
+setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/ProjetCPP.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

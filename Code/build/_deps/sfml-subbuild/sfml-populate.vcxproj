@@ -1,0 +1,953 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7A33A4B8-8C0D-305A-B314-23763CD08E88}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>sfml-populate</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\dae036aab8fe6ce80991b50f52ec4710\sfml-populate-mkdir.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Creating directories for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Creating directories for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Creating directories for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\dae036aab8fe6ce80991b50f52ec4710\sfml-populate-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (git clone) for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-gitinfo.txt;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing download step (git clone) for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-gitinfo.txt;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing download step (git clone) for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-gitinfo.txt;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing download step (git clone) for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\sfml-populate-gitinfo.txt;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\dae036aab8fe6ce80991b50f52ec4710\sfml-populate-update.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing update step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing update step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing update step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing update step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/tmp/sfml-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\dae036aab8fe6ce80991b50f52ec4710\sfml-populate-patch.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No patch step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No patch step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No patch step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\dae036aab8fe6ce80991b50f52ec4710\sfml-populate-configure.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No configure step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No configure step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No configure step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\dae036aab8fe6ce80991b50f52ec4710\sfml-populate-build.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No build step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No build step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No build step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\dae036aab8fe6ce80991b50f52ec4710\sfml-populate-install.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No install step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No install step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No install step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\dae036aab8fe6ce80991b50f52ec4710\sfml-populate-test.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No test step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No test step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No test step for 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\6e21854887cac2da3eb2fdee6e349378\sfml-populate-complete.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/$(Configuration)/sfml-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\$(Configuration)\sfml-populate-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Completed 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/$(Configuration)/sfml-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\$(Configuration)\sfml-populate-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Completed 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/$(Configuration)/sfml-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\$(Configuration)\sfml-populate-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Completed 'sfml-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/$(Configuration)
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/$(Configuration)/sfml-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/$(Configuration)/sfml-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-install;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-mkdir;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-download;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-update;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-patch;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-configure;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-build;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\src\sfml-populate-stamp\$(Configuration)\sfml-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\$(Configuration)\sfml-populate-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\aa01522ef22c92db8867747c63eaa067\sfml-populate.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\$(Configuration)\sfml-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\sfml-populate</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\$(Configuration)\sfml-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\sfml-populate</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\$(Configuration)\sfml-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\sfml-populate</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\$(Configuration)\sfml-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\sfml-populate</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\3.16.19112601-MSVC_2\CMakeSystem.cmake;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\ExternalProject.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindGit.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\3.16.19112601-MSVC_2\CMakeSystem.cmake;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\ExternalProject.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindGit.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\3.16.19112601-MSVC_2\CMakeSystem.cmake;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\ExternalProject.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindGit.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\3.16.19112601-MSVC_2\CMakeSystem.cmake;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-cfgcmd.txt.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeGenericSystem.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeInitializeConfigs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInformation.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeSystemSpecificInitialize.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\ExternalProject.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindGit.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\Platform\Windows.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\Platform\WindowsPaths.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\sfml-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{D88EEAE8-5D92-3A93-AE17-901EBD762AB3}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
