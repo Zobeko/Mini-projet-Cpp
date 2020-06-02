@@ -1,3 +1,0 @@
-C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate.dir
-C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-subbuild/CMakeFiles/ALL_BUILD.dir
-C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-subbuild/CMakeFiles/ZERO_CHECK.dir

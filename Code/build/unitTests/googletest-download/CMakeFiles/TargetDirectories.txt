@@ -1,3 +1,0 @@
-C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/googletest-download/CMakeFiles/googletest.dir
-C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/googletest-download/CMakeFiles/ALL_BUILD.dir
-C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/googletest-download/CMakeFiles/ZERO_CHECK.dir
