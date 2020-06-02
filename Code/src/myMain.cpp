@@ -84,13 +84,18 @@ void GestionAnimation(sf::Texture persoTexture) {
     persoSprite.setTextureRect(sf::IntRect(anim.x * 64, anim.y * 64, 64, 64));
 }
 */
+void dessin(sf::RenderWindow & win) {
+    win.draw(persoSprite);
+}
+
 
 
 int myMain()
 {   
+    sf::RenderWindow window;
 #pragma region Initialisation de la fenetre avec SFML
     //Variables posant un problème quand globales
-    sf::RenderWindow window;
+    
     sf::Texture persoTexture;
 
     //Ouverture de la fenetre
@@ -282,7 +287,9 @@ int myMain()
         //Ajout des elements
         //window.draw(cercle);
         //window.draw(rect);
-        window.draw(persoSprite);
+        
+        //window.draw(persoSprite);
+        dessin(window);
 
         //Affichage des elements
         window.display();
