@@ -31,6 +31,8 @@ bool direction = false; //false : vers la gauche, true : vers la droite
 int speed = 4;
 const int baseSpeed = 4;
 
+// Utiliser un dictionnaire pour les textures !!!
+
 
 void CapPosition() {
     if (persoSprite.getPosition().x <= 0) {
