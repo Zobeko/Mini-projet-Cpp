@@ -17,6 +17,8 @@ Unite::Unite(int _x, int _y, int _h, int _l, sf::Texture texture) {
 	sprite.setTextureRect(sf::IntRect(0, 0, _l, _h)); //idem ?
 }
 
+Unite::Unite(){}
+
 int Unite::getX() {
 	return x;
 }

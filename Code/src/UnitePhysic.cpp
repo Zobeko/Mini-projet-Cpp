@@ -1,46 +1,49 @@
 #include "Unite.h"
+#include "UnitePhysic.h"
 #include <vector>
 #include <SFML/Graphics.hpp>
 
 // à enlever après
 #include <iostream>
+#include <myMain.cpp>
 
 using namespace std;
 
-Unite::Unite(int _x, int _y, int _h, int _l, sf::Texture texture) {
-	x = _x;
-	y = _y;
-	h = _h;
-	l = _l;
-	//sprite.setTexture(texture);
-	sprite.setPosition(x, y);	// à modifier pour avoir le sprite au bon endroit
-	sprite.setTextureRect(sf::IntRect(0, 0, _l, _h)); //idem ?
+UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, b2BodyType bodyType) {
+    b2BodyDef bodyDef;
+    bodyDef.type = bodyType;
+    bodyDef.position.Set(_x, _y);
+    b2Body* body = world.CreateBody(&bodyDef);
+
+    // Define another box shape for our dynamic body.
+    b2PolygonShape shape;
+    shape.SetAsBox(_l, _h);
+
+    // Define the dynamic body fixture.
+    b2FixtureDef fixtureDef;
+    fixtureDef.shape = &shape;
+
+
+    // Set the box density to be non-zero, so it will be dynamic.
+    fixtureDef.density = 1.0f;
+
+    // Override the default friction.
+    fixtureDef.friction = 0.3f;
+
+    // Add the shape to the body.
+    body->CreateFixture(&fixtureDef);
+
+    box = body;
 }
 
-int Unite::getX() {
-	return x;
-}
-int Unite::getY() {
-	return y;
-}
-int Unite::getH() {
-	return h;
-}
-int Unite::getL() {
-	return l;
+b2Body* UnitePhysic::getBox()
+{
+    return box;
 }
 
-void Unite::setXY(int _x, int _y) {
-	x = _x;
-	y = _y;
-	// Changer la position de la texture
-}
-void Unite::setSprite(int _h, int _l, sf::Texture texture) {
-	h = _h;
-	l = _l;
-	sprite.setTextureRect(sf::IntRect(0, 0, _l, _h));
+void UnitePhysic::setXY(int _x, int _y)
+{
+    box->SetTransform(b2Vec2(_x, _y), 0);
 }
 
-void Unite::draw() {
-	std::cout << "Afficher l'image ici " << endl;
-}
+

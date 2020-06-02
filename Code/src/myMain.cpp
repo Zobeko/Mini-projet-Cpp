@@ -13,6 +13,13 @@
 using namespace std;
 
 //Variables globales
+
+// Define the gravity vector.
+b2Vec2 gravity(0.0f, -10.0f);
+
+// Construct a world object, which will hold and simulate the rigid bodies.
+b2World world(gravity);
+
 int persoDimension = 64*2;
 sf::CircleShape cercle;
 sf::RectangleShape rect;
@@ -56,6 +63,7 @@ void GestionInputs() {
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         persoSprite.move(speed, 0);
         direction = true;
+       
     }
     else {
         //on ne joue pas l'animation :
@@ -141,11 +149,7 @@ int myMain()
 
 #pragma endregion
 #pragma region Initialisation du monde avec Box2D
-    // Define the gravity vector.
-    b2Vec2 gravity(0.0f, -10.0f);
-
-    // Construct a world object, which will hold and simulate the rigid bodies.
-    b2World world(gravity);
+    
 
     // Define the ground body.
     b2BodyDef groundBodyDef;
@@ -238,6 +242,8 @@ int myMain()
         world.Step(timeStep, velocityIterations, positionIterations);
 
         // Now print the position and angle of the body.
+
+        body->SetTransform(b2Vec2(4, 4), 0);
         position = body->GetPosition();
         angle = body->GetAngle();
 

@@ -1,25 +1,17 @@
 #pragma once
 #include <vector>
-
+#include <Unite.h>
 #include <SFML/Graphics.hpp>
+#include <box2d/box2d.h>
 
-class Unite
+class UnitePhysic : public Unite
 {
 public:
-	virtual ~Unite() = default;
-	Unite(int _x, int _y, int _h, int _l, sf::Texture texture);
-	int getX();
-	int getY();
-	int getH();
-	int getL();
-	void setXY(int _x, int _y);
-	void setSprite(int _h, int _l, sf::Texture texture);
-	void draw();
+	virtual ~UnitePhysic() = default;
+	UnitePhysic(int _x, int _y, int _h, int _l, b2BodyType bodyType);
+	b2Body* getBox();
+	void setXY(int _x, int _y) override;
 
 private:
-	int x;
-	int y;
-	int h;
-	int l;
-	sf::Sprite sprite;
+	b2Body* box;
 };
