@@ -1,20 +1,20 @@
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\3D63F6DB7CD9828F9A92FBAF5F70922C\PUGIXML-POPULATE-MKDIR.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\A55F2032AA052ED097071EF3D22C17BC\PUGIXML-POPULATE-MKDIR.RULE
 setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-src
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-src
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/tmp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/tmp
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-mkdir
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -22,15 +22,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\3D63F6DB7CD9828F9A92FBAF5F70922C\PUGIXML-POPULATE-DOWNLOAD.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\A55F2032AA052ED097071EF3D22C17BC\PUGIXML-POPULATE-DOWNLOAD.RULE
 setlocal
-cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps
+cd C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps
 if %errorlevel% neq 0 goto :cmEnd
-D:
+C:
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/tmp/pugixml-populate-gitclone.cmake
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/tmp/pugixml-populate-gitclone.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-download
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -38,13 +38,13 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\3D63F6DB7CD9828F9A92FBAF5F70922C\PUGIXML-POPULATE-UPDATE.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\A55F2032AA052ED097071EF3D22C17BC\PUGIXML-POPULATE-UPDATE.RULE
 setlocal
-cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src
+cd C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src
 if %errorlevel% neq 0 goto :cmEnd
-D:
+C:
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/tmp/pugixml-populate-gitupdate.cmake
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/tmp/pugixml-populate-gitupdate.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -52,11 +52,11 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\3D63F6DB7CD9828F9A92FBAF5F70922C\PUGIXML-POPULATE-PATCH.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\A55F2032AA052ED097071EF3D22C17BC\PUGIXML-POPULATE-PATCH.RULE
 setlocal
 "F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-patch
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -64,15 +64,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\3D63F6DB7CD9828F9A92FBAF5F70922C\PUGIXML-POPULATE-CONFIGURE.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\A55F2032AA052ED097071EF3D22C17BC\PUGIXML-POPULATE-CONFIGURE.RULE
 setlocal
-cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-build
+cd C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-build
 if %errorlevel% neq 0 goto :cmEnd
-D:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-configure
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -80,15 +80,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\3D63F6DB7CD9828F9A92FBAF5F70922C\PUGIXML-POPULATE-BUILD.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\A55F2032AA052ED097071EF3D22C17BC\PUGIXML-POPULATE-BUILD.RULE
 setlocal
-cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-build
+cd C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-build
 if %errorlevel% neq 0 goto :cmEnd
-D:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-build
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -96,15 +96,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\3D63F6DB7CD9828F9A92FBAF5F70922C\PUGIXML-POPULATE-INSTALL.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\A55F2032AA052ED097071EF3D22C17BC\PUGIXML-POPULATE-INSTALL.RULE
 setlocal
-cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-build
+cd C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-build
 if %errorlevel% neq 0 goto :cmEnd
-D:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-install
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -112,15 +112,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\3D63F6DB7CD9828F9A92FBAF5F70922C\PUGIXML-POPULATE-TEST.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\A55F2032AA052ED097071EF3D22C17BC\PUGIXML-POPULATE-TEST.RULE
 setlocal
-cd D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-build
+cd C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-build
 if %errorlevel% neq 0 goto :cmEnd
-D:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-test
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-test
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -128,13 +128,13 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\A4092D8390516C48B7F341D9E5C43197\PUGIXML-POPULATE-COMPLETE.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\01D19EB95A88A777882AC36DB4B2EF7B\PUGIXML-POPULATE-COMPLETE.RULE
 setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/CMakeFiles/Debug
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/CMakeFiles/Debug
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/CMakeFiles/Debug/pugixml-populate-complete
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/CMakeFiles/Debug/pugixml-populate-complete
 if %errorlevel% neq 0 goto :cmEnd
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-done
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate-prefix/src/pugixml-populate-stamp/Debug/pugixml-populate-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -142,7 +142,7 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\2EE38683A39DAE7DB6EF65D840B20E10\PUGIXML-POPULATE.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\143F59C9153BF7413AE49A9C094D06B0\PUGIXML-POPULATE.RULE
 setlocal
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -150,9 +150,9 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKELISTS.TXT
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKELISTS.TXT
 setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

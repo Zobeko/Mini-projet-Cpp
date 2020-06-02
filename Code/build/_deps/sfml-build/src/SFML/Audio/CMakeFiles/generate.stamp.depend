@@ -1,8 +1,8 @@
 # CMake generation dependency list for this directory.
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/cmake.verify_globs
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/cmake/Modules/FindFLAC.cmake
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/cmake/Modules/FindVorbis.cmake
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/src/SFML/Audio/CMakeLists.txt
+C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/cmake.verify_globs
+C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/cmake/Modules/FindFLAC.cmake
+C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/cmake/Modules/FindVorbis.cmake
+C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/src/SFML/Audio/CMakeLists.txt
 F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/FindOpenAL.cmake
 F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake
 F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/FindPackageMessage.cmake

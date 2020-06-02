@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download
+# Install script for directory: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/googletest-download
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/googletest-download/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

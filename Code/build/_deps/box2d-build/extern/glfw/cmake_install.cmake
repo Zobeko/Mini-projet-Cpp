@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src/extern/glfw
+# Install script for directory: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src/extern/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

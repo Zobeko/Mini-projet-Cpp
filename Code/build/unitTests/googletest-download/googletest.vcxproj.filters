@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\8c1ce172d6b4527331f3e65eec0f2ad0\googletest-mkdir.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\917544a49c86327433cae2e917958fa8\googletest-mkdir.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\8c1ce172d6b4527331f3e65eec0f2ad0\googletest-download.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\917544a49c86327433cae2e917958fa8\googletest-download.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\8c1ce172d6b4527331f3e65eec0f2ad0\googletest-update.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\917544a49c86327433cae2e917958fa8\googletest-update.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\8c1ce172d6b4527331f3e65eec0f2ad0\googletest-patch.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\917544a49c86327433cae2e917958fa8\googletest-patch.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\8c1ce172d6b4527331f3e65eec0f2ad0\googletest-configure.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\917544a49c86327433cae2e917958fa8\googletest-configure.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\8c1ce172d6b4527331f3e65eec0f2ad0\googletest-build.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\917544a49c86327433cae2e917958fa8\googletest-build.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\8c1ce172d6b4527331f3e65eec0f2ad0\googletest-install.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\917544a49c86327433cae2e917958fa8\googletest-install.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\8c1ce172d6b4527331f3e65eec0f2ad0\googletest-test.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\917544a49c86327433cae2e917958fa8\googletest-test.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\09e3e0b866d4badd549a5460d881add1\googletest-complete.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\bb3a113242977be817cb8cf0a180bd71\googletest-complete.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\4940cc824aa50dd506b6794073d06407\googletest.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\b3c2acab79a38f28f1e3367e67679011\googletest.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-download\CMakeFiles\googletest" />
+    <None Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-download\CMakeFiles\googletest" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{0F5C1B9E-031D-39DE-B1EA-A3BF2D6AB47B}</UniqueIdentifier>
+      <UniqueIdentifier>{C61358D5-16F6-3BE8-B25D-0B0BE43BEDC7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

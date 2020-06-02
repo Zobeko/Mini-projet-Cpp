@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src
+# Install script for directory: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,34 +33,34 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/include" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.inl$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/include" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.inl$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/lib" FILES_MATCHING REGEX "/[^/]*\\.pdb$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/lib" FILES_MATCHING REGEX "/[^/]*\\.pdb$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/license.md")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/license.md")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/readme.md")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/readme.md")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./bin" TYPE DIRECTORY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/extlibs/bin/x64/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./bin" TYPE DIRECTORY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/extlibs/bin/x64/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./lib" TYPE DIRECTORY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/./lib" TYPE DIRECTORY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML/SFMLStaticTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML/SFMLStaticTargets.cmake"
-         "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets.cmake")
+         "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML/SFMLStaticTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -69,32 +69,32 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-debug.cmake")
   endif()
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-minsizerel.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-minsizerel.cmake")
   endif()
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-relwithdebinfo.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-relwithdebinfo.cmake")
   endif()
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/CMakeFiles/Export/lib/cmake/SFML/SFMLStaticTargets-release.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES
-    "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/SFMLConfig.cmake"
-    "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/SFMLConfigDependencies.cmake"
-    "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/SFMLConfigVersion.cmake"
+    "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/SFMLConfig.cmake"
+    "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/SFMLConfigDependencies.cmake"
+    "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/SFMLConfigVersion.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/src/SFML/cmake_install.cmake")
+  include("C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/src/SFML/cmake_install.cmake")
 
 endif()
 

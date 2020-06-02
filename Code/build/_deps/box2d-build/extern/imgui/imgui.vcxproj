@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{58184307-366A-384B-83CB-14913BBEA37F}</ProjectGuid>
+    <ProjectGuid>{5F3E3332-C132-38D3-92E8-859D996311E2}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\imgui\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\imgui\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">imgui.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">imgui</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\imgui\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\imgui\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">imgui.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">imgui</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\imgui\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\imgui\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">imgui.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">imgui</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\imgui\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\imgui\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">imgui.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">imgui</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -95,10 +95,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -111,7 +111,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -128,10 +128,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -161,10 +161,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -177,7 +177,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -193,10 +193,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -208,10 +208,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src/extern/imgui/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src/extern/imgui/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/imgui/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/imgui/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -219,12 +219,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\imgui\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\imgui\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src/extern/imgui/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src/extern/imgui/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/imgui/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/imgui/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -232,12 +232,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\imgui\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\imgui\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src/extern/imgui/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src/extern/imgui/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/imgui/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/imgui/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -245,12 +245,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\imgui\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\imgui\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src/extern/imgui/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src/extern/imgui/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/imgui/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/imgui/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -258,26 +258,26 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\imgui\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\imgui\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imgui.cpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imgui_demo.cpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imgui_draw.cpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imgui_widgets.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imconfig.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imgui.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imgui_internal.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imstb_rectpack.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imstb_textedit.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\imgui\imstb_truetype.h" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imgui.cpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imgui_demo.cpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imgui_draw.cpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imgui_widgets.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imconfig.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imgui.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imgui_internal.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imstb_rectpack.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imstb_textedit.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\imgui\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\ZERO_CHECK.vcxproj">
-      <Project>{F3889FAC-CF43-36AD-96C6-8416998E03FD}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\ZERO_CHECK.vcxproj">
+      <Project>{8918969A-A431-32B4-BCEA-1D9FD1885FB4}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

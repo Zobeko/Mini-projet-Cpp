@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/src/SFML/Graphics
+# Install script for directory: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/src/SFML/Graphics
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,13 +34,13 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/lib/Debug/sfml-graphics-s-d.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/lib/Debug/sfml-graphics-s-d.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/lib/Release/sfml-graphics-s.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/lib/Release/sfml-graphics-s.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/lib/MinSizeRel/sfml-graphics-s.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/lib/MinSizeRel/sfml-graphics-s.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/lib/RelWithDebInfo/sfml-graphics-s.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/lib/RelWithDebInfo/sfml-graphics-s.lib")
   endif()
 endif()
 

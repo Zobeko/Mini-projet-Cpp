@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/Cours/Info/CSC4526/TutoSFML/mainLauncher
+# Install script for directory: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/mainLauncher
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

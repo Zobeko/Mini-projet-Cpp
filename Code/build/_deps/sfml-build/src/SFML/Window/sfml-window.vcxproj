@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9CD5CD7C-8573-38B0-95BF-7D5941FA1B94}</ProjectGuid>
+    <ProjectGuid>{B9566045-EFBE-359D-B3C1-E798037A760F}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-window.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-window-s-d</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-window.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-window-s</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\lib\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\lib\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-window.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-window-s</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\lib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\lib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-window.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-window-s</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -92,14 +92,14 @@
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>WIN32;_WINDOWS;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\lib\Debug\sfml-window-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\lib\Debug\sfml-window-s.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -112,7 +112,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -126,14 +126,14 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\lib\Release\sfml-window-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\lib\Release\sfml-window-s.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -146,7 +146,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -160,14 +160,14 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\lib\MinSizeRel\sfml-window-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\lib\MinSizeRel\sfml-window-s.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -180,7 +180,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -193,14 +193,14 @@
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\lib\RelWithDebInfo\sfml-window-s.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\lib\RelWithDebInfo\sfml-window-s.pdb</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;SFML_STATIC;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -212,10 +212,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -223,12 +223,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindOpenGL.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\src\SFML\Window\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindOpenGL.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\src\SFML\Window\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -236,12 +236,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindOpenGL.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\src\SFML\Window\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindOpenGL.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\src\SFML\Window\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -249,12 +249,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindOpenGL.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\src\SFML\Window\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindOpenGL.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\src\SFML\Window\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-build/src/SFML/Window/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -262,80 +262,80 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindOpenGL.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\src\SFML\Window\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindOpenGL.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\src\SFML\Window\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Clipboard.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Clipboard.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\ClipboardImpl.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Context.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Context.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Cursor.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Cursor.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\CursorImpl.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Export.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\GlContext.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\GlContext.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\GlResource.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\GlResource.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\ContextSettings.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Event.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\InputImpl.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Joystick.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Joystick.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\JoystickImpl.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\JoystickManager.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\JoystickManager.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Keyboard.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Keyboard.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Mouse.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Mouse.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Touch.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Touch.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Sensor.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Sensor.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\SensorImpl.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\SensorManager.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\SensorManager.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\VideoMode.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\VideoMode.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\VideoModeImpl.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Window.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\Window.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\WindowHandle.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\WindowImpl.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\WindowImpl.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include\SFML\Window\WindowStyle.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\CursorImpl.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\CursorImpl.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\ClipboardImpl.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\ClipboardImpl.cpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\WglContext.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\WglContext.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\WglExtensions.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\WglExtensions.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\InputImpl.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\InputImpl.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\JoystickImpl.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\JoystickImpl.hpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\SensorImpl.hpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\SensorImpl.cpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\VideoModeImpl.cpp" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\WindowImplWin32.cpp" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\src\SFML\Window\Win32\WindowImplWin32.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Clipboard.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Clipboard.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\ClipboardImpl.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Context.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Context.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Cursor.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Cursor.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\CursorImpl.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Export.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\GlContext.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\GlContext.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\GlResource.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\GlResource.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\ContextSettings.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Event.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\InputImpl.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Joystick.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Joystick.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\JoystickImpl.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\JoystickManager.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\JoystickManager.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Keyboard.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Keyboard.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Mouse.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Mouse.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Touch.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Touch.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Sensor.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Sensor.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\SensorImpl.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\SensorManager.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\SensorManager.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\VideoMode.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\VideoMode.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\VideoModeImpl.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Window.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\Window.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\WindowHandle.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\WindowImpl.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\WindowImpl.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include\SFML\Window\WindowStyle.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\CursorImpl.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\CursorImpl.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\ClipboardImpl.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\ClipboardImpl.cpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\WglContext.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\WglContext.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\WglExtensions.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\WglExtensions.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\InputImpl.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\InputImpl.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\JoystickImpl.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\JoystickImpl.hpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\SensorImpl.hpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\SensorImpl.cpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\VideoModeImpl.cpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\WindowImplWin32.cpp" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\src\SFML\Window\Win32\WindowImplWin32.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\ZERO_CHECK.vcxproj">
-      <Project>{F3889FAC-CF43-36AD-96C6-8416998E03FD}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\ZERO_CHECK.vcxproj">
+      <Project>{8918969A-A431-32B4-BCEA-1D9FD1885FB4}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
-      <Project>{D2E3F56B-FAE4-3027-A8C7-76FA42704E91}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
+      <Project>{6AD70C2F-52DB-3DD2-A06C-22725638E21F}</Project>
       <Name>sfml-system</Name>
     </ProjectReference>
   </ItemGroup>

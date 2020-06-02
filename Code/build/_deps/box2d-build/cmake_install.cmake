@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src
+# Install script for directory: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,13 +34,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/src/cmake_install.cmake")
-  include("D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/unit-test/cmake_install.cmake")
-  include("D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/glad/cmake_install.cmake")
-  include("D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/glfw/cmake_install.cmake")
-  include("D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/imgui/cmake_install.cmake")
-  include("D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/sajson/cmake_install.cmake")
-  include("D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/testbed/cmake_install.cmake")
+  include("C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/src/cmake_install.cmake")
+  include("C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/unit-test/cmake_install.cmake")
+  include("C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/glad/cmake_install.cmake")
+  include("C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/glfw/cmake_install.cmake")
+  include("C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/imgui/cmake_install.cmake")
+  include("C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/sajson/cmake_install.cmake")
+  include("C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/testbed/cmake_install.cmake")
 
 endif()
 

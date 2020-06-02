@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-src
+# Install script for directory: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/googletest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-build/googlemock/cmake_install.cmake")
+  include("C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/googletest-build/googlemock/cmake_install.cmake")
 
 endif()
 

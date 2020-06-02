@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-subbuild\CMakeFiles\aa01522ef22c92db8867747c63eaa067\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-subbuild\CMakeFiles\eb56a5d6c1061d52e2e1de79e055e8a5\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{9ECB066E-90B5-318B-98B5-73CCDB8F010D}</UniqueIdentifier>
+      <UniqueIdentifier>{979B220A-FF12-34C6-BE24-DED15C8C6684}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

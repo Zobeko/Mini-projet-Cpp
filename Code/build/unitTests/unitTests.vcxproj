@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{277B01A1-2BF6-3EF2-A9C2-6E5E9EEFAFA2}</ProjectGuid>
+    <ProjectGuid>{8DDDBF2D-6543-3E27-A9C5-DBF8476833CC}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">unitTests.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">unitTests</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">unitTests.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">unitTests</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">unitTests.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">unitTests</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">unitTests.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">unitTests</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -103,10 +103,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;SFML_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -119,8 +119,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/Debug/unitTests.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/Debug/unitTests.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/Debug/unitTests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/Debug/unitTests.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -129,7 +129,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -146,10 +146,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;SFML_STATIC;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -162,8 +162,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/Release/unitTests.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/Release/unitTests.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/Release/unitTests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/Release/unitTests.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -172,7 +172,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -189,10 +189,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;SFML_STATIC;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -205,8 +205,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/MinSizeRel/unitTests.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/MinSizeRel/unitTests.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/MinSizeRel/unitTests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/MinSizeRel/unitTests.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -215,7 +215,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -231,10 +231,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;SFML_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\src\.;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-src\src;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-src\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\src\..\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest\include;D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\src\.;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-src\src;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-src\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\src\..\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest\include;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -247,8 +247,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/RelWithDebInfo/unitTests.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/RelWithDebInfo/unitTests.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/RelWithDebInfo/unitTests.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/RelWithDebInfo/unitTests.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -256,10 +256,10 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\unitTests\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/unitTests/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\unitTests\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/unitTests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -267,12 +267,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;D:\Documents\Cours\Info\CSC4526\TutoSFML\unitTests\CMakeLists.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\unitTests\CMakeLists.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/unitTests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/unitTests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -280,12 +280,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;D:\Documents\Cours\Info\CSC4526\TutoSFML\unitTests\CMakeLists.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\unitTests\CMakeLists.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/unitTests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/unitTests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -293,12 +293,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;D:\Documents\Cours\Info\CSC4526\TutoSFML\unitTests\CMakeLists.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\unitTests\CMakeLists.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/unitTests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/unitTests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/unitTests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -306,51 +306,51 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;D:\Documents\Cours\Info\CSC4526\TutoSFML\unitTests\CMakeLists.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\unitTests\CMakeLists.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\unitTests\unitTests.cpp" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\unitTests\unitTests.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\ZERO_CHECK.vcxproj">
-      <Project>{F3889FAC-CF43-36AD-96C6-8416998E03FD}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\ZERO_CHECK.vcxproj">
+      <Project>{8918969A-A431-32B4-BCEA-1D9FD1885FB4}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\src\box2d.vcxproj">
-      <Project>{0FB97483-0D2F-38B6-8BE8-4AA5BA9202F5}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\src\box2d.vcxproj">
+      <Project>{A258D6D7-E917-3997-ACAD-A85393D3844E}</Project>
       <Name>box2d</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googletest\gtest.vcxproj">
-      <Project>{E6E78968-8316-35F5-99A9-79FBBA4F1AD7}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-build\googletest\gtest.vcxproj">
+      <Project>{7F458AB5-077A-30D0-8D20-9F096391FF17}</Project>
       <Name>gtest</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\unitTests\googletest-build\googletest\gtest_main.vcxproj">
-      <Project>{9BA492BD-DB25-36AD-A96F-987377096B8E}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\unitTests\googletest-build\googletest\gtest_main.vcxproj">
+      <Project>{9518AEFA-D74F-3181-8416-6F0786624C4B}</Project>
       <Name>gtest_main</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\pugixml-build\pugixml.vcxproj">
-      <Project>{87AEB246-D789-3601-9665-41299504C10E}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\pugixml-build\pugixml.vcxproj">
+      <Project>{B71C8AD1-4848-3EF4-835F-E73C0BD76082}</Project>
       <Name>pugixml</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.vcxproj">
-      <Project>{A1818C25-3947-3457-BBA8-1DE1D31F96F0}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.vcxproj">
+      <Project>{70FC2D48-B784-3BB1-BC16-771393F148ED}</Project>
       <Name>sfml-graphics</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
-      <Project>{D2E3F56B-FAE4-3027-A8C7-76FA42704E91}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
+      <Project>{6AD70C2F-52DB-3DD2-A06C-22725638E21F}</Project>
       <Name>sfml-system</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\sfml-build\src\SFML\Window\sfml-window.vcxproj">
-      <Project>{9CD5CD7C-8573-38B0-95BF-7D5941FA1B94}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\sfml-build\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{B9566045-EFBE-359D-B3C1-E798037A760F}</Project>
       <Name>sfml-window</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\src\src.vcxproj">
-      <Project>{07DDC444-60B3-3F94-9521-DDD4731744C3}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\src\src.vcxproj">
+      <Project>{8D28B28C-B694-398D-9DC4-F5C20B11741C}</Project>
       <Name>src</Name>
     </ProjectReference>
   </ItemGroup>

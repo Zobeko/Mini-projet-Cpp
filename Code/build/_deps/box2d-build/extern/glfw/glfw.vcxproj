@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C19AECEB-7777-304B-BBE2-811EBCDE7B82}</ProjectGuid>
+    <ProjectGuid>{B9141D7B-643D-309A-B68A-D267EA48CB49}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\glfw\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\glfw\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">glfw.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">glfw</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\glfw\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\glfw\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">glfw.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">glfw</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\glfw\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\glfw\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">glfw.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">glfw</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\glfw\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\glfw\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">glfw.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">glfw</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -95,10 +95,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -111,7 +111,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -128,10 +128,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -161,10 +161,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -177,7 +177,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -193,10 +193,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -208,10 +208,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src/extern/glfw/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src/extern/glfw/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/glfw/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/glfw/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -219,12 +219,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\glfw\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.c.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\glfw\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src/extern/glfw/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src/extern/glfw/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/glfw/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/glfw/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -232,12 +232,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\glfw\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.c.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\glfw\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src/extern/glfw/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src/extern/glfw/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/glfw/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/glfw/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -245,12 +245,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\glfw\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.c.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\glfw\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-src/extern/glfw/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-src/extern/glfw/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build --check-stamp-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/box2d-build/extern/glfw/CMakeFiles/generate.stamp
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build --check-stamp-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/box2d-build/extern/glfw/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -258,40 +258,40 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-build\extern\glfw\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\cmake.verify_globs;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.c.in;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\FindThreads.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-build\extern\glfw\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\context.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\init.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\input.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\monitor.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\vulkan.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\window.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\win32_init.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\win32_joystick.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\win32_monitor.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\win32_time.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\win32_thread.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\win32_window.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\wgl_context.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\egl_context.c" />
-    <ClCompile Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\osmesa_context.c" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\internal.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\mappings.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include\GLFW\glfw3.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\include\GLFW\glfw3native.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\win32_platform.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\win32_joystick.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\wgl_context.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\egl_context.h" />
-    <ClInclude Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-src\extern\glfw\src\osmesa_context.h" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\context.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\init.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\input.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\monitor.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\vulkan.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\window.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\win32_init.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\win32_joystick.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\win32_monitor.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\win32_time.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\win32_thread.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\win32_window.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\wgl_context.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\egl_context.c" />
+    <ClCompile Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\osmesa_context.c" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\internal.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\mappings.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include\GLFW\glfw3.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\include\GLFW\glfw3native.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\win32_platform.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\win32_joystick.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\wgl_context.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\egl_context.h" />
+    <ClInclude Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-src\extern\glfw\src\osmesa_context.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\ZERO_CHECK.vcxproj">
-      <Project>{F3889FAC-CF43-36AD-96C6-8416998E03FD}</Project>
+    <ProjectReference Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\ZERO_CHECK.vcxproj">
+      <Project>{8918969A-A431-32B4-BCEA-1D9FD1885FB4}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

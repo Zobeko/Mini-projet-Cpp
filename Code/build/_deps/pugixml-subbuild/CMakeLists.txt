@@ -12,8 +12,8 @@ project(pugixml-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(pugixml-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/zeux/pugixml.git" "GIT_TAG" "v1.10"
-                    SOURCE_DIR          "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-src"
-                    BINARY_DIR          "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build"
+                    SOURCE_DIR          "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-src"
+                    BINARY_DIR          "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

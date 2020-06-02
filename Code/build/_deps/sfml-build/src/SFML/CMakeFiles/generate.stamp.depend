@@ -1,5 +1,5 @@
 # CMake generation dependency list for this directory.
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/cmake.verify_globs
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/cmake/Macros.cmake
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/sfml-src/src/SFML/CMakeLists.txt
+C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/cmake.verify_globs
+C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/cmake/Macros.cmake
+C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/sfml-src/src/SFML/CMakeLists.txt
 F:/Programmes/Visual Studio/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.16/Modules/CMakeParseArguments.cmake

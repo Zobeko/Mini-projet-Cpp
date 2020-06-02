@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\f7e3dd6926a65cd34bb69ad422aca03f\Hero.png.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\067da93f01d9bbe38ac2368652a5a9a3\Hero.png.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\9fbd971e2914e45a7acc0125b435f89b\copy-resources.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\da6ebfb38894ea113d59e3973f34d2d8\copy-resources.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\mainLauncher\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\mainLauncher\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\mainLauncher\CMakeFiles\copy-resources" />
+    <None Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\mainLauncher\CMakeFiles\copy-resources" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{39644E28-35A2-3464-B61E-AA07704920B3}</UniqueIdentifier>
+      <UniqueIdentifier>{397F587B-E2AA-31FC-B598-A7188AF22762}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

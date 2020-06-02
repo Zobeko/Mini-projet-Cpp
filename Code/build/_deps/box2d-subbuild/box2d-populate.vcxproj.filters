@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\031664f2e5246e3449e7ccb452f579ad\box2d-populate-mkdir.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\07bc8e27f5a0bdb411810cca81153798\box2d-populate-mkdir.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\031664f2e5246e3449e7ccb452f579ad\box2d-populate-download.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\07bc8e27f5a0bdb411810cca81153798\box2d-populate-download.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\031664f2e5246e3449e7ccb452f579ad\box2d-populate-update.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\07bc8e27f5a0bdb411810cca81153798\box2d-populate-update.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\031664f2e5246e3449e7ccb452f579ad\box2d-populate-patch.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\07bc8e27f5a0bdb411810cca81153798\box2d-populate-patch.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\031664f2e5246e3449e7ccb452f579ad\box2d-populate-configure.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\07bc8e27f5a0bdb411810cca81153798\box2d-populate-configure.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\031664f2e5246e3449e7ccb452f579ad\box2d-populate-build.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\07bc8e27f5a0bdb411810cca81153798\box2d-populate-build.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\031664f2e5246e3449e7ccb452f579ad\box2d-populate-install.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\07bc8e27f5a0bdb411810cca81153798\box2d-populate-install.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\031664f2e5246e3449e7ccb452f579ad\box2d-populate-test.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\07bc8e27f5a0bdb411810cca81153798\box2d-populate-test.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\41158bda1db03bec8e325ed1ec44dfe1\box2d-populate-complete.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\6a08a247ead80435eebae711874bc663\box2d-populate-complete.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\81b591eea7e0eac5cc1cf3a2d12ec958\box2d-populate.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\5ceba133551f12d9e9e87118be93be19\box2d-populate.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\_deps\box2d-subbuild\CMakeFiles\box2d-populate" />
+    <None Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\_deps\box2d-subbuild\CMakeFiles\box2d-populate" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{C2DD8110-014F-3357-B9B2-555EA094C918}</UniqueIdentifier>
+      <UniqueIdentifier>{FD60074A-2532-3E2A-BAEA-84213D294C1B}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

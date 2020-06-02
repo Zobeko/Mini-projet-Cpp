@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\0c2c9ed4f8c10d61a4cc42fd975cd476\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\7effcc3bf55f2bc127df17ee5eb5a11b\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{39644E28-35A2-3464-B61E-AA07704920B3}</UniqueIdentifier>
+      <UniqueIdentifier>{397F587B-E2AA-31FC-B598-A7188AF22762}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

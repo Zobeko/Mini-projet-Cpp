@@ -1,6 +1,6 @@
-^D:\DOCUMENTS\COURS\INFO\CSC4526\TUTOSFML\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\2EE38683A39DAE7DB6EF65D840B20E10\GENERATE.STAMP.RULE
+^C:\USERS\LOUIS\DOCUMENTS\PROJETCPP\MINI-PROJET-CPP\CODE\BUILD\_DEPS\PUGIXML-SUBBUILD\CMAKEFILES\143F59C9153BF7413AE49A9C094D06B0\GENERATE.STAMP.RULE
 setlocal
-"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild -BD:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/pugixml-populate.sln
+"F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild -BC:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-subbuild/pugixml-populate.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

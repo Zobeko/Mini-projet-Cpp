@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-src
+# Install script for directory: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,20 +34,20 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/Debug/pugixml.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/Debug/pugixml.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/Release/pugixml.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/Release/pugixml.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/MinSizeRel/pugixml.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/MinSizeRel/pugixml.lib")
   elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/RelWithDebInfo/pugixml.lib")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/RelWithDebInfo/pugixml.lib")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-src/src/pugixml.hpp"
-    "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-src/src/pugiconfig.hpp"
+    "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-src/src/pugixml.hpp"
+    "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-src/src/pugiconfig.hpp"
     )
 endif()
 
@@ -55,7 +55,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml/pugixml-config.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml/pugixml-config.cmake"
-         "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config.cmake")
+         "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml/pugixml-config-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -64,18 +64,18 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config-debug.cmake")
   endif()
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config-minsizerel.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config-minsizerel.cmake")
   endif()
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config-relwithdebinfo.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config-relwithdebinfo.cmake")
   endif()
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/pugixml" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/CMakeFiles/Export/lib/cmake/pugixml/pugixml-config-release.cmake")
   endif()
 endif()
 
@@ -88,6 +88,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Program Files (x86)/ProjetCPP/lib/pkgconfig" TYPE FILE FILES "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-build/pugixml.pc")
+file(INSTALL DESTINATION "C:/Program Files (x86)/ProjetCPP/lib/pkgconfig" TYPE FILE FILES "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/_deps/pugixml-build/pugixml.pc")
 endif()
 

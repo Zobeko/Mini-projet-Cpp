@@ -9,8 +9,8 @@ The output was:
 Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
-La génération a démarré 31/05/2020 15:15:03.
-Projet "D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" sur le noud 1 (cibles par défaut).
+La génération a démarré 02/06/2020 11:59:52.
+Projet "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" sur le noud 1 (cibles par défaut).
 PrepareForBuild:
   Création du répertoire "Debug\".
   Création du répertoire "Debug\CompilerIdCXX.tlog\".
@@ -21,7 +21,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   F:\Programmes\Visual Studio\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\.\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\.\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -29,46 +29,46 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Suppression du fichier "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Mise à jour de l'horodatage "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Génération du projet "D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" terminée (cibles par défaut).
+Génération du projet "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" terminée (cibles par défaut).
 
 La génération a réussi.
     0 Avertissement(s)
     0 Erreur(s)
 
-Temps écoulé 00:00:01.81
+Temps écoulé 00:00:01.23
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe"
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_1cc9a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
+Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_f62b5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
   Compilateur d'optimisation Microsoft (R) C/C++ version 19.25.28614 pour x64
-  testCXXCompiler.cxx
   Copyright (C) Microsoft Corporation. Tous droits réservés.
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1cc9a.dir\Debug\\" /Fd"cmTC_1cc9a.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
-  cmTC_1cc9a.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\Debug\cmTC_1cc9a.exe
+  testCXXCompiler.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f62b5.dir\Debug\\" /Fd"cmTC_f62b5.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  cmTC_f62b5.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\Debug\cmTC_f62b5.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_e2bd5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
+Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_7c3fc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
   Compilateur d'optimisation Microsoft (R) C/C++ version 19.25.28614 pour x64
   CMakeCXXCompilerABI.cpp
   Copyright (C) Microsoft Corporation. Tous droits réservés.
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_e2bd5.dir\Debug\\" /Fd"cmTC_e2bd5.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_e2bd5.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\Debug\cmTC_e2bd5.exe
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7c3fc.dir\Debug\\" /Fd"cmTC_7c3fc.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_7c3fc.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\Debug\cmTC_7c3fc.exe
 
 
 
@@ -82,8 +82,8 @@ The output was:
 Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
-La génération a démarré 31/05/2020 15:15:23.
-Projet "D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" sur le noud 1 (cibles par défaut).
+La génération a démarré 02/06/2020 12:00:40.
+Projet "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" sur le noud 1 (cibles par défaut).
 PrepareForBuild:
   Création du répertoire "Debug\".
   Création du répertoire "Debug\CompilerIdC.tlog\".
@@ -94,7 +94,7 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   F:\Programmes\Visual Studio\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\.\CompilerIdC.exe
+  CompilerIdC.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\.\CompilerIdC.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -102,102 +102,102 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Suppression du fichier "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Mise à jour de l'horodatage "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Génération du projet "D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" terminée (cibles par défaut).
+Génération du projet "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\3.16.19112601-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" terminée (cibles par défaut).
 
 La génération a réussi.
     0 Avertissement(s)
     0 Erreur(s)
 
-Temps écoulé 00:00:00.89
+Temps écoulé 00:00:00.73
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdC/CompilerIdC.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_54aed.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
+Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_4ac6c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
   Compilateur d'optimisation Microsoft (R) C/C++ version 19.25.28614 pour x64
-  testCCompiler.c
   Copyright (C) Microsoft Corporation. Tous droits réservés.
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_54aed.dir\Debug\\" /Fd"cmTC_54aed.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\testCCompiler.c
-  cmTC_54aed.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\Debug\cmTC_54aed.exe
+  testCCompiler.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4ac6c.dir\Debug\\" /Fd"cmTC_4ac6c.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+  cmTC_4ac6c.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\Debug\cmTC_4ac6c.exe
 
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_f6720.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
+Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_32ba7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
   Compilateur d'optimisation Microsoft (R) C/C++ version 19.25.28614 pour x64
   Copyright (C) Microsoft Corporation. Tous droits réservés.
   CMakeCCompilerABI.c
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f6720.dir\Debug\\" /Fd"cmTC_f6720.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCCompilerABI.c"
-  cmTC_f6720.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\Debug\cmTC_f6720.exe
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_32ba7.dir\Debug\\" /Fd"cmTC_32ba7.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "F:\Programmes\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.16\Modules\CMakeCCompilerABI.c"
+  cmTC_32ba7.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\Debug\cmTC_32ba7.exe
 
 
 
 Determining if the include file sys/types.h exists passed with the following output:
-Change Dir: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_b699d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
+Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_3e5b1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
   Compilateur d'optimisation Microsoft (R) C/C++ version 19.25.28614 pour x64
   Copyright (C) Microsoft Corporation. Tous droits réservés.
   CheckIncludeFile.c
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b699d.dir\Debug\\" /Fd"cmTC_b699d.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-  cmTC_b699d.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\Debug\cmTC_b699d.exe
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3e5b1.dir\Debug\\" /Fd"cmTC_3e5b1.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_3e5b1.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\Debug\cmTC_3e5b1.exe
 
 
 
 Determining if the include file stdint.h exists passed with the following output:
-Change Dir: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_55b5a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
+Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_105c2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
   Compilateur d'optimisation Microsoft (R) C/C++ version 19.25.28614 pour x64
-  Copyright (C) Microsoft Corporation. Tous droits réservés.
   CheckIncludeFile.c
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_55b5a.dir\Debug\\" /Fd"cmTC_55b5a.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-  cmTC_55b5a.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\Debug\cmTC_55b5a.exe
+  Copyright (C) Microsoft Corporation. Tous droits réservés.
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_105c2.dir\Debug\\" /Fd"cmTC_105c2.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_105c2.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\Debug\cmTC_105c2.exe
 
 
 
 Determining if the include file stddef.h exists passed with the following output:
-Change Dir: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_91f11.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
+Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_96685.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
   Compilateur d'optimisation Microsoft (R) C/C++ version 19.25.28614 pour x64
-  CheckIncludeFile.c
   Copyright (C) Microsoft Corporation. Tous droits réservés.
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_91f11.dir\Debug\\" /Fd"cmTC_91f11.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
-  cmTC_91f11.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\Debug\cmTC_91f11.exe
+  CheckIncludeFile.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_96685.dir\Debug\\" /Fd"cmTC_96685.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+  cmTC_96685.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\Debug\cmTC_96685.exe
 
 
 
 Determining size of void* passed with the following output:
-Change Dir: D:/Documents/Cours/Info/CSC4526/TutoSFML/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/louis/Documents/ProjetCPP/Mini-projet-Cpp/Code/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_61f63.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
+Run Build Command(s):F:/Programmes/Visual Studio/MSBuild/Current/Bin/MSBuild.exe cmTC_bfe7d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.5.0+d4cbfca49 pour .NET Framework
 Copyright (C) Microsoft Corporation. Tous droits réservés.
 
   Compilateur d'optimisation Microsoft (R) C/C++ version 19.25.28614 pour x64
   SIZEOF_VOID_PTR.c
   Copyright (C) Microsoft Corporation. Tous droits réservés.
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_61f63.dir\Debug\\" /Fd"cmTC_61f63.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CheckTypeSize\SIZEOF_VOID_PTR.c
-  cmTC_61f63.vcxproj -> D:\Documents\Cours\Info\CSC4526\TutoSFML\build\CMakeFiles\CMakeTmp\Debug\cmTC_61f63.exe
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bfe7d.dir\Debug\\" /Fd"cmTC_bfe7d.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CheckTypeSize\SIZEOF_VOID_PTR.c"
+  cmTC_bfe7d.vcxproj -> C:\Users\louis\Documents\ProjetCPP\Mini-projet-Cpp\Code\build\CMakeFiles\CMakeTmp\Debug\cmTC_bfe7d.exe
 
 
 
