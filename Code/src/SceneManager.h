@@ -3,6 +3,9 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "Joueur.h"
+#include "PickUp.h"
+
 class SceneManager
 {
 public:
@@ -12,6 +15,7 @@ public:
 	void draw(sf::RenderWindow& window);
 	void tuerJoueur();
 	void Update();
+	Joueur* getJoueur();
 
 private:
 	int idSalle;
@@ -19,7 +23,7 @@ private:
 	sf::Clock timerTotal;
 	sf::Clock timerSalle;
 	
-	//Joueur joueur;
+	Joueur joueur;
 	//vector<Ennemi> ennemis;
 	//vector<Static> tiles;
 	//vector<PickUp> pickUps;
