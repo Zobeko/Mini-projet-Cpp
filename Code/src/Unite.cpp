@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Unite::Unite(int _x, int _y, int _h, int _l, sf::Texture texture) {
+Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName) {
 	x = _x;
 	y = _y;
 	h = _h;
@@ -37,7 +37,7 @@ void Unite::setXY(int _x, int _y) {
 	y = _y;
 	// Changer la position de la texture
 }
-void Unite::setSprite(int _h, int _l, sf::Texture texture) {
+void Unite::setSprite(int _h, int _l, std::string textureName) {
 	h = _h;
 	l = _l;
 	sprite.setTextureRect(sf::IntRect(0, 0, _l, _h));

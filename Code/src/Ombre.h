@@ -3,7 +3,7 @@
 #include "Unite.h"
 #include "PickUp.h"
 
-class Ombre : PickUp
+class Ombre : public PickUp
 {
 public:
 	Ombre(int _x, int _y, int _h);

@@ -9,7 +9,8 @@
 
 using namespace std;
 
-UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, b2BodyType bodyType) {
+UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName, b2BodyType bodyType) : Unite(_x, _y, _h, _l, textureName)
+{
     b2BodyDef bodyDef;
     bodyDef.type = bodyType;
     bodyDef.position.Set(_x, _y);
