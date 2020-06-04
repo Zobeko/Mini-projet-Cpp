@@ -1,15 +1,17 @@
 #include "PickUp.h"
 #include "Unite.h"
+#include "Joueur.h"
+#include "SceneManager.h"
 
 using namespace std;
 
-PickUp::PickUp(int _x, int _y, int _h, int _l, string textureName) : Unite(_x, _y, _h, _l, textureName)
+// Contructeur : doit simplement appeler celui de la classe de base Unite
+PickUp::PickUp(int _x, int _y, int _h, int _l, std::string textureName) : Unite(_x, _y, _h, _l, textureName)
 {
-
 }
 
-
-bool PickUp::intersect(Unite* _unite) {
+// Calcule s'il y a intersection avec _unite : renvoie un bool
+bool PickUp::intersect(Unite & _unite) {
 	//test sur la hauteur :
 		// est-ce qu'il y a correspondance par le dessus (unite plus haut que this)
 	bool uniteInterDessus = (getY() < _unite.getY() + _unite.getH()) & (getY() + getH() > _unite.getY());
@@ -31,6 +33,16 @@ bool PickUp::intersect(Unite* _unite) {
 	return false;	// si on arrive là c'est qu'il n'y a pas d'intersection
 }
 
-void PickUp::Update(SceneManager & sceneManager) {
-	bool intersectJoueur = intersect(sceneManager.getJoueur());
+// Routine de jeu du pickup : par défaut, regarde s'il y a intersection avec le joueur et si oui fait son action
+void PickUp::Update(SceneManager & sceneManager, int iDpickUp) {
+	//Unite* joueur = ;
+	if (intersect(sceneManager.getJoueur())) {
+		ActionOnIntersect(sceneManager, iDpickUp);
+	}
+}
+
+// Action à réaliser lorsque le joueur touche le pickup : par défaut, le détruire
+void PickUp::ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) {
+	// Par defaut : enleve le pickUp du vector
+	sceneManager.RemovePickUp(iDpickUp);
 }
