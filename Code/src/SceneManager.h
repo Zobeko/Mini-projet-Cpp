@@ -17,6 +17,7 @@ public:
 	Joueur& getJoueur();
 	void tuerJoueur();
 	void RemovePickUp(int idPickUp);
+	void MettreJoueurAbri();
 
 	void unLockDoor();
 	bool getClefRecupere();

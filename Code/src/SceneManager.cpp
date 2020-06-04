@@ -33,6 +33,7 @@ void SceneManager::draw(sf::RenderWindow& window) {
 
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
 void SceneManager::Update() {
+	joueur.SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
     /*
     for (auto& i : pickUps) {
         i.Update(this);
@@ -66,6 +67,9 @@ void SceneManager::tuerJoueur() {
     //joueur => animation de mort + set velocity à 0
     //trouver un moyen d'afficher la fenetre
     chargerSalle();
+}
+void SceneManager::MettreJoueurAbri() {
+	joueur.SetALAbri(true);
 }
 #pragma endregion
 
