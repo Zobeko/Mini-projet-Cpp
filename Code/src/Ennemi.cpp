@@ -1,14 +1,15 @@
 #include "Ennemi.h"
+#include "SceneManager.h"
 
 Ennemi::Ennemi(int _x, int _y, int _h, int _l, std::string textureName, bool _mortel) : Static(_x, _y, _h, _l, textureName) {
 	_mortel = mortel;
 }
 
 void Ennemi::Update(SceneManager& sceneManager, int idEnnemi) {
-	Joueur j = sceneManager.getJoueur();
 	//if collision
-	if (false)
+	if (collisionFlag)
 	{
+		Joueur j = sceneManager.getJoueur();
 		if (mortel) {
 			//test sur la hauteur
 			if (j.getY() > getY() + 0.95 * getH()) {

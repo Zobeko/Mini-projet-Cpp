@@ -67,11 +67,11 @@ void SceneManager::MettreJoueurAbri() {
 }
 // Enlève un pickup donné du vector
 void SceneManager::RemovePickUp(int idPickUp) {
-    pickUps.erase(pickUps.begin + idPickUp);
+    pickUps.erase(pickUps.begin() + idPickUp);
 }
 // Enlève un pickup donné du vector
 void SceneManager::RemoveEnnemi(int idEnnemi) {
-    ennemis.erase(ennemis.begin + idEnnemi);
+    ennemis.erase(ennemis.begin() + idEnnemi);
 }
 #pragma endregion
 

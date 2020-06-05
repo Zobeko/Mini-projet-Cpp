@@ -33,6 +33,9 @@ UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName
     fixtureDef.friction = 0.3f;
     body->CreateFixture(&fixtureDef);
 
+    // Défini le dataUser pour pouvoir gérer les collisions
+    body->SetUserData(this);
+
     box = body;
 }
 

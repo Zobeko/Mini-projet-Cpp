@@ -2,7 +2,8 @@
 
 #include "Static.h"
 
-#include "SceneManager.h"
+//#include "SceneManager.h"
+class SceneManager;
 
 class Ennemi : public Static
 {
@@ -12,5 +13,6 @@ public:
 
 private:
 	bool mortel;
+	bool collisionFlag;		// Sert à savoir si il y a eu collision avec le joueur pour la traiter dans l'update
 };
 

@@ -100,6 +100,13 @@ void dessin(sf::RenderWindow & win) {
 
 
 
+
+
+
+
+
+
+
 int myMain()
 {   
     sf::RenderWindow window;

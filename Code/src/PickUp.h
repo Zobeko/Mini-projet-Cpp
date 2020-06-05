@@ -1,6 +1,8 @@
 #pragma once
-#include "SceneManager.h"
+//#include "SceneManager.h"
 #include "Unite.h"
+
+class SceneManager;
 
 class PickUp : public Unite
 {
