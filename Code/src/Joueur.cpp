@@ -8,10 +8,7 @@ Joueur::Joueur() : Dynamic(0, 0, dimensions, dimensions, "Hero.png", world) {
 	std::vector<int> anim = {0, 0}; //A confirmer avec Louis
 }
 
-//Permet de modifier l'etat "à l'abri" du joueur
-void Joueur::SetALAbri(bool abri) {
-	aLAbri = abri;
-}
+
 
 //Méthode qui tue le joueur si il regarde Meduse sans utiliser le mirroir o etre à l'abri
 void Joueur::checkMeduse(SceneManager& sceneManager) {
@@ -22,6 +19,8 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 		sceneManager.tuerJoueur();
 	}
 }
+
+#pragma region Méthodes liées aux inputs
 
 //Gestions des inputs (appel des différentes gestion d'inputs)
 //gestionInputsTypeDep appelée en 1ere obligatoirement car elle modifie
@@ -97,3 +96,19 @@ void Joueur::gestionInputsTypeDep() {
 	anim[1] = 0;
 	speed = speedBase;
 }
+#pragma endregion
+
+#pragma region Méthodes de mise des drapeaux
+//Permet de modifier l'etat "à l'abri" du joueur
+void Joueur::SetALAbri(bool abri) {
+	aLAbri = abri;
+}
+//Permet de dire si oui ou non le joueur est au sol
+void Joueur::SetGroundedFlag(bool GF) {
+	grounded = GF;
+}
+//Permet de dire si oui ou non le joueur est sur un mur
+void Joueur::SetWalledFlage(bool WF) {
+	walled = WF;
+}
+#pragma endregion

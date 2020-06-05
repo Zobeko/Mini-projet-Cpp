@@ -25,6 +25,7 @@ void Ennemi::Update(SceneManager& sceneManager, int idEnnemi) {
 			//tuer le joueur:
 			sceneManager.tuerJoueur();
 		}
+		collisionFlag = false;
 	}
 }
 
