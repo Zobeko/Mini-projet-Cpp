@@ -8,7 +8,7 @@ class UnitePhysic : public Unite
 {
 public:
 	virtual ~UnitePhysic() = default;
-	UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName, b2BodyType bodyType);
+	UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName, b2BodyType bodyType, b2World &world);
 	b2Body* getBox();
 	void setXY(int _x, int _y) override;
 
