@@ -109,14 +109,14 @@ void dessin(sf::RenderWindow & win) {
 
 int myMain()
 {   
-    sf::RenderWindow window;
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Tuto Jeu SFML");
 #pragma region Initialisation de la fenetre avec SFML
     //Variables posant un problème quand globales
     
     sf::Texture persoTexture;
 
     //Ouverture de la fenetre
-    window.create(sf::VideoMode(800, 600), "Tuto Jeu SFML");
+    //window.create(sf::VideoMode(800, 600), "Tuto Jeu SFML");
 
     //placement de la fenetre
         //window.setPosition(sf::Vector2i(0, 0));

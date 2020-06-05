@@ -13,4 +13,5 @@ public:
     // Called when two fixtures cease to touch
     void EndContact(b2Contact* contact);
 
+    void CheckObjectColliding(void* & o1, void* & o2);
 };

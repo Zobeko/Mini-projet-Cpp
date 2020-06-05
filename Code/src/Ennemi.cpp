@@ -27,3 +27,7 @@ void Ennemi::Update(SceneManager& sceneManager, int idEnnemi) {
 		}
 	}
 }
+
+void Ennemi::SetCollisionFlagOn() {
+	collisionFlag = true;
+}
