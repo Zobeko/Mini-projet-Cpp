@@ -1,7 +1,7 @@
 #include "Ennemi.h"
 #include "SceneManager.h"
 
-Ennemi::Ennemi(int _x, int _y, int _h, int _l, std::string textureName, bool _mortel) : Static(_x, _y, _h, _l, textureName) {
+Ennemi::Ennemi(int _x, int _y, int _h, int _l, std::string textureName, bool _mortel, b2World& world) : Static(_x, _y, _h, _l, textureName, world) {
 	_mortel = mortel;
 }
 
