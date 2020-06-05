@@ -52,12 +52,6 @@ void SceneManager::Update() {
 Joueur& SceneManager::getJoueur() {
     return joueur;
 }
-
-// Enlève un pickup donné du vector
-void SceneManager::RemovePickUp(int idPickUp) {
-    pickUps.erase(pickUps.begin + idPickUp);
-}
-
 // Bloque le jeu pendant un certain temps puis recharge la salle précédente
 void SceneManager::tuerJoueur() {
     idSalle -= 1;
@@ -70,6 +64,14 @@ void SceneManager::tuerJoueur() {
 }
 void SceneManager::MettreJoueurAbri() {
 	joueur.SetALAbri(true);
+}
+// Enlève un pickup donné du vector
+void SceneManager::RemovePickUp(int idPickUp) {
+    pickUps.erase(pickUps.begin + idPickUp);
+}
+// Enlève un pickup donné du vector
+void SceneManager::RemoveEnnemi(int idEnnemi) {
+    ennemis.erase(ennemis.begin + idEnnemi);
 }
 #pragma endregion
 

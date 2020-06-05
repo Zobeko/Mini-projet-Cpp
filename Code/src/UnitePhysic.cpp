@@ -45,6 +45,7 @@ b2Body* UnitePhysic::getBox()
 //Permet de modifier la position de la boite de collision
 void UnitePhysic::setXY(int _x, int _y)
 {
+	Unite::setXY(_x, _y);
     box->SetTransform(b2Vec2(_x, _y), 0);
 }
 

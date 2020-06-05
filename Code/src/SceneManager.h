@@ -5,6 +5,7 @@
 
 #include "Joueur.h"
 #include "PickUp.h"
+#include "Ennemi.h"
 
 class SceneManager
 {
@@ -16,8 +17,9 @@ public:
 
 	Joueur& getJoueur();
 	void tuerJoueur();
-	void RemovePickUp(int idPickUp);
 	void MettreJoueurAbri();
+	void RemovePickUp(int idPickUp);
+	void RemoveEnnemi(int idEnnemi);
 
 	void unLockDoor();
 	bool getClefRecupere();
@@ -32,7 +34,7 @@ private:
 	sf::Clock timerSalle;
 	
 	Joueur joueur;
-	//vector<Ennemi> ennemis;
+	std::vector<std::unique_ptr<Ennemi>> ennemis;
 	//vector<Static> tiles;
 	std::vector<std::unique_ptr<PickUp>> pickUps;
 	bool clefRecupere = false;
