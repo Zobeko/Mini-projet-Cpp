@@ -10,6 +10,11 @@ Joueur::Joueur() : Dynamic(0, 0, dimensions, dimensions, "Hero.png", world) {
 
 
 
+//Méthode renvoyant le bool de la direction du joueur
+bool Joueur::getDirection() {
+	return direction;
+}
+
 //Méthode qui tue le joueur si il regarde Meduse sans utiliser le mirroir o etre à l'abri
 void Joueur::checkMeduse(SceneManager& sceneManager) {
 
@@ -108,7 +113,7 @@ void Joueur::SetGroundedFlag(bool GF) {
 	grounded = GF;
 }
 //Permet de dire si oui ou non le joueur est sur un mur
-void Joueur::SetWalledFlage(bool WF) {
+void Joueur::SetWalledFlag(bool WF) {
 	walled = WF;
 }
 #pragma endregion

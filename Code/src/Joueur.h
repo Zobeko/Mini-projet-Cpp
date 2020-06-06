@@ -3,13 +3,13 @@
 #include "Dynamic.h"
 #include "Unite.h"
 #include <vector>
-
 class SceneManager;
 
 class Joueur : public Dynamic	
 {
 public:
 	Joueur();
+	bool getDirection();
 	void checkMeduse(SceneManager &sceneManager); // Regarde si le joueur est à l'abri et si il regarde Meduse, 
 													//si il n'est pas à l'abri et regarde Meduse,alors il meurt
 	void getInputs();
@@ -19,7 +19,7 @@ public:
 
 	void SetALAbri(bool abri); // Modifie le bool aLAbri
 	void SetGroundedFlag(bool GF);
-	void SetWalledFlage(bool WF);
+	void SetWalledFlag(bool WF);
 
 private:
 	bool aLAbri = false; //False : joueur pas à l'abri, tuable par le regard de Meduse

@@ -2,33 +2,55 @@
 #include "SceneManager.h"
 
 Ennemi::Ennemi(int _x, int _y, int _h, int _l, std::string textureName, bool _mortel, b2World& world) : Static(_x, _y, _h, _l, textureName, world) {
-	_mortel = mortel;
+	mortel = _mortel;
 }
 
+// Méthode Update qui regarde si le joueur est en collision avec l'ennemi en question (this)
+// Malgrès une similitude d'utilisation, elle n'est pas hérité de Static car a des arguments différents,
+// un comportement différent, et est appelée à un autre endroit
 void Ennemi::Update(SceneManager& sceneManager, int idEnnemi) {
-	//if collision
-	if (collisionFlag)
-	{
-		Joueur j = sceneManager.getJoueur();
-		if (mortel) {
-			//test sur la hauteur
-			if (j.getY() > getY() + 0.95 * getH()) {
-				//le joueur est au dessus : il faut tuer l'ennemi
-				sceneManager.RemoveEnnemi(idEnnemi);
-			}
-			else {
-				// le joueur n'est pas au-dessus : il doit mourrir
-				sceneManager.tuerJoueur();
-			}
-		}
-		else {
-			//tuer le joueur:
-			sceneManager.tuerJoueur();
-		}
-		collisionFlag = false;
+	Joueur j = sceneManager.getJoueur();
+	if (CheckCollision(j)) {
+		OnCollisionAction(sceneManager, idEnnemi);
 	}
 }
 
-void Ennemi::SetCollisionFlagOn() {
-	collisionFlag = true;
+// Regarde si le joueur "touche" l'ennemi
+bool Ennemi::CheckCollision(Joueur& j) {
+	bool uniteInterDessus = (getY() - margeDetect < j.getY() + j.getH()) & (getY() + getH() + margeDetect > j.getY());
+	// est-ce qu'il y a correspondance par le dessous (unite plus bas que this)
+	bool uniteInterDessous = (j.getY() < getY() + getH() + margeDetect) & (j.getY() + j.getH() > getY() - margeDetect);
+
+	if (uniteInterDessus || uniteInterDessous) {
+		//hauteur : ok => intersection possible => test sur la longueur :
+			// est-ce qu'il y a correspondance par la droite (unite plus à droite que this)
+		bool uniteInterDroite = (getX() - margeDetect < j.getX() + j.getL()) & (getX() + getL() + margeDetect > j.getX());
+		// est-ce qu'il y a correspondance par le dessous (unite plus bas que this)
+		bool uniteInterDessous = (j.getX() < getX() + getL() + margeDetect) & (j.getX() + j.getL() > getX() - margeDetect);
+
+		if (uniteInterDroite || uniteInterDessous) {
+			// Il y a bien intersection => on renvoie true (on aurait pu renvoyé directement uniteInterDroite || uniteInterDessous mais c'est plus clair
+			return true;
+		}
+	}
+	return false;
+}
+
+void Ennemi::OnCollisionAction(SceneManager& sceneManager, int idEnnemi) {
+	Joueur j = sceneManager.getJoueur();
+	if (mortel) {
+		//test sur la hauteur
+		if (j.getY() > getY() + 0.95 * getH()) {
+			//le joueur est au dessus : il faut tuer l'ennemi
+			sceneManager.RemoveEnnemi(idEnnemi);
+		}
+		else {
+			// le joueur n'est pas au-dessus : il doit mourrir
+			sceneManager.tuerJoueur();
+		}
+	}
+	else {
+		//tuer le joueur:
+		sceneManager.tuerJoueur();
+	}
 }
