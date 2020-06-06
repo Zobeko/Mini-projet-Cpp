@@ -14,7 +14,7 @@ using namespace std;
 //avec la meme position, les mêmes dimensions
 //Le parametre b2BodyDef bodyType sera précisé dans les constructeurs des 2 classes filles de UnitePhysic : Dynamic (bodyType = b2_dynamicBody) et
 //Static (bodyType = b2_staticBody)
-UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName, b2BodyType bodyType, b2World &world) : Unite(_x, _y, _h, _l, textureName)
+UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, b2BodyType bodyType, b2World &world) : Unite(_x, _y, _h, _l, textureName, textDictionnary)
 {
     //Crée une boite de collision et initialise sa position et son bodyType (static ou dynamic)
     b2BodyDef bodyDef;

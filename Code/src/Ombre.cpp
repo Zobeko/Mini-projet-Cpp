@@ -3,7 +3,7 @@
 #include "Unite.h"
 
 // Constructeur : la largeur est calculée automatique à partir de la hauteur : on prend un angle de 30°
-Ombre::Ombre(int _x, int _y, int _h) : PickUp(_x, _y, _h, _h*tan(30), "Ombre") {
+Ombre::Ombre(int _x, int _y, int _h, std::map<std::string, sf::Texture>& textDictionnary) : PickUp(_x, _y, _h, _h*tan(30), "Ombre", textDictionnary) {
 }
 
 /* Pour les ombres, on considère que le joueur est à l'ombre si le point

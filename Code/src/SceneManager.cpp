@@ -10,17 +10,18 @@
 using namespace std;
 
 // Constructeur
-SceneManager::SceneManager() {
+SceneManager::SceneManager(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) {
+    joueur = std::make_unique<Joueur>(textDictionnary, world);
     idSalle = 0;
-    chargerSalle();
+    chargerSalle(textDictionnary, world);
 }
 
 // Dessine le jeu (appelé à chaque fin de frame)
 void SceneManager::draw(sf::RenderWindow& window) {
-    /*
     for (auto& i : tiles) {
-        i.draw(window);
+        i->draw(window);
     }
+    /*
     for (auto& i : pickUps) {
         i.draw(window);
     }
@@ -32,8 +33,8 @@ void SceneManager::draw(sf::RenderWindow& window) {
 }
 
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
-void SceneManager::Update() {
-	joueur.SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
+void SceneManager::Update(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) {
+	joueur->SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
     /*
     for (auto& i : pickUps) {
         i.Update(this);
@@ -50,20 +51,22 @@ void SceneManager::Update() {
 #pragma region Méthodes liées à la manipulation des éléments du niveau
 // Renvoie une référence vers le joueur
 Joueur& SceneManager::getJoueur() {
-    return joueur;
+    return *joueur;
 }
 // Bloque le jeu pendant un certain temps puis recharge la salle précédente
 void SceneManager::tuerJoueur() {
+    /*
     idSalle -= 1;
     if (idSalle < 0) {
         idSalle = 0;    //On vérifies que le joueur n'aille pas à une salle inexistante
     }
     //joueur => animation de mort + set velocity à 0
     //trouver un moyen d'afficher la fenetre
-    chargerSalle();
+    chargerSalle(textDictionnary, world);
+    */
 }
 void SceneManager::MettreJoueurAbri() {
-	joueur.SetALAbri(true);
+	joueur->SetALAbri(true);
 }
 // Enlève un pickup donné du vector
 void SceneManager::RemovePickUp(int idPickUp) {
@@ -76,18 +79,16 @@ void SceneManager::RemoveEnnemi(int idEnnemi) {
 #pragma endregion
 
 #pragma region Méthodes liées à la porte et la clef
-
 // Débloque la porte (appelé lorsqu'une clef est attrapée)
 void SceneManager::unLockDoor() {
     clefRecupere = true;
 }
-
 // Renvoie un bool indiquant si la porte est ouverte ou non
 bool SceneManager::getClefRecupere() {
     return clefRecupere;
 }
-
 void SceneManager::chargerSalleSuivante() {
+    /*
     idSalle += 1;
     // Si le joueur a atteint le dernier niveau, on termine le jeu et affiche son temps total
     if (idSalle >= idLastSalle) {
@@ -95,29 +96,66 @@ void SceneManager::chargerSalleSuivante() {
         idSalle = idLastSalle;
         // faire finir le jeu
     }
-    chargerSalle();
+    chargerSalle(textDictionnary, world);
+    */
 }
+#pragma endregion
 
+#pragma region Méthodes pour load un niveau
 // Charge la salle correspondant à l'idSalle actuel
-void SceneManager::chargerSalle() {
+void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) {
     pugi::xml_document doc;
-    pugi::xml_parse_result result = doc.load_file("visage.xml");
+    pugi::xml_parse_result result = doc.load_file("Resources/Salle.xml");
     if (!result)
     {
-        std::cerr << "Could not open file visage.xml" << std::endl;
+        std::cerr << "Erreur : impossible d'ouvrir le xml" << std::endl;
     }
     else
     {
-        // Attente pour qu'il y ait une coupure entre les niveaux (quand joueur meurt ou passe la porte
-        int i = 0;
-        while (i < delaiMort) {
-            //Boucle pour mettre en pause le jeu
-        }
+        //Attente();
 
-        //... Constructions du niveau basée sur le xml et surtout les consctructeurs des différentes tiles et tout
+        std::string nomNoeud = "Salle" + to_string(idSalle);
+        //pugi::xml_node node = doc.child(nomNoeud); // On recupère le noeud XML de la salle à charger
+        pugi::xml_node node = doc.child("Salle0");
+
+        joueur->setXY(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
+        
+        AddStatic(textDictionnary, world, node.child("Statics"));
+        AddEnnemi(textDictionnary, world, node.child("Ennemis"));
+        AddPickup(textDictionnary, world, node.child("PickUps"));
+
     }
     timerSalle.restart();   // on redemmarre le timer de la salle
 }
+// Ajoute un Static depuis un noeud XML
+void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
+    for (pugi::xml_node _n : n.children("Pierre")) {
+        cout << "Ajout d'une pierre" << endl;
+        auto st = std::make_unique<Static>(n.attribute("x").as_int(), n.attribute("y").as_int(), 32, 32, "TilePierre.png", textDictionnary, world);
+        tiles.push_back(std::move(st));
+    }
+    // faire une boucle for pour les tiles plus générales, désignées par Static et comportant tous les attributs
+}
+// Ajoute un Ennemi depuis un noeud XML
+void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
 
+}
+// Ajoute un Pickup depuis un noeud XML
+void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
+
+}
+// Méthode permettant de faire une petite attente
+void SceneManager::Attente() {
+    // Attente pour qu'il y ait une coupure entre les niveaux (quand joueur meurt ou passe la porte
+    int i = 0;
+    while (i < delaiMort) {
+        //Boucle pour mettre en pause le jeu
+        i++;
+    }
+}
 #pragma endregion
+
+
+
+
 

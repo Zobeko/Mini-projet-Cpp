@@ -8,7 +8,7 @@ class SceneManager;
 class Joueur : public Dynamic	
 {
 public:
-	Joueur();
+	Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
 	bool getDirection();
 	void checkMeduse(SceneManager &sceneManager); // Regarde si le joueur est à l'abri et si il regarde Meduse, 
 													//si il n'est pas à l'abri et regarde Meduse,alors il meurt

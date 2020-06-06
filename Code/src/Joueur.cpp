@@ -1,8 +1,9 @@
 #include "Joueur.h"
 #include <vector>
 #include "SceneManager.h"
+#include "myMain.h"
 
-Joueur::Joueur() : Dynamic(0, 0, dimensions, dimensions, "Hero.png", world) {
+Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(0, 0, dimensions, dimensions, "Hero.png", textDictionnary, world) {
 	direction = false;
 	mirror = false;
 	std::vector<int> anim = {0, 0}; //A confirmer avec Louis

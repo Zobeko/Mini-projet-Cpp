@@ -6,7 +6,7 @@
 using namespace std;
 
 // Contructeur : doit simplement appeler celui de la classe de base Unite
-PickUp::PickUp(int _x, int _y, int _h, int _l, std::string textureName) : Unite(_x, _y, _h, _l, textureName)
+PickUp::PickUp(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary) : Unite(_x, _y, _h, _l, textureName, textDictionnary)
 {
 }
 

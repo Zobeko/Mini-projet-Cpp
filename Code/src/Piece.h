@@ -8,7 +8,7 @@
 class Piece : public PickUp
 {
 public:
-	Piece(int _x, int _y, int _value);
+	Piece(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary, int _value);
 
 private:
 	int value;

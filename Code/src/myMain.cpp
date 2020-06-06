@@ -1,11 +1,12 @@
 #include "myMain.h"
+
 #include "pugixml.hpp"
 #include <SFML/Graphics.hpp>
-
-#include "shapeEx.h"
-#include <iostream>
-
 #include "box2d/box2d.h"
+
+#include "SceneManager.h"
+
+#include <iostream>
 #include <stdio.h>
 #include <assert.h>
 
@@ -35,7 +36,8 @@ int myMain()
     int32 velocityIterations = 6;
     int32 positionIterations = 2;
 
-    
+    std::map<std::string, sf::Texture> textDictionnary;
+    SceneManager manager(textDictionnary, world);
 
 
     // Game Loop
@@ -66,7 +68,7 @@ int myMain()
         
 
         // Dessin des différents sprites
-
+        manager.draw(window);
 
         // Affichage des elements
         window.display();

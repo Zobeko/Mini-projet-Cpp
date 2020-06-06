@@ -2,7 +2,7 @@
 
 
 
-Dynamic::Dynamic(int _x, int _y, int _h, int _l, std::string textureName, b2World& world) : UnitePhysic(_x, _y, _h, _l, textureName, b2_dynamicBody, world)
+Dynamic::Dynamic(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : UnitePhysic(_x, _y, _h, _l, textureName, textDictionnary, b2_dynamicBody, world)
 {
 }
 

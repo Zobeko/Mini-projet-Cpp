@@ -1,20 +1,20 @@
 #include "Unite.h"
 #include <vector>
 #include <SFML/Graphics.hpp>
-#include "myMain.h"
+
 
 // à enlever après
 #include <iostream>
 
 using namespace std;
 
-Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName) {
+Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture> & textDictionnary) {
 	x = _x;
 	y = _y;
 	h = _h;
 	l = _l;
 
-	setSprite(_h, _l, textureName);
+	setSprite(_h, _l, textureName, textDictionnary);
 	
 	sprite.setPosition(x, y);	// à modifier pour avoir le sprite au bon endroit
 	sprite.setTextureRect(sf::IntRect(0, 0, _l, _h)); //idem ?
@@ -39,7 +39,7 @@ void Unite::setXY(int _x, int _y) {
 	y = _y;
 	// Changer la position de la texture
 }
-void Unite::setSprite(int _h, int _l, std::string textureName) {
+void Unite::setSprite(int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary) {
 	h = _h;
 	l = _l;
 	if (textDictionnary.find(textureName) != textDictionnary.end()) {

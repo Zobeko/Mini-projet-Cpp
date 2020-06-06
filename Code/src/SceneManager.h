@@ -2,6 +2,7 @@
 #include <vector>
 
 #include <SFML/Graphics.hpp>
+#include "pugixml.hpp"
 
 #include "Joueur.h"
 #include "PickUp.h"
@@ -11,9 +12,9 @@ class SceneManager
 {
 public:
 	int nbPiece = 0;
-	SceneManager();
+	SceneManager(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
 	void draw(sf::RenderWindow& window);
-	void Update();
+	void Update(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
 
 	Joueur& getJoueur();
 	void tuerJoueur();
@@ -24,7 +25,8 @@ public:
 	void unLockDoor();
 	bool getClefRecupere();
 	void chargerSalleSuivante();
-	void chargerSalle();
+	void chargerSalle(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
+	void Attente();
 
 private:
 	int idSalle;
@@ -33,11 +35,15 @@ private:
 	sf::Clock timerTotal;
 	sf::Clock timerSalle;
 	
-	Joueur joueur;
+	std::unique_ptr<Joueur> joueur;
 	std::vector<std::unique_ptr<Ennemi>> ennemis;
-	//vector<Static> tiles;
+	std::vector<std::unique_ptr<Static>> tiles;
 	std::vector<std::unique_ptr<PickUp>> pickUps;
 	bool clefRecupere = false;
+
+	void AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);
+	void AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);
+	void AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);
 
 	//musique
 };

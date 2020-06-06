@@ -6,7 +6,7 @@
 using namespace std;
 
 // Constructeur : associe une valeur et un sprite correspondant /!\ en l'état seules les pièces 1,5 et 10 ont un sprite
-Porte::Porte(int _x, int _y) : PickUp(_x, _y, 32, 32, "Porte.png") {
+Porte::Porte(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary) : PickUp(_x, _y, 32, 32, "Porte.png", textDictionnary) {
 }
 
 
