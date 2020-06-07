@@ -21,15 +21,15 @@ void SceneManager::draw(sf::RenderWindow& window) {
     for (auto& i : tiles) {
         i->draw(window);
     }
-    /*
+    
     for (auto& i : pickUps) {
-        i.draw(window);
+        i->draw(window);
     }
     for (auto& i : ennemis) {
-        i.draw(window);
+        i->draw(window);
     }
-    joueur.draw(window);
-    */
+    //joueur->draw(window);
+    
 }
 
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
@@ -138,11 +138,30 @@ void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary
 }
 // Ajoute un Ennemi depuis un noeud XML
 void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
-
+    for (pugi::xml_node _n : n.children("Ennemi")) {
+        cout << "Ajout d'un ennemi" << endl;
+        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "ennemi.png", textDictionnary, _n.attribute("mortel").as_int(), world);
+        ennemis.push_back(std::move(st));
+    }
 }
 // Ajoute un Pickup depuis un noeud XML
 void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
-
+    for (pugi::xml_node _n : n.children("Piece")) {
+        cout << "Ajout d'une piece" << endl;
+        if (_n.attribute("value").as_int() == 1) {
+            auto st = std::make_unique<PickUp>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "Piece1.png", textDictionnary);
+            pickUps.push_back(std::move(st));
+        }
+        else if (_n.attribute("value").as_int() == 5) {
+            auto st = std::make_unique<PickUp>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "Piece5.png", textDictionnary);
+            pickUps.push_back(std::move(st));
+        }
+        else if (_n.attribute("value").as_int() == 10) {
+            auto st = std::make_unique<PickUp>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "Piece10.png", textDictionnary);
+            pickUps.push_back(std::move(st));
+        }
+        
+    }
 }
 // Méthode permettant de faire une petite attente
 void SceneManager::Attente() {

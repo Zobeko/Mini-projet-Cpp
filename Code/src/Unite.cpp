@@ -43,7 +43,7 @@ void Unite::setXY(int _x, int _y) {
 	//Change la position de Unite
 	x = _x;
 	y = _y;
-
+	
 
 	// Change la position de la texture sur celle de Unite
 	sprite.setPosition(x, (WINDOW_HEIGHT - y));
