@@ -6,6 +6,8 @@
 // à enlever après
 #include <iostream>
 
+#define WINDOW_HEIGHT 568
+
 using namespace std;
 
 Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture> & textDictionnary) {
@@ -16,8 +18,11 @@ Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName, std::map<s
 
 	setSprite(_h, _l, textureName, textDictionnary);
 	
-	sprite.setPosition(x, y);	// à modifier pour avoir le sprite au bon endroit
+	sprite.setPosition(x, (WINDOW_HEIGHT - y));	// à modifier pour avoir le sprite au bon endroit
 	sprite.setTextureRect(sf::IntRect(0, 0, _l, _h)); //idem ?
+
+	std::cout << "Unite position : (" << x << ", " << y << ")" << std::endl;
+	std::cout << "Sprite position : (" << sprite.getPosition().x << ", " << sprite.getPosition().y << ")" << std::endl;
 }
 
 
@@ -35,9 +40,13 @@ int Unite::getL() {
 }
 
 void Unite::setXY(int _x, int _y) {
+	//Change la position de Unite
 	x = _x;
 	y = _y;
-	// Changer la position de la texture
+
+
+	// Change la position de la texture sur celle de Unite
+	sprite.setPosition(x, (WINDOW_HEIGHT - y));
 }
 void Unite::setSprite(int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary) {
 	h = _h;

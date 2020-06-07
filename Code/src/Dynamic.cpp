@@ -30,6 +30,7 @@ int Dynamic::getVelocityY() {
 }
 
 
-void update() {
+void Dynamic::update() {
 
+	Unite::setXY(getBox()->GetPosition().x, getBox()->GetPosition().y);
 }

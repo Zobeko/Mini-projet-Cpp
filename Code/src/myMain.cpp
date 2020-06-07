@@ -63,7 +63,6 @@ int myMain()
         world.Step(timeStep, velocityIterations, positionIterations);
 
         // Update des éléments
-
    
         
 

@@ -9,6 +9,7 @@ public :
 	void setVelocityXY(int speedX, int speedY);
 	int getVelocityX();
 	int getVelocityY();
+	void update();
 
 private:
 

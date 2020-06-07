@@ -131,7 +131,7 @@ void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& textDictionn
 void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("Pierre")) {
         cout << "Ajout d'une pierre" << endl;
-        auto st = std::make_unique<Static>(n.attribute("x").as_int(), n.attribute("y").as_int(), 32, 32, "TilePierre.png", textDictionnary, world);
+        auto st = std::make_unique<Static>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "TilePierre.png", textDictionnary, world);
         tiles.push_back(std::move(st));
     }
     // faire une boucle for pour les tiles plus générales, désignées par Static et comportant tous les attributs
