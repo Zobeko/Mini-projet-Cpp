@@ -9,23 +9,23 @@ Dynamic::Dynamic(int _x, int _y, int _h, int _l, std::string textureName, std::m
 void Dynamic::setVelocityXY(int speedX, int speedY) {
 
 	//Modifie la vitesse de déplacement de la boite de collision
-	b2Body* box = getBox();
-	b2Vec2 vel = box->GetLinearVelocity();
+	//b2Body* box = getBox();
+	b2Vec2 vel = getBox()->GetLinearVelocity();
 	vel.x = speedX;
 	vel.y = speedY;
-	box->SetLinearVelocity(vel);
+	getBox()->SetLinearVelocity(vel);
 	
 }
 
 int Dynamic::getVelocityX() {
-	b2Body* box = getBox();
-	b2Vec2 vel = box->GetLinearVelocity();
+
+	b2Vec2 vel = getBox()->GetLinearVelocity();
 	return vel.x;
 }
 
 int Dynamic::getVelocityY() {
-	b2Body* box = getBox();
-	b2Vec2 vel = box->GetLinearVelocity();
+
+	b2Vec2 vel = getBox()->GetLinearVelocity();
 	return vel.y;
 }
 

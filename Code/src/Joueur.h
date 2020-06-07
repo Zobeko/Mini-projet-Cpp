@@ -33,7 +33,7 @@ private:
 	enum animationStates {Marcher, Mirroir, Mourir, Jump, WallJump }; //Enum des différents types de déplacement, et donc différents sprites
 	bool grounded = true;
 	bool walled = false;
-	int const dimensions = 128;
+	int const dimensions = 32;
 
 };
 

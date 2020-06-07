@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 
 // à enlever après
-//#include <iostream>
+#include <iostream>
 //#include "myMain.h"
 
 using namespace std;
@@ -19,12 +19,14 @@ UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName
     //Crée une boite de collision et initialise sa position et son bodyType (static ou dynamic)
     b2BodyDef bodyDef;
     bodyDef.type = bodyType;
-    bodyDef.position.Set(_x, _y);
+    bodyDef.position.Set(_x/30.f, _y/30.f);
     b2Body* body = world.CreateBody(&bodyDef);
 
     // Defini la forme de la boite de collision souhaitée (ici un rectangle) et initialise ses dimensions
     b2PolygonShape shape;
-    shape.SetAsBox(_l, _h);
+    shape.SetAsBox(_h, _l); //_h=54 et _l=54 pour que ca marche bien
+
+    
 
     // Défini les caractéristiques de notre boite de collision
     b2FixtureDef fixtureDef;
@@ -49,7 +51,9 @@ b2Body* UnitePhysic::getBox()
 void UnitePhysic::setXY(int _x, int _y)
 {
 	Unite::setXY(_x, _y);
+    std::cout << "Unite : (" << Unite::getX() << ", " << Unite::getY() << ")" << endl;
     box->SetTransform(b2Vec2(_x, _y), 0);
+    std::cout << "Box : (" << getBox()->GetPosition().x << ", " << getBox()->GetPosition().y << ")" << endl;
 }
 
 

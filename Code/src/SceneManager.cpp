@@ -21,15 +21,15 @@ void SceneManager::draw(sf::RenderWindow& window) {
     for (auto& i : tiles) {
         i->draw(window);
     }
-    
     for (auto& i : pickUps) {
         i->draw(window);
     }
     for (auto& i : ennemis) {
         i->draw(window);
     }
-    //joueur->draw(window);
-    
+    joueur->draw(window);
+    std::cout << "Unite draw : (" << joueur->getX() << ", " << joueur->getY() << ")" << endl;
+    std::cout << "Unite box: (" << joueur->getBox()->GetPosition().x << ", " << joueur->getBox()->GetPosition().y << ")" << endl;
 }
 
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
@@ -39,11 +39,12 @@ void SceneManager::Update(std::map<std::string, sf::Texture>& textDictionnary, b
     for (auto& i : pickUps) {
         i.Update(this);
     }
-    for (auto& i : ennemis) {
-        i.Update(this);
-    }
-    joueur.Update(this);
-    */
+    //for (std::vector<std::unique_ptr<Ennemi>>::iterator it = ennemis.begin(); it != ennemis.end(); it++) {
+    for (int i = 0; i < ennemis.size(); i++) {
+        ennemis[i]->Update(*this, i);
+    }*/
+    joueur->update();
+    
 }
 
 
@@ -72,7 +73,7 @@ void SceneManager::MettreJoueurAbri() {
 void SceneManager::RemovePickUp(int idPickUp) {
     pickUps.erase(pickUps.begin() + idPickUp);
 }
-// Enlève un pickup donné du vector
+// Enlève un ennemi donné du vector
 void SceneManager::RemoveEnnemi(int idEnnemi) {
     ennemis.erase(ennemis.begin() + idEnnemi);
 }
@@ -118,8 +119,9 @@ void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& textDictionn
         //pugi::xml_node node = doc.child(nomNoeud); // On recupère le noeud XML de la salle à charger
         pugi::xml_node node = doc.child("Salle0");
 
+       
         joueur->setXY(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
-        
+
         AddStatic(textDictionnary, world, node.child("Statics"));
         AddEnnemi(textDictionnary, world, node.child("Ennemis"));
         AddPickup(textDictionnary, world, node.child("PickUps"));

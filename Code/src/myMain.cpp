@@ -11,6 +11,8 @@
 #include <assert.h>
 
 
+
+
 using namespace std;
 
 
@@ -30,7 +32,7 @@ int myMain()
     // Prepare for simulation. Typically we use a time step of 1/60 of a
     // second (60Hz) and 10 iterations. This provides a high quality simulation
     // in most game scenarios.
-    b2Vec2 gravity(0.0f, -10.0f);
+    b2Vec2 gravity(0.0f, -200.0f);
     b2World world(gravity);
     float timeStep = 1.0f / 60.0f;
     int32 velocityIterations = 6;
@@ -63,7 +65,7 @@ int myMain()
         world.Step(timeStep, velocityIterations, positionIterations);
 
         // Update des éléments
-   
+        manager.Update(textDictionnary, world);
         
 
         // Dessin des différents sprites

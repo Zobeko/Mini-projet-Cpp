@@ -3,7 +3,7 @@
 #include "SceneManager.h"
 #include "myMain.h"
 
-Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(0, 0, dimensions, dimensions, "Hero.png", textDictionnary, world) {
+Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 128, 128, "Hero.png", textDictionnary, world) {
 	direction = false;
 	mirror = false;
 	std::vector<int> anim = {0, 0}; //A confirmer avec Louis
@@ -102,6 +102,8 @@ void Joueur::gestionInputsTypeDep() {
 	anim[1] = 0;
 	speed = speedBase;
 }
+
+
 #pragma endregion
 
 #pragma region Méthodes de mise des drapeaux

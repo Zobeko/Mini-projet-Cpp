@@ -21,8 +21,7 @@ Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName, std::map<s
 	sprite.setPosition(x, (WINDOW_HEIGHT - y));	// à modifier pour avoir le sprite au bon endroit
 	sprite.setTextureRect(sf::IntRect(0, 0, _l, _h)); //idem ?
 
-	std::cout << "Unite position : (" << x << ", " << y << ")" << std::endl;
-	std::cout << "Sprite position : (" << sprite.getPosition().x << ", " << sprite.getPosition().y << ")" << std::endl;
+	
 }
 
 
@@ -43,6 +42,7 @@ void Unite::setXY(int _x, int _y) {
 	//Change la position de Unite
 	x = _x;
 	y = _y;
+
 	
 
 	// Change la position de la texture sur celle de Unite
