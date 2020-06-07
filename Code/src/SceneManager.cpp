@@ -162,6 +162,17 @@ void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary
         }
         
     }
+    for (pugi::xml_node _n : n.children("Porte")) {
+        cout << "Ajout d'une porte" << endl;
+        auto st = std::make_unique<PickUp>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 64, 64, "Porte.png", textDictionnary);
+        pickUps.push_back(std::move(st));
+    }
+    for (pugi::xml_node _n : n.children("Clef")) {
+        cout << "Ajout d'une clef" << endl;
+        auto st = std::make_unique<PickUp>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "Clef.png", textDictionnary);
+        pickUps.push_back(std::move(st));
+    }
+
 }
 // Méthode permettant de faire une petite attente
 void SceneManager::Attente() {
