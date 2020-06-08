@@ -29,8 +29,9 @@ void SceneManager::draw(sf::RenderWindow& window) {
         i->draw(window);
     }
     joueur->draw(window);
-    std::cout << "Joueur Unite : (" << joueur->getX() << ", " << joueur->getY() << ")" << endl;
-    std::cout << "Joueur Box : (" << joueur->getBox()->GetPosition().x << ", " << joueur->getBox()->GetPosition().y << ")" << endl;
+    //std::cout << "Joueur Unite : (" << joueur->getX() << ", " << joueur->getY() << ")" << endl;
+    //std::cout << "Joueur Box : (" << joueur->getBox()->GetPosition().x << ", " << joueur->getBox()->GetPosition().y << ")" << endl;
+    
     //joueur->getBox()->GetFixtureList();
 }
 
@@ -48,8 +49,14 @@ void SceneManager::Update(std::map<std::string, sf::Texture>& textDictionnary,b2
     for (int i = 0; i < ennemis.size(); i++) {
         ennemis[i]->Update(*this, i);
     }*/
-    for (auto& i : tiles) {
-        i->Update(*this);
+    std::cout << "--------------------------------------------" << endl;
+    /*for (auto& i : tiles) {
+        i->Update(this);
+        std::cout << joueur->grounded << endl;
+    }*/
+    for (int i = 0; i < tiles.size(); i++) {
+        tiles[i]->Update(*this);
+        std::cout << joueur->walled << endl;
     }
 
     joueur->update();
@@ -61,8 +68,8 @@ void SceneManager::Update(std::map<std::string, sf::Texture>& textDictionnary,b2
 
 #pragma region Méthodes liées à la manipulation des éléments du niveau
 // Renvoie une référence vers le joueur
-Joueur& SceneManager::getJoueur() {
-    return *joueur;
+std::unique_ptr<Joueur>& SceneManager::getJoueur() {
+    return joueur;
 }
 // Bloque le jeu pendant un certain temps puis recharge la salle précédente
 void SceneManager::tuerJoueur() {

@@ -16,7 +16,7 @@ public:
 	void draw(sf::RenderWindow& window);
 	void Update(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
 
-	Joueur& getJoueur();
+	std::unique_ptr<Joueur>& getJoueur();
 	void tuerJoueur();
 	void MettreJoueurAbri();
 	void RemovePickUp(int idPickUp);

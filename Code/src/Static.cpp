@@ -11,9 +11,9 @@ Static::Static(int _x, int _y, int _h, int _l, std::string textureName, std::map
 
 
 void Static::Update(SceneManager& sceneManager) {
-	Joueur j = sceneManager.getJoueur();
-	CheckGrounded(j);
-	CheckWalled(j);
+	//Joueur j = *sceneManager.getJoueur();
+	CheckGrounded(*sceneManager.getJoueur());
+	CheckWalled(*sceneManager.getJoueur());
 	//Unite::setXY(getBox()->GetPosition().x, getBox()->GetPosition().y);
 }
 
@@ -23,8 +23,8 @@ void Static::CheckGrounded(Joueur& j) {
 	if (centre - margeDetect < (j.getY() - j.getH()) && (j.getY() - j.getH()) < centre + margeDetect) {
 		getSprite().setColor(sf::Color::Red);
 		// Ok pour la hauteur, checkons sur x
-		int limiteGaucheX = getX() - margeDetect;
-		int limiteDroiteX = getX() + getL() + margeDetect;
+		int limiteGaucheX = getX(); //-margeDetect;
+		int limiteDroiteX = getX() + getL();  //+margeDetect;
 		if (((limiteGaucheX < j.getX()) && (j.getX() < limiteDroiteX)) || ((limiteGaucheX < j.getX() + j.getL()) && (j.getX() + j.getL() < limiteDroiteX))) {
 			//Le joueur est bien au-dessus de la tile : on le définie comme grounded :
 			j.SetGroundedFlag(true);
@@ -46,15 +46,17 @@ void Static::CheckWalled(Joueur& j) {
 }
 void Static::CheckWalledDroite(Joueur& j) {
 	int centreXjoueur = j.getX() + j.getL();
-	int centreYjoueur = j.getY() + j.getH() / 2;
-	if (((getX() - margeDetect < centreXjoueur) & (centreXjoueur < getX() + margeDetect)) & ((getY() - margeDetect < centreYjoueur) & (centreYjoueur < getY() + getH() + margeDetect))) {
+	int centreYjoueur = j.getY() - j.getH() / 2;
+	if (((getX() - margeDetect < centreXjoueur) & (centreXjoueur < getX() + margeDetect)) & ((getY() - margeDetect - getH() < centreYjoueur) & (centreYjoueur < getY() + margeDetect))) {
 		j.SetWalledFlag(true);
+		getSprite().setColor(sf::Color::Green);
 	}
 }
 void Static::CheckWalledGauche(Joueur& j) {
 	int centreX = getX() + getL();
-	int centreYjoueur = j.getY() + j.getH() / 2;
-	if (((centreX - margeDetect < j.getX()) & (j.getX() < centreX + margeDetect)) & ((getY() - margeDetect < centreYjoueur) & (centreYjoueur < getY() + getH() + margeDetect))) {
+	int centreYjoueur = j.getY() - j.getH() / 2;
+	if (((centreX - margeDetect < j.getX()) & (j.getX() < centreX + margeDetect)) & ((getY() - margeDetect - getH() < centreYjoueur) & (centreYjoueur < getY()  + margeDetect))) {
 		j.SetWalledFlag(true);
+		getSprite().setColor(sf::Color::Green);
 	}
 }

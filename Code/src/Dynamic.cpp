@@ -29,7 +29,7 @@ void Dynamic::setVelocityXY(int speedX, int speedY) {
 
 	box->SetTransform(b2Vec2(x + speedX, y + speedY), 0);*/
 
-	std::cout << "Vitesse : (" << getBox()->GetLinearVelocity().x << ", " << getBox()->GetLinearVelocity().y << ")" << std::endl;
+	//std::cout << "Vitesse : (" << getBox()->GetLinearVelocity().x << ", " << getBox()->GetLinearVelocity().y << ")" << std::endl;
 	
 }
 

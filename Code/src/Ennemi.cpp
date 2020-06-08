@@ -9,7 +9,7 @@ Ennemi::Ennemi(int _x, int _y, int _h, int _l, std::string textureName, std::map
 // Malgrès une similitude d'utilisation, elle n'est pas hérité de Static car a des arguments différents,
 // un comportement différent, et est appelée à un autre endroit
 void Ennemi::Update(SceneManager& sceneManager, int idEnnemi) {
-	Joueur j = sceneManager.getJoueur();
+	Joueur j = *sceneManager.getJoueur();
 	if (CheckCollision(j)) {
 		OnCollisionAction(sceneManager, idEnnemi);
 	}
@@ -37,7 +37,7 @@ bool Ennemi::CheckCollision(Joueur& j) {
 }
 
 void Ennemi::OnCollisionAction(SceneManager& sceneManager, int idEnnemi) {
-	Joueur j = sceneManager.getJoueur();
+	Joueur j = *sceneManager.getJoueur();
 	if (mortel) {
 		//test sur la hauteur
 		if (j.getY() > getY() + 0.95 * getH()) {
