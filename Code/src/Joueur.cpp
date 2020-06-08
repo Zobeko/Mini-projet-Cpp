@@ -31,6 +31,7 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 
 void Joueur::update() {
 
+	
 	Dynamic::update();
 	getInputs();
 
@@ -53,8 +54,15 @@ void Joueur::update() {
 	std::cout << "anim.x : " << anim.x << std::endl;
 	std::cout << "anim.y : " << anim.y  << std::endl;
 
+	if (direction) {
+		getSprite().setTextureRect(sf::IntRect((anim.x+1) * dimensions, anim.y * dimensions, -dimensions, dimensions));
+	}
+	else {
+		getSprite().setTextureRect(sf::IntRect(anim.x * dimensions, anim.y * dimensions, dimensions, dimensions));
+	}
 
-	getSprite().setTextureRect(sf::IntRect(anim.x * dimensions, anim.y * dimensions, dimensions, dimensions));
+	cout << "Speed : " << speed << endl;
+	
 	
 }
 
@@ -112,7 +120,7 @@ void Joueur::gestionInputsJump() {
 
 			setVelocityXY(speed, jumpForce);
 		}
-		if (direction == false) {
+		if (direction == true) {
 
 			setVelocityXY(-speed, jumpForce);
 		}
@@ -124,17 +132,18 @@ void Joueur::gestionInputsJump() {
 //Gestion des inputs de de type de déplacements (marche, course ou mirroir)
 //Modification des vitesses et numéros de sprites adéquat
 void Joueur::gestionInputsTypeDep() {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))) {
 		anim.y = 0;
-		speed = 1.5 * speedBase;
+		speed = 1.5f * speedBase;
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl)) {
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl) && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))) {
 		anim.y = 1;
-		speed = -0.6 * speedBase;
+		speed = - 0.5f * speedBase;
 	}
-	
-	anim.y = 0;
-	speed = speedBase;
+	else {
+		anim.y = 0;
+		speed = speedBase;
+	}
 }
 
 

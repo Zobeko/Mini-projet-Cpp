@@ -9,7 +9,7 @@
 	<Statics>
 		<!-- Sol -->
 	    <Pierre x="0" y="0"/> 
-		
+		<Pierre x="32" y="0"/>
 		<Pierre x="64" y="0"/>
 		<Pierre x="96" y="0"/>
 		<Pierre x="128" y="0"/>

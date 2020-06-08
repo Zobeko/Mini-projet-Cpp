@@ -35,7 +35,7 @@ UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string tex
     b2FixtureDef fixtureDef;
     fixtureDef.shape = &shape;
     fixtureDef.density = 1.0f;
-    fixtureDef.friction = 0.3f;
+    fixtureDef.friction = 0.9f;
     body->CreateFixture(&fixtureDef);
 
     // Défini le dataUser pour pouvoir gérer les collisions
