@@ -20,6 +20,7 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& textDictionnary, 
 void SceneManager::draw(sf::RenderWindow& window) {
     for (auto& i : tiles) {
         i->draw(window);
+        
     }
     for (auto& i : pickUps) {
         i->draw(window);
@@ -28,8 +29,8 @@ void SceneManager::draw(sf::RenderWindow& window) {
         i->draw(window);
     }
     joueur->draw(window);
-    std::cout << "Unite draw : (" << joueur->getX() << ", " << joueur->getY() << ")" << endl;
-    std::cout << "Unite box: (" << joueur->getBox()->GetPosition().x << ", " << joueur->getBox()->GetPosition().y << ")" << endl;
+    std::cout << "Joueur Unite : (" << joueur->getX() << ", " << joueur->getY() << ")" << endl;
+    std::cout << "Joueur Box : (" << joueur->getBox()->GetPosition().x << ", " << joueur->getBox()->GetPosition().y << ")" << endl;
 }
 
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
@@ -39,7 +40,7 @@ void SceneManager::Update(std::map<std::string, sf::Texture>& textDictionnary, b
     for (auto& i : pickUps) {
         i.Update(this);
     }
-    //for (std::vector<std::unique_ptr<Ennemi>>::iterator it = ennemis.begin(); it != ennemis.end(); it++) {
+    
     for (int i = 0; i < ennemis.size(); i++) {
         ennemis[i]->Update(*this, i);
     }*/
@@ -134,6 +135,7 @@ void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary
     for (pugi::xml_node _n : n.children("Pierre")) {
         cout << "Ajout d'une pierre" << endl;
         auto st = std::make_unique<Static>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "TilePierre.png", textDictionnary, world);
+        std::cout << "Pierre position : (" << _n.attribute("x").as_int() << ", " << _n.attribute("y").as_int() << ")" << std::endl;
         tiles.push_back(std::move(st));
     }
     // faire une boucle for pour les tiles plus générales, désignées par Static et comportant tous les attributs

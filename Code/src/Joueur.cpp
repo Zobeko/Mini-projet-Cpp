@@ -26,6 +26,15 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 	}
 }
 
+void Joueur::update() {
+	Dynamic::update();
+
+	gestionInputsDir();
+	gestionInputsJump();
+	//getInputs();
+
+}
+
 #pragma region Méthodes liées aux inputs
 
 //Gestions des inputs (appel des différentes gestion d'inputs)

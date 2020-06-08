@@ -16,15 +16,17 @@ using namespace std;
 //Static (bodyType = b2_staticBody)
 UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, b2BodyType bodyType, b2World &world) : Unite(_x, _y, _h, _l, textureName, textDictionnary)
 {
+    std::cout << "Constructeur de UnitePhysic : (" << _h << ", " << _l << ")" << std::endl;
     //Crée une boite de collision et initialise sa position et son bodyType (static ou dynamic)
     b2BodyDef bodyDef;
     bodyDef.type = bodyType;
-    bodyDef.position.Set(_x/30.f, _y/30.f);
+    bodyDef.position.Set(_x-20, _y+30);
     b2Body* body = world.CreateBody(&bodyDef);
+    std::cout << "BodyDef position : (" << bodyDef.position.x << ", " << bodyDef.position.y << ")" << std::endl;
 
     // Defini la forme de la boite de collision souhaitée (ici un rectangle) et initialise ses dimensions
     b2PolygonShape shape;
-    shape.SetAsBox(_h, _l); //_h=54 et _l=54 pour que ca marche bien
+    shape.SetAsBox((_l/3), (_h)); //_h=54 et _l=54 pour que ca marche bien pour le perso
 
     
 
@@ -39,6 +41,8 @@ UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName
     body->SetUserData(this);
 
     box = body;
+    std::cout << "Box : (" << getBox()->GetPosition().x << ", " << getBox()->GetPosition().y << ")" << endl;
+    std::cout << "Box origin : (" << getBox()->GetLocalPoint(b2Vec2 (0, 0)).x << ", " << getBox()->GetLocalPoint(b2Vec2(0, 0)).y << ")" << std::endl;
 }
 
 //Permet de récupéré la boite de collision
