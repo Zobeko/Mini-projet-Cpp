@@ -3,10 +3,13 @@
 #include "SceneManager.h"
 #include "myMain.h"
 
-Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 128, 128, "Hero.png", textDictionnary, world) {
+//A enlever
+#include <iostream>
+
+Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 32, 32, "persoSprite.png", textDictionnary, world) {
 	direction = false;
 	mirror = false;
-	std::vector<int> anim = {0, 0}; //A confirmer avec Louis
+	texturePerso.loadFromFile("persoSprite.png");
 }
 
 
@@ -27,12 +30,21 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 }
 
 void Joueur::update() {
+
 	Dynamic::update();
+	getInputs();
 
-	gestionInputsDir();
-	gestionInputsJump();
-	//getInputs();
+	anim.x++;
+	if (anim.x * 32 >= texturePerso.getSize().x) {
+		anim.x = 0;
 
+	}
+	std::cout << "anim.x : " << anim.x << std::endl;
+	std::cout << "anim.y : " << anim.y  << std::endl;
+
+
+	getSprite().setTextureRect(sf::IntRect(anim.x * 32, anim.y * 32, 32, 32));
+	
 }
 
 #pragma region Méthodes liées aux inputs
@@ -48,12 +60,12 @@ void Joueur::getInputs() {
 
 	//Si le joueur n'est pas au sol, alors on déclenche l'animation de saut
 	if (!grounded) {
-		anim[1] = 3;
+		anim.y = 3;
 	}
 	//Si le joueur n'est pas au sol et est collé à un mur, alors on déclenche
 	//l'animation de wall jump tant qu'il est collé au mur
 	if (!grounded && walled) {
-		anim[1] = 4;
+		anim.y = 4;
 	}
 	
 }
@@ -100,15 +112,15 @@ void Joueur::gestionInputsJump() {
 //Modification des vitesses et numéros de sprites adéquat
 void Joueur::gestionInputsTypeDep() {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)) {
-		anim[1] = 0;
+		anim.y = 0;
 		speed = 1.5 * speedBase;
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl)) {
-		anim[1] = 1;
+		anim.y = 1;
 		speed = -0.6 * speedBase;
 	}
 	
-	anim[1] = 0;
+	anim.y = 0;
 	speed = speedBase;
 }
 

@@ -14,22 +14,22 @@ using namespace std;
 //avec la meme position, les mêmes dimensions
 //Le parametre b2BodyDef bodyType sera précisé dans les constructeurs des 2 classes filles de UnitePhysic : Dynamic (bodyType = b2_dynamicBody) et
 //Static (bodyType = b2_staticBody)
-UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, b2BodyType bodyType, b2World &world) : Unite(_x, _y, _h, _l, textureName, textDictionnary)
+UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, b2BodyType bodyType, b2World &world) : Unite(_x, _y, _h, _l, textureName, textDictionnary)
 {
     std::cout << "Constructeur de UnitePhysic : (" << _h << ", " << _l << ")" << std::endl;
     //Crée une boite de collision et initialise sa position et son bodyType (static ou dynamic)
     b2BodyDef bodyDef;
     bodyDef.type = bodyType;
-    bodyDef.position.Set(_x-20, _y+30);
+    bodyDef.position.Set(_x - (_l*1.5f), _y + _h*1.5f);
+    bodyDef.fixedRotation;
     b2Body* body = world.CreateBody(&bodyDef);
     std::cout << "BodyDef position : (" << bodyDef.position.x << ", " << bodyDef.position.y << ")" << std::endl;
 
     // Defini la forme de la boite de collision souhaitée (ici un rectangle) et initialise ses dimensions
     b2PolygonShape shape;
-    shape.SetAsBox((_l/3), (_h)); //_h=54 et _l=54 pour que ca marche bien pour le perso
 
     
-
+    shape.SetAsBox((_l/2.f), (_h/2.f)); //_h=54 et _l=54 pour que ca marche bien pour le perso
     // Défini les caractéristiques de notre boite de collision
     b2FixtureDef fixtureDef;
     fixtureDef.shape = &shape;
@@ -58,6 +58,8 @@ void UnitePhysic::setXY(int _x, int _y)
     std::cout << "Unite : (" << Unite::getX() << ", " << Unite::getY() << ")" << endl;
     box->SetTransform(b2Vec2(_x, _y), 0);
     std::cout << "Box : (" << getBox()->GetPosition().x << ", " << getBox()->GetPosition().y << ")" << endl;
+    
+
 }
 
 

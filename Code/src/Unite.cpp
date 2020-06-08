@@ -19,7 +19,7 @@ Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName, std::map<s
 	setSprite(_h, _l, textureName, textDictionnary);
 	
 	sprite.setPosition(x, (WINDOW_HEIGHT - y));	// à modifier pour avoir le sprite au bon endroit
-	sprite.setTextureRect(sf::IntRect(0, 0, _l, _h)); //idem ?
+	//sprite.setTextureRect(sf::IntRect(0, 0, _l, _h)); //idem ?
 
 	
 }
@@ -36,6 +36,10 @@ int Unite::getH() {
 }
 int Unite::getL() {
 	return l;
+}
+
+sf::Sprite& Unite::getSprite() {
+	return sprite;
 }
 
 void Unite::setXY(int _x, int _y) {
@@ -66,7 +70,7 @@ void Unite::setSprite(int _h, int _l, std::string textureName, std::map<std::str
 		// On assigne bien la texture issue du dictionnaire à l'unite pour eviter les pb de variables locales
 		sprite.setTexture(textDictionnary[textureName]);
 	}
-	sprite.setTextureRect(sf::IntRect(0, 0, _l, _h));
+	//sprite.setTextureRect(sf::IntRect(0, 0, _l, _h));
 }
 
 void Unite::draw(sf::RenderWindow& window) {

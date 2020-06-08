@@ -3,7 +3,6 @@
 #include "pugixml.hpp"
 #include <SFML/Graphics.hpp>
 #include "box2d/box2d.h"
-
 #include "SceneManager.h"
 
 #include <iostream>
@@ -27,6 +26,8 @@ int myMain()
     float fpsCount = 0,
         switchFps = 100,
         fpsSpeed = 500;
+
+    
 
     // Mise en place des paramétres pour la simulation
     // Prepare for simulation. Typically we use a time step of 1/60 of a
