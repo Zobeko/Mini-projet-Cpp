@@ -10,9 +10,10 @@ Clef::Clef(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary) 
 }
 
 
-
+/*
 // (Override) Action à réaliser lorsque le joueur touche la clef : débloquer la salle + detruire la pièce
 void Clef::ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) {
 	sceneManager.unLockDoor();
 	sceneManager.RemovePickUp(iDpickUp);
 }
+*/

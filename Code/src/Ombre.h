@@ -10,6 +10,6 @@ public:
 	bool intersect(Unite & _unite) override;
 
 private:
-	void ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) override; 
+	//void ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) override; 
 };
 

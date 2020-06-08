@@ -9,8 +9,8 @@ class Piece : public PickUp
 {
 public:
 	Piece(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary, int _value);
+	void Update(SceneManager& sceneManager, int iDpickUp) override;
 
 private:
 	int value;
-	void ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) override;
 };

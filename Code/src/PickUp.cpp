@@ -14,9 +14,14 @@ PickUp::PickUp(int _x, int _y, int _h, int _l, std::string textureName, std::map
 bool PickUp::intersect(Unite & _unite) {
 	//test sur la hauteur :
 		// est-ce qu'il y a correspondance par le dessus (unite plus haut que this)
+	bool uniteInterDessus = (getY() - getH() < _unite.getY()) & (getY() > _unite.getY() - _unite.getH());
+		// est-ce qu'il y a correspondance par le dessous (unite plus bas que this)
+	bool uniteInterDessous = (_unite.getY() - _unite.getH() < getY()) & (_unite.getY() > getY() + getH());
+	/*
 	bool uniteInterDessus = (getY() < _unite.getY() + _unite.getH()) & (getY() + getH() > _unite.getY());
 		// est-ce qu'il y a correspondance par le dessous (unite plus bas que this)
 	bool uniteInterDessous = (_unite.getY() < getY() + getH()) & (_unite.getY() + _unite.getH() > getY());
+	*/
 
 	if (uniteInterDessus || uniteInterDessous) {
 		//hauteur : ok => intersection possible => test sur la longueur :
@@ -37,12 +42,6 @@ bool PickUp::intersect(Unite & _unite) {
 void PickUp::Update(SceneManager & sceneManager, int iDpickUp) {
 	//Unite* joueur = ;
 	if (intersect(*sceneManager.getJoueur())) {
-		ActionOnIntersect(sceneManager, iDpickUp);
+		sceneManager.RemovePickUp(iDpickUp);
 	}
-}
-
-// Action à réaliser lorsque le joueur touche le pickup : par défaut, le détruire
-void PickUp::ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) {
-	// Par defaut : enleve le pickUp du vector
-	sceneManager.RemovePickUp(iDpickUp);
 }

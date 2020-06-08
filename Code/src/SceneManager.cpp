@@ -4,6 +4,11 @@
 #include "pugixml.hpp"
 #include <SFML/Graphics.hpp>
 
+#include "Piece.h"
+#include "Clef.h"
+#include "Porte.h"
+#include "Ombre.h"
+
 // à enlever après
 #include <iostream>
 
@@ -41,22 +46,25 @@ void SceneManager::Update(std::map<std::string, sf::Texture>& textDictionnary,b2
     joueur->SetWalledFlag(false);
 	joueur->SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
     
-    /*
-    for (auto& i : pickUps) {
-        i.Update(this);
-    }
     
+    
+    for (int i = 0; i < pickUps.size(); i++) {
+        pickUps[i]->Update(*this,i);
+        //std::cout << joueur->walled << endl;
+    }
+
+    /*
     for (int i = 0; i < ennemis.size(); i++) {
         ennemis[i]->Update(*this, i);
     }*/
-    std::cout << "--------------------------------------------" << endl;
+    //std::cout << "--------------------------------------------" << endl;
     /*for (auto& i : tiles) {
         i->Update(this);
         std::cout << joueur->grounded << endl;
     }*/
     for (int i = 0; i < tiles.size(); i++) {
         tiles[i]->Update(*this);
-        std::cout << joueur->walled << endl;
+        //std::cout << joueur->walled << endl;
     }
 
     joueur->update();
@@ -168,19 +176,8 @@ void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary
 void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("Piece")) {
         cout << "Ajout d'une piece" << endl;
-        if (_n.attribute("value").as_int() == 1) {
-            auto st = std::make_unique<PickUp>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "Piece1.png", textDictionnary);
-            pickUps.push_back(std::move(st));
-        }
-        else if (_n.attribute("value").as_int() == 5) {
-            auto st = std::make_unique<PickUp>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "Piece5.png", textDictionnary);
-            pickUps.push_back(std::move(st));
-        }
-        else if (_n.attribute("value").as_int() == 10) {
-            auto st = std::make_unique<PickUp>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "Piece10.png", textDictionnary);
-            pickUps.push_back(std::move(st));
-        }
-        
+        auto st = std::make_unique<Piece>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary, _n.attribute("value").as_int());
+        pickUps.push_back(std::move(st));     
     }
     for (pugi::xml_node _n : n.children("Porte")) {
         cout << "Ajout d'une porte" << endl;

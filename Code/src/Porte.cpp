@@ -10,7 +10,7 @@ Porte::Porte(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary
 }
 
 
-
+/*
 // (Override) Action à réaliser lorsque le joueur touche la clef : débloquer la salle + detruire la pièce
 // remarque : ici le iDpickUp ne sert à rien mais on le garde de l'hérite de l'override
 void Porte::ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) {
@@ -19,3 +19,4 @@ void Porte::ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) {
 		sceneManager.chargerSalleSuivante();
 	}
 }
+*/

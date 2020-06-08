@@ -25,8 +25,10 @@ bool Ombre::intersect(Unite & _unite) {
 	return false;
 }
 
+/*
 // Action à executer quand le joueur est dans l'ombre : il faut le déclarer à l'abri
 // Comme pour la porte, le iDpickUp est inutile mais conservé de l'héritage
 void Ombre::ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) {
 	sceneManager.MettreJoueurAbri();
 }
+*/

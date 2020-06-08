@@ -13,7 +13,9 @@ Piece::Piece(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary
 
 
 // (Override) Action à réaliser lorsque le joueur touche la pièce : augmenter le compteur de SceneManager + detruire la pièce
-void Piece::ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) {
-	sceneManager.nbPiece += value;
-	sceneManager.RemovePickUp(iDpickUp);
+void Piece::Update(SceneManager& sceneManager, int iDpickUp) {
+	if (intersect(*sceneManager.getJoueur())) {
+		sceneManager.nbPiece += value;
+		sceneManager.RemovePickUp(iDpickUp);
+	}	
 }
