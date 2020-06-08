@@ -36,8 +36,10 @@ private:
 	sf::Vector2i anim = { 1, Marcher};//Vecteur dont x contient les numéro de sprite à afficher (de 1 à 3) et y un bool disant que quelle direction on est
 	bool grounded = true;
 	bool walled = false;
-	int const dimensions = 32;
+	int const dimensions = 64;
 	sf::Texture texturePerso;
+	sf::Clock clock;
+	float fpsCount = 0, fpsSpeed = 700, fpsSwitch = 100;
 
 };
 

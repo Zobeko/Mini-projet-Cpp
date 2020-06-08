@@ -6,10 +6,10 @@
 //A enlever
 #include <iostream>
 
-Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 32, 32, "persoSprite.png", textDictionnary, world) {
+Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 64, 64, "Hero.png", textDictionnary, world) {
 	direction = false;
 	mirror = false;
-	texturePerso.loadFromFile("persoSprite.png");
+	texturePerso.loadFromFile("Hero.png");
 }
 
 
@@ -34,16 +34,27 @@ void Joueur::update() {
 	Dynamic::update();
 	getInputs();
 
-	anim.x++;
-	if (anim.x * 32 >= texturePerso.getSize().x) {
-		anim.x = 0;
 
+	//Gestion animation personnage déplacements
+
+	fpsCount += fpsSpeed * clock.restart().asSeconds();
+
+
+
+	if (fpsCount >= fpsSwitch) {
+		anim.x++;
+		if (anim.x * 32 >= 96) {
+			anim.x = 0;
+
+		}
+		fpsCount = 0;
 	}
+
 	std::cout << "anim.x : " << anim.x << std::endl;
 	std::cout << "anim.y : " << anim.y  << std::endl;
 
 
-	getSprite().setTextureRect(sf::IntRect(anim.x * 32, anim.y * 32, 32, 32));
+	getSprite().setTextureRect(sf::IntRect(anim.x * dimensions, anim.y * dimensions, dimensions, dimensions));
 	
 }
 
@@ -54,6 +65,8 @@ void Joueur::update() {
 //la vitesse et les autes gestionInputs dépendent de cette vitesse
 void Joueur::getInputs() {
 
+	std::cout << "Grounded : " << grounded << std::endl;
+	std::cout << "Walled : " << walled << std::endl;
 	gestionInputsTypeDep();
 	gestionInputsDir();
 	gestionInputsJump();

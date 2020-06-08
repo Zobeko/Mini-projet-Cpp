@@ -16,7 +16,7 @@ protected: // Pour que les classes héritées y aient accès et puissent réécrire l
 	void CheckWalled(Joueur& j);
 	void CheckWalledDroite(Joueur& j);
 	void CheckWalledGauche(Joueur& j);
-	float const margeDetect = 0.1f;
+	float const margeDetect = 6.f;
 
 };
 

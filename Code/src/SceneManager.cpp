@@ -35,8 +35,11 @@ void SceneManager::draw(sf::RenderWindow& window) {
 }
 
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
-void SceneManager::Update(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) {
+void SceneManager::Update(std::map<std::string, sf::Texture>& textDictionnary,b2World& world) {
+    joueur->SetGroundedFlag(false);
+    joueur->SetWalledFlag(false);
 	joueur->SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
+    
     /*
     for (auto& i : pickUps) {
         i.Update(this);
@@ -45,7 +48,12 @@ void SceneManager::Update(std::map<std::string, sf::Texture>& textDictionnary, b
     for (int i = 0; i < ennemis.size(); i++) {
         ennemis[i]->Update(*this, i);
     }*/
+    for (auto& i : tiles) {
+        i->Update(*this);
+    }
+
     joueur->update();
+    
     
 }
 

@@ -42,6 +42,8 @@ int myMain()
     std::map<std::string, sf::Texture> textDictionnary;
     SceneManager manager(textDictionnary, world);
 
+    
+
 
     // Game Loop
     while (window.isOpen())
