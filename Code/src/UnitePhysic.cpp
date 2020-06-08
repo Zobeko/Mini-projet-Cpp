@@ -20,8 +20,9 @@ UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string tex
     //Crée une boite de collision et initialise sa position et son bodyType (static ou dynamic)
     b2BodyDef bodyDef;
     bodyDef.type = bodyType;
-    bodyDef.position.Set(_x - (_l*1.5f), _y + _h*1.5f);
+
     bodyDef.fixedRotation;
+    bodyDef.position.Set(_x + (_l/2), _y - (_h/2));
     b2Body* body = world.CreateBody(&bodyDef);
     std::cout << "BodyDef position : (" << bodyDef.position.x << ", " << bodyDef.position.y << ")" << std::endl;
 

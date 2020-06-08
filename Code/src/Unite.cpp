@@ -19,9 +19,7 @@ Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName, std::map<s
 	setSprite(_h, _l, textureName, textDictionnary);
 	
 	sprite.setPosition(x, (WINDOW_HEIGHT - y));	// à modifier pour avoir le sprite au bon endroit
-	//sprite.setTextureRect(sf::IntRect(0, 0, _l, _h)); //idem ?
-
-	
+	//sprite.setTextureRect(sf::IntRect(0, 0, _l, _h)); //idem 	
 }
 
 
