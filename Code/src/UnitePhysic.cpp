@@ -20,13 +20,13 @@ UnitePhysic::UnitePhysic(int _x, int _y, int _h, int _l, std::string textureName
     //Crée une boite de collision et initialise sa position et son bodyType (static ou dynamic)
     b2BodyDef bodyDef;
     bodyDef.type = bodyType;
-    bodyDef.position.Set(_x-20, _y+30);
+    bodyDef.position.Set(_x + (_l/2), _y - (_h/2));
     b2Body* body = world.CreateBody(&bodyDef);
     std::cout << "BodyDef position : (" << bodyDef.position.x << ", " << bodyDef.position.y << ")" << std::endl;
 
     // Defini la forme de la boite de collision souhaitée (ici un rectangle) et initialise ses dimensions
     b2PolygonShape shape;
-    shape.SetAsBox((_l/3), (_h)); //_h=54 et _l=54 pour que ca marche bien pour le perso
+    shape.SetAsBox((_l * 0.5f), (_h * 0.5f)); //_h=54 et _l=54 pour que ca marche bien pour le perso       // - b2_polygonRadius
 
     
 
