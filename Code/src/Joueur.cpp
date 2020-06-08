@@ -38,7 +38,7 @@ void Joueur::update() {
 
 	//Gestion animation personnage déplacements
 
-	fpsCount += fpsSpeed * clock.restart().asSeconds();
+	fpsCount += fpsSpeed * clockAnimation.restart().asSeconds();
 
 
 
@@ -94,17 +94,17 @@ void Joueur::getInputs() {
 //Gestions des inputs de direction, changement de vitesse adéquat
 //et changement de sprite
 void Joueur::gestionInputsDir() {
+	if (clockWallJump.getElapsedTime().asSeconds() > 0.8f) {
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+			direction = false;
+			setVelocityXY(-speed, getVelocityY());
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-		direction = false;
-		setVelocityXY(-speed, getVelocityY());
-
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+			direction = true;
+			setVelocityXY(speed, getVelocityY());
+		}
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-		direction = true;
-		setVelocityXY(speed, getVelocityY());
-	}
-
 }
 
 //Gestion des inputs liés aux differents types de saut (jump et wall jump)
@@ -112,13 +112,16 @@ void Joueur::gestionInputsDir() {
 //changement de sprite lié au saut géré dans getInputs() 
 void Joueur::gestionInputsJump() {
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && grounded == true) {
 		setVelocityXY(getVelocityX(), jumpForce);
+		
+		
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && grounded == false && walled == true) {
+		clockWallJump.restart().asSeconds();
 		if (direction == false) {
 
-			setVelocityXY(speed, jumpForce);
+			setVelocityXY(jumpForce, jumpForce);
 		}
 		if (direction == true) {
 

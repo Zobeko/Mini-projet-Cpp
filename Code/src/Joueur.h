@@ -40,7 +40,8 @@ private:
 	bool grounded = true;
 	int const dimensions = 64;
 	sf::Texture texturePerso;
-	sf::Clock clock;
+	sf::Clock clockAnimation;
+	sf::Clock clockWallJump;
 	float fpsCount = 0, fpsSpeed = 700, fpsSwitch = 100;
 
 };
