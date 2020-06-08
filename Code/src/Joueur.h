@@ -23,6 +23,9 @@ public:
 
 	void update();
 
+	bool walled = false;
+	
+
 private:
 	bool aLAbri = false; //False : joueur pas à l'abri, tuable par le regard de Meduse
 							//True : joueur à l'abri, peut regarder dans toutes les directions sans rien craindre
@@ -35,7 +38,6 @@ private:
 	enum animationStates {Marcher, Mirroir, Mourir, Jump, WallJump }; //Enum des différents types de déplacement, et donc différents sprites
 	sf::Vector2i anim = { 1, Marcher};//Vecteur dont x contient les numéro de sprite à afficher (de 1 à 3) et y un bool disant que quelle direction on est
 	bool grounded = true;
-	bool walled = false;
 	int const dimensions = 64;
 	sf::Texture texturePerso;
 	sf::Clock clock;

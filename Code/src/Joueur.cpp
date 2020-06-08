@@ -50,8 +50,8 @@ void Joueur::update() {
 		fpsCount = 0;
 	}
 
-	std::cout << "anim.x : " << anim.x << std::endl;
-	std::cout << "anim.y : " << anim.y  << std::endl;
+	//std::cout << "anim.x : " << anim.x << std::endl;
+	//std::cout << "anim.y : " << anim.y  << std::endl;
 
 
 	getSprite().setTextureRect(sf::IntRect(anim.x * dimensions, anim.y * dimensions, dimensions, dimensions));
@@ -65,8 +65,8 @@ void Joueur::update() {
 //la vitesse et les autes gestionInputs dépendent de cette vitesse
 void Joueur::getInputs() {
 
-	std::cout << "Grounded : " << grounded << std::endl;
-	std::cout << "Walled : " << walled << std::endl;
+	//std::cout << "Grounded : " << grounded << std::endl;
+	//std::cout << "Walled : " << walled << std::endl;
 	gestionInputsTypeDep();
 	gestionInputsDir();
 	gestionInputsJump();
@@ -148,6 +148,9 @@ void Joueur::SetALAbri(bool abri) {
 //Permet de dire si oui ou non le joueur est au sol
 void Joueur::SetGroundedFlag(bool GF) {
 	grounded = GF;
+	/*if (GF) {
+		std::cout << grounded << endl;
+	}*/
 }
 //Permet de dire si oui ou non le joueur est sur un mur
 void Joueur::SetWalledFlag(bool WF) {

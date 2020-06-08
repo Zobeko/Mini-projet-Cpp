@@ -36,7 +36,7 @@ bool PickUp::intersect(Unite & _unite) {
 // Routine de jeu du pickup : par défaut, regarde s'il y a intersection avec le joueur et si oui fait son action
 void PickUp::Update(SceneManager & sceneManager, int iDpickUp) {
 	//Unite* joueur = ;
-	if (intersect(sceneManager.getJoueur())) {
+	if (intersect(*sceneManager.getJoueur())) {
 		ActionOnIntersect(sceneManager, iDpickUp);
 	}
 }
