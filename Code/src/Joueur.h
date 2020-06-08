@@ -31,11 +31,13 @@ private:
 	int jumpForce = 500000; // Force de saut du joueur
 	bool direction; // direction = false : regarde vers la gauche, direction = true : regarde vers la droite
 	bool mirror; //mirror = true : mirroir activé ; mirror = false : désactivé
-	std::vector<int> anim; //Vecteur dont x contient les numéro de sprite à afficher (de 1 à 3) et y un bool disant que quelle direction on est
+	 //Vecteur dont x contient les numéro de sprite à afficher (de 1 à 3) et y un bool disant que quelle direction on est
 	enum animationStates {Marcher, Mirroir, Mourir, Jump, WallJump }; //Enum des différents types de déplacement, et donc différents sprites
+	sf::Vector2i anim = { 1, Marcher};//Vecteur dont x contient les numéro de sprite à afficher (de 1 à 3) et y un bool disant que quelle direction on est
 	bool grounded = true;
 	bool walled = false;
 	int const dimensions = 32;
+	sf::Texture texturePerso;
 
 };
 

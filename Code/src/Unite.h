@@ -12,6 +12,7 @@ public:
 	int getY();
 	int getH();
 	int getL();
+	sf::Sprite& getSprite();
 	virtual void setXY(int _x, int _y);
 	void setSprite(int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary);
 	void draw(sf::RenderWindow & window);

@@ -14,6 +14,7 @@ void Static::Update(SceneManager& sceneManager) {
 	Joueur j = sceneManager.getJoueur();
 	CheckGrounded(j);
 	CheckWalled(j);
+	Unite::setXY(getBox()->GetPosition().x, getBox()->GetPosition().y);
 }
 
 

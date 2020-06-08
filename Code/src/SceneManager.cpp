@@ -31,6 +31,7 @@ void SceneManager::draw(sf::RenderWindow& window) {
     joueur->draw(window);
     std::cout << "Joueur Unite : (" << joueur->getX() << ", " << joueur->getY() << ")" << endl;
     std::cout << "Joueur Box : (" << joueur->getBox()->GetPosition().x << ", " << joueur->getBox()->GetPosition().y << ")" << endl;
+    //joueur->getBox()->GetFixtureList();
 }
 
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
