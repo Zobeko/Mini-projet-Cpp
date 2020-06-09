@@ -9,9 +9,7 @@ CoteEnnemi::CoteEnnemi(int _cote, int _type, Ennemi* _owner) {
 	owner = _owner;
 }
 
-// Méthode Update qui regarde si le joueur est en collision avec l'ennemi en question (this)
-// Malgrès une similitude d'utilisation, elle n'est pas hérité de Static car a des arguments différents,
-// un comportement différent, et est appelée à un autre endroit
+// Méthode Update qui regarde si le joueur est en collision avec le coté
 bool CoteEnnemi::Update(SceneManager& sceneManager) {
 	if (CheckCollision(*sceneManager.getJoueur())) {
 		if (type == 0) {
@@ -37,23 +35,7 @@ bool CoteEnnemi::Update(SceneManager& sceneManager) {
 
 // Regarde si le joueur "touche" l'ennemi
 bool CoteEnnemi::CheckCollision(Joueur& j) {
-	/*
-	bool uniteInterDessus = (getY() - margeDetect < j.getY() + j.getH()) & (getY() + getH() + margeDetect > j.getY());
-	// est-ce qu'il y a correspondance par le dessous (unite plus bas que this)
-	bool uniteInterDessous = (j.getY() < getY() + getH() + margeDetect) & (j.getY() + j.getH() > getY() - margeDetect);
 
-	if (uniteInterDessus || uniteInterDessous) {
-		//hauteur : ok => intersection possible => test sur la longueur :
-			// est-ce qu'il y a correspondance par la droite (unite plus à droite que this)
-		bool uniteInterDroite = (getX() - margeDetect < j.getX() + j.getL()) & (getX() + getL() + margeDetect > j.getX());
-		// est-ce qu'il y a correspondance par le dessous (unite plus bas que this)
-		bool uniteInterDessous = (j.getX() < getX() + getL() + margeDetect) & (j.getX() + j.getL() > getX() - margeDetect);
-
-		if (uniteInterDroite || uniteInterDessous) {
-			// Il y a bien intersection => on renvoie true (on aurait pu renvoyé directement uniteInterDroite || uniteInterDessous mais c'est plus clair
-			return true;
-		}
-	}*/
 	int marge = owner->margeDetect;
 	if (cote == 0) {
 		//Cote haut

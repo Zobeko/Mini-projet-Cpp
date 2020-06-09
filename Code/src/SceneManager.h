@@ -42,7 +42,7 @@ private:
 	sf::Font font;
 
 	int idSalle;
-	int idLastSalle = 2;		//Nombre de salles à change avant rendu
+	int idLastSalle = 5;		//Nombre de salles à change avant rendu
 	int const delaiMort = 50;	//nombre de boucle while a faire pour "mettre en pause" le jeu lorsque le joueur meurt avant de redemmarer le niveau
 	sf::Clock timerTotal;
 	sf::Clock timerSalle;
