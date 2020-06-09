@@ -185,9 +185,11 @@ void SceneManager::finirJeu() {
     ImageDefond.setScale(WINDOW_WIDTH / 200.f, WINDOW_HEIGHT / 150.f);   
     levelSuivantFlag = false;
     joueur.reset();
+    textChronoSalle.setString(to_string(timerTotal.getElapsedTime().asSeconds()));
+    textChronoSalle.setCharacterSize(30);
+    textChronoSalle.setPosition(300, 550);
     gameFlag = false;
 }
-
 #pragma endregion
 
 #pragma region Méthodes pour load un niveau
