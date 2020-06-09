@@ -10,8 +10,9 @@ class Joueur : public Dynamic
 {
 public:
 	Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
-	bool getDirection();
-	bool getGrounded();
+	bool getDirection();//Renvoie walled
+	bool getGrounded();//Renvoie grounded
+
 	void checkMeduse(SceneManager &sceneManager); // Regarde si le joueur est à l'abri et si il regarde Meduse, 
 													//si il n'est pas à l'abri et regarde Meduse, alors il meurt
 	void getInputs();
@@ -48,11 +49,11 @@ private:
 	enum animationStates {Marcher, Mirroir, Mourir, Jump, WallJump }; //Enum des différents types de déplacement, et donc différents sprites
 	sf::Vector2i anim = { 1, Marcher};//Vecteur dont x contient les numéro de sprite à afficher (de 1 à 3) et y un bool disant que quelle direction on est
 
-	int const dimensions = 64;
-	sf::Texture texturePerso;
-	sf::Clock clockAnimation;
-	sf::Clock clockWallJump;
-	float fpsCount = 0, fpsSpeed = 700, fpsSwitch = 100;
+	int const dimensions = 64;//Dimension du sprite du joueur
+	sf::Texture texturePerso;//Texture du joueur
+	sf::Clock clockAnimation;//Horloge des animations
+	sf::Clock clockWallJump;//Horloge du wall jump
+	float fpsCount = 0, fpsSpeed = 700, fpsSwitch = 100; //Constantes pour reduire la fréquence d'affichage des animations
 
 };
 

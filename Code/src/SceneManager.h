@@ -11,26 +11,26 @@
 class SceneManager
 {
 public:
-	int nbPiece = 0;
-	SceneManager(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
-	void draw(sf::RenderWindow& window);
-	void Update();
-	void CheckTimer();
+	int nbPiece = 0;//Nombre de pieces 
+	SceneManager(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);//Constructeur
+	void draw(sf::RenderWindow& window);// Dessine le jeu (appelé à chaque fin de frame)
+	void Update();// Méthode appelée à chaque frame pour mettre à jour l'état du jeu
+	void CheckTimer();//Si le temps est ecoule, le joueur meurt
 
-	std::unique_ptr<Joueur> &getJoueur();
-	void checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);
-	void MettreJoueurAbri();
-	void RemovePickUp(int idPickUp);
-	void RemoveEnnemi(int idEnnemi);
+	std::unique_ptr<Joueur> &getJoueur();// Renvoie une référence vers le joueur
+	void checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);// Bloque le jeu pendant un certain temps puis recharge la salle précédente
+	void MettreJoueurAbri();//Mets joueur.ALabri à true
+	void RemovePickUp(int idPickUp);// Enlève un pickup donné du vector
+	void RemoveEnnemi(int idEnnemi);// Enlève un ennemi donné du vector + fait sauter le joueur (car si l'ennemi meurt c'est que le joueur lui saute dessus)
 
-	void unLockDoor();
-	bool getClefRecupere();
-	void checkSalleSuivante(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);
-	void chargerSalle(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);
-	void setLevelFlagTrue();
-	void setDeathFlagTrue();
+	void unLockDoor();// Débloque la porte (appelé lorsqu'une clef est attrapée)
+	bool getClefRecupere();// Renvoie un bool indiquant si la porte est ouverte ou non
+	void checkSalleSuivante(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);// Méthode appelée lorsqu'on veut passer au niveau suivant
+	void chargerSalle(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);// Charge la salle correspondant à l'idSalle actuel
+	void setLevelFlagTrue();// Mets le bool indiquant qu'il faut changer de niveau à true
+	void setDeathFlagTrue();// Mets le bool indiquant que le joueur est mort à true
 
-	void finirJeu();
+	void finirJeu();//Si on finit la derniere salle, on a finit le jeu
 
 
 private:
@@ -54,10 +54,10 @@ private:
 	std::vector<std::unique_ptr<PickUp>> pickUps;
 	bool clefRecupere = false;
 
-	void AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);
-	void AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);
-	void AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);
-	void ClearSalle();
+	void AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);// Ajoute un Static depuis un noeud XML
+	void AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);// Ajoute un Ennemi depuis un noeud XML
+	void AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);// Ajoute un Pickup depuis un noeud XML
+	void ClearSalle();//Efface tous les elements de la salle (pour en charger une autre)
 
 	bool levelSuivantFlag = false;
 	bool mortFlag = false;
