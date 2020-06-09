@@ -88,22 +88,15 @@ void SceneManager::Update() {
 
         for (int i = 0; i < pickUps.size(); i++) {
             pickUps[i]->Update(*this, i);
-            //std::cout << joueur->walled << endl;
         }
         for (int i = 0; i < ennemis.size(); i++) {
             ennemis[i]->Update(*this, i);
         }
-        //std::cout << "--------------------------------------------" << endl;
-        /*for (auto& i : tiles) {
-            i->Update(this);
-            std::cout << joueur->grounded << endl;
-        }*/
         for (int i = 0; i < tiles.size(); i++) {
             tiles[i]->Update(*this);
-            //std::cout << joueur->walled << endl;
         }
 
-        joueur->update();
+        joueur->update(*this);
 
         CheckTimer();
     }    
