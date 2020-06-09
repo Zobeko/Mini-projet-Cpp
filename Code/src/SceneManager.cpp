@@ -209,8 +209,8 @@ void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& _textDiction
         pugi::xml_node node = doc.child("Salle"); // On recupère le noeud XML de la salle à charger
         tempsSalle = node.child("Temps").attribute("t").as_int();
         cout << tempsSalle << endl;
-       
-        joueur->setXY(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
+        
+        joueur->init(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
 
         AddStatic(_textDictionnary, _world, node.child("Statics"));
         AddEnnemi(_textDictionnary, _world, node.child("Ennemis"));
