@@ -1,0 +1,18 @@
+#pragma once
+
+#include "EnnemiDecorateur.h"
+#include "Joueur.h"
+//#include "SceneManager.h"
+class SceneManager;
+
+class Ennemi : public EnnemiBase
+{
+public:
+	Ennemi(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, bool _mortel, b2World& world);
+	virtual ~Ennemi();
+	
+	void Update(SceneManager& sceneManager, int idEnnemi);
+	bool CheckCollision(Joueur& j);
+	void OnCollisionAction(SceneManager& sceneManager, int idEnnemi);
+};
+

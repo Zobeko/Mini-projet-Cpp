@@ -185,18 +185,25 @@ void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary
 }
 // Ajoute un Ennemi depuis un noeud XML
 void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
-    for (pugi::xml_node _n : n.children("Ennemi")) {
+    for (pugi::xml_node _n : n.children("EnnemiBlinde")) {
         cout << "Ajout d'un ennemi" << endl;
-        if (_n.attribute("mortel").as_int() == 1) {
-            // L'ennemi est Mortel
-            auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiMortel.png", textDictionnary, true, world);
-            ennemis.push_back(std::move(st));
-        }
-        else {
-            auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "Ennemi.png", textDictionnary, false, world);
-            ennemis.push_back(std::move(st));
-        }
-        
+        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "Ennemi.png", textDictionnary, world, 0,0,0,0);
+        ennemis.push_back(std::move(st));        
+    }
+    for (pugi::xml_node _n : n.children("EnnemiExpose")) {
+        cout << "Ajout d'un ennemi" << endl;
+        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiMortel.png", textDictionnary, world, 1, 0, 0, 0);
+        ennemis.push_back(std::move(st));
+    }
+    for (pugi::xml_node _n : n.children("EnnemiPlat")) {
+        cout << "Ajout d'un ennemi" << endl;
+        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
+        ennemis.push_back(std::move(st));
+    }
+    for (pugi::xml_node _n : n.children("EnnemiWall")) {
+        cout << "Ajout d'un ennemi" << endl;
+        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiWall.png", textDictionnary, world, 0, 2, 2, 0);
+        ennemis.push_back(std::move(st));
     }
 }
 // Ajoute un Pickup depuis un noeud XML

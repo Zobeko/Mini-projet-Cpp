@@ -3,34 +3,20 @@
 
 #include <iostream>
 
-Ennemi::Ennemi(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, b2World& world, int typeCote0, int typeCote1, int typeCote2, int typeCote3) : Static(_x, _y, _h, _l, textureName, textDictionnary, world) {
-	cote0 = std::make_unique<CoteEnnemi>(0, typeCote0, this);
-	cote1 = std::make_unique<CoteEnnemi>(1, typeCote1, this);;
-	cote2 = std::make_unique<CoteEnnemi>(2, typeCote2, this);;
-	cote3 = std::make_unique<CoteEnnemi>(3, typeCote3, this);;
+Ennemi::Ennemi(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, bool _mortel, b2World& world) : {}
+
+Ennemi::~Ennemi() {
 }
 
 // Méthode Update qui regarde si le joueur est en collision avec l'ennemi en question (this)
 // Malgrès une similitude d'utilisation, elle n'est pas hérité de Static car a des arguments différents,
 // un comportement différent, et est appelée à un autre endroit
 void Ennemi::Update(SceneManager& sceneManager, int idEnnemi) {
-	/*if (CheckCollision(*sceneManager.getJoueur())) {
+	if (CheckCollision(*sceneManager.getJoueur())) {
 		OnCollisionAction(sceneManager, idEnnemi);
-	}*/
-
-	// On est obligé de les stocker dans des variables locales sinon si l'ennemi meurt le reste n'est pas check
-		// En meme si temps si l'ennemi meurt il y a pas besoin de check les autres normalement
-	bool tue0 = cote0->Update(sceneManager);
-	bool tue1 = cote1->Update(sceneManager);
-	bool tue2 = cote2->Update(sceneManager);
-	bool tue3 = cote3->Update(sceneManager);
-	if (tue0 || tue1 || tue2 || tue3) {
-		// C'est que l'ennemi a été tué par le joueur
-		sceneManager.RemoveEnnemi(idEnnemi);
 	}
 }
 
-/*
 // Regarde si le joueur "touche" l'ennemi
 bool Ennemi::CheckCollision(Joueur& j) {
 	bool uniteInterDessus = (getY() - margeDetect < j.getY() + j.getH()) & (getY() + getH() + margeDetect > j.getY());
@@ -69,4 +55,3 @@ void Ennemi::OnCollisionAction(SceneManager& sceneManager, int idEnnemi) {
 		sceneManager.setDeathFlagTrue();
 	}
 }
-*/
