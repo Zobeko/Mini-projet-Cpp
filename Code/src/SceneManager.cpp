@@ -72,6 +72,10 @@ void SceneManager::draw(sf::RenderWindow& window) {
         textPiece.setString(to_string(nbPiece)+"$");
         window.draw(textPiece);
     }
+    else {
+        // On affiche le score du joueur à savoir le temps qu'il a fait
+        window.draw(textChronoSalle);
+    }
 }
 
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
