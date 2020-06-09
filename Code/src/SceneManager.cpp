@@ -8,8 +8,6 @@
 #include "Clef.h"
 #include "Porte.h"
 #include "Ombre.h"
-
-// à enlever après
 #include <iostream>
 
 using namespace std;
@@ -101,6 +99,8 @@ void SceneManager::Update() {
         CheckTimer();
     }    
 }
+
+//Si le temps est ecoule, le joueur meurt
 void SceneManager::CheckTimer() {
     if (tempsSalle - timerSalle.getElapsedTime().asSeconds() < 0) {
         mortFlag = true;
@@ -127,6 +127,7 @@ void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnar
         chargerSalle(_textDictionnary, _world);
     }
 }
+//Mets joueur.ALabri à true
 void SceneManager::MettreJoueurAbri() {
 	joueur->SetALAbri(true);
 }
