@@ -17,7 +17,7 @@ public:
 	void Update();
 
 	std::unique_ptr<Joueur> &getJoueur();
-	void tuerJoueur();
+	void checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);
 	void MettreJoueurAbri();
 	void RemovePickUp(int idPickUp);
 	void RemoveEnnemi(int idEnnemi);

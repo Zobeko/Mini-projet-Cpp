@@ -52,11 +52,9 @@ void SceneManager::Update() {
         pickUps[i]->Update(*this,i);
         //std::cout << joueur->walled << endl;
     }
-
-    /*
     for (int i = 0; i < ennemis.size(); i++) {
         ennemis[i]->Update(*this, i);
-    }*/
+    }
     //std::cout << "--------------------------------------------" << endl;
     /*for (auto& i : tiles) {
         i->Update(this);
@@ -80,16 +78,17 @@ std::unique_ptr<Joueur>& SceneManager::getJoueur() {
     return joueur;
 }
 // Bloque le jeu pendant un certain temps puis recharge la salle précédente
-void SceneManager::tuerJoueur() {
-    /*
-    idSalle -= 1;
-    if (idSalle < 0) {
-        idSalle = 0;    //On vérifies que le joueur n'aille pas à une salle inexistante
+void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
+    if (mortFlag) {
+        idSalle -= 1;
+        ClearSalle();
+        if (idSalle < 0) {
+            idSalle = 0;    //On vérifies que le joueur n'aille pas à une salle inexistante
+        }
+        //joueur => animation de mort + set velocity à 0
+        //trouver un moyen d'afficher la fenetre
+        chargerSalle(_textDictionnary, _world);
     }
-    //joueur => animation de mort + set velocity à 0
-    //trouver un moyen d'afficher la fenetre
-    chargerSalle(textDictionnary, world);
-    */
 }
 void SceneManager::MettreJoueurAbri() {
 	joueur->SetALAbri(true);
@@ -98,8 +97,9 @@ void SceneManager::MettreJoueurAbri() {
 void SceneManager::RemovePickUp(int idPickUp) {
     pickUps.erase(pickUps.begin() + idPickUp);
 }
-// Enlève un ennemi donné du vector
+// Enlève un ennemi donné du vector + fait sauter le joueur (car si l'ennemi meurt c'est que le joueur lui saute dessus)
 void SceneManager::RemoveEnnemi(int idEnnemi) {
+    cout << "Fly you fool ! (Faire sauter le joueur" << endl;
     ennemis.erase(ennemis.begin() + idEnnemi);
 }
 #pragma endregion
@@ -130,11 +130,14 @@ void SceneManager::checkSalleSuivante(std::map<std::string, sf::Texture>& _textD
         }
     }   
 }
+// Mets le bool indiquant qu'il faut changer de niveau à true
 void SceneManager::setLevelFlagTrue() {
     levelSuivantFlag = true;
 }
+// Mets le bool indiquant que le joueur est mort à true
 void SceneManager::setDeathFlagTrue() {
     mortFlag = true;
+    cout << "Joueur mort" << endl;
 }
 #pragma endregion
 
@@ -184,8 +187,16 @@ void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary
 void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("Ennemi")) {
         cout << "Ajout d'un ennemi" << endl;
-        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "ennemi.png", textDictionnary, _n.attribute("mortel").as_int(), world);
-        ennemis.push_back(std::move(st));
+        if (_n.attribute("mortel").as_int() == 1) {
+            // L'ennemi est Mortel
+            auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiMortel.png", textDictionnary, true, world);
+            ennemis.push_back(std::move(st));
+        }
+        else {
+            auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "Ennemi.png", textDictionnary, false, world);
+            ennemis.push_back(std::move(st));
+        }
+        
     }
 }
 // Ajoute un Pickup depuis un noeud XML

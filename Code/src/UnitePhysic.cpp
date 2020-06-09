@@ -56,9 +56,9 @@ b2Body* UnitePhysic::getBox()
 void UnitePhysic::setXY(int _x, int _y)
 {
 	Unite::setXY(_x, _y);
-    std::cout << "Unite : (" << Unite::getX() << ", " << Unite::getY() << ")" << endl;
+    //std::cout << "Unite : (" << Unite::getX() << ", " << Unite::getY() << ")" << endl;
     box->SetTransform(b2Vec2(_x, _y), 0);
-    std::cout << "Box : (" << getBox()->GetPosition().x << ", " << getBox()->GetPosition().y << ")" << endl;
+    //std::cout << "Box : (" << getBox()->GetPosition().x << ", " << getBox()->GetPosition().y << ")" << endl;
     
 
 }

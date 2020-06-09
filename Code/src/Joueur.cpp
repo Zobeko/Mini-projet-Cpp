@@ -25,7 +25,7 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 	//Si le joueur regarde à droite et qu'il n'est pas à l'abri 
 	//et que le mirroir n'est pas activé, alors il meurt
 	if ( direction == true && aLAbri == false && mirror == false) {
-		sceneManager.tuerJoueur();
+		sceneManager.setDeathFlagTrue();
 	}
 }
 

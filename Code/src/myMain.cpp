@@ -67,8 +67,9 @@ int myMain()
         // Evolution du monde physique (Avant les updates pour que les inputs du joueur correspondent à la situation)
         world.Step(timeStep, velocityIterations, positionIterations);
 
-        //On vérifie le flag du SceneManager et si besoin on change de niveau
+        //On vérifie les flags du SceneManager et si besoin on change de niveau
         manager.checkSalleSuivante(textDictionnary, world);
+        manager.checkMort(textDictionnary, world);
 
         // Update des éléments
         manager.Update();
