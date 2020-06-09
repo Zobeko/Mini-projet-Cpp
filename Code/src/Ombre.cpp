@@ -1,5 +1,4 @@
 #include "Ombre.h"
-
 #include "Unite.h"
 #include <iostream>
 

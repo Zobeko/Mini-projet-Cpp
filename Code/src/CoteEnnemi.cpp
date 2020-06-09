@@ -4,8 +4,8 @@
 #include <iostream>
 
 CoteEnnemi::CoteEnnemi(int _cote, int _type, Ennemi* _owner) {
-	cote = _cote;	// 0 : haut, 1: gauche, 2: droite, 3 : bas
-	type = _type;	// 0 : tue le joueur, 1 : tue l'ennemi, 3 : agit comme un static (cond sur cote pour faire Walled ou Grounded)
+	cote = _cote;
+	type = _type;	
 	owner = _owner;
 }
 

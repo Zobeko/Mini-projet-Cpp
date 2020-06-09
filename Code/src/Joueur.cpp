@@ -10,9 +10,6 @@ Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& wor
 	direction = false;
 	mirror = false;
 	texturePerso.loadFromFile("Hero.png");
-
-
-
 }
 
 
