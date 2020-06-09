@@ -32,11 +32,12 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 	}
 }
 
-void Joueur::update() {
+void Joueur::update(SceneManager& sceneManager) {
 
 	
 	Dynamic::update();
 	getInputs();
+	checkMeduse(sceneManager);
 
 
 	//Gestion animation personnage déplacements
@@ -142,11 +143,11 @@ void Joueur::gestionInputsJump() {
 		clockWallJump.restart().asSeconds();
 		if (direction == false) {
 
-			setVelocityXY(jumpForce, jumpForce);
+			setVelocityXY(wallJumpForce, wallJumpForce);
 		}
 		if (direction == true) {
 
-			setVelocityXY(-jumpForce, jumpForce);
+			setVelocityXY(-wallJumpForce, wallJumpForce);
 		}
 	}
 
@@ -158,9 +159,9 @@ void Joueur::gestionInputsJump() {
 void Joueur::gestionInputsTypeDep() {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) && grounded==true && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))) {
 		anim.y = 0;
-		speed = 1.8f * speedBase;
+		speed = 1.5f * speedBase;
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl) && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))) {
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl) && grounded==true && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))) {
 		anim.y = 1;
 		speed = - 0.5f * speedBase;
 	}
