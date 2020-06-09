@@ -1,3 +1,0 @@
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/CMakeFiles/pugixml-populate.dir
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/CMakeFiles/ALL_BUILD.dir
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/_deps/pugixml-subbuild/CMakeFiles/ZERO_CHECK.dir

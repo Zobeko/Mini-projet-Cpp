@@ -1,3 +1,0 @@
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/googletest.dir
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/ALL_BUILD.dir
-D:/Documents/Cours/Info/CSC4526/TutoSFML/build/unitTests/googletest-download/CMakeFiles/ZERO_CHECK.dir

@@ -1,2 +1,0 @@
-D:\Documents\Cours\Info\CSC4526\TutoSFML\build\src\Debug\src.pdb
-D:\Documents\Cours\Info\CSC4526\TutoSFML\build\src\src.dir\Debug\src.pdb

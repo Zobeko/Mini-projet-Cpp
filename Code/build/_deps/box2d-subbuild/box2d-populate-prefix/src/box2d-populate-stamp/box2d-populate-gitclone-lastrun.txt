@@ -1,3 +1,0 @@
-repository='https://github.com/erincatto/box2d.git'
-module=''
-tag='origin'

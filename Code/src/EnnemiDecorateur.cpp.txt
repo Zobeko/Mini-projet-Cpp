@@ -1,0 +1,21 @@
+#include "EnnemiDecorateur.h"
+#include "Static.h"
+
+#pragma region EnnemiBase
+EnnemiBase::~EnnemiBase() {}
+EnnemiBase::EnnemiBase(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, bool _mortel, b2World& world) : Static(_x, _y, _h, _l, textureName, textDictionnary, world) {
+	{
+	mortel = _mortel;
+}
+#pragma endregion
+
+#pragma region EnnemiDecorateur
+EnnemiDecorateur::~EnnemiDecorateur(){}
+EnnemiDecorateur::EnnemiDecorateur(EnnemiBase& _base, int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, bool _mortel, b2World& world) : EnnemiBase(_x, _y, _h, _l, textureName, textDictionnary, _mortel, world), e_base(_base) {}
+
+#pragma endregion
+
+#pragma region EnDecoMove
+EnDecoMove::~EnDecoMove() {}
+
+#pragma endregion
