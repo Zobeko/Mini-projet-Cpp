@@ -14,9 +14,9 @@ public:
 	int nbPiece = 0;
 	SceneManager(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
 	void draw(sf::RenderWindow& window);
-	void Update(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
+	void Update();
 
-	std::unique_ptr<Joueur>& getJoueur();
+	std::unique_ptr<Joueur> &getJoueur();
 	void tuerJoueur();
 	void MettreJoueurAbri();
 	void RemovePickUp(int idPickUp);
@@ -24,13 +24,15 @@ public:
 
 	void unLockDoor();
 	bool getClefRecupere();
-	void chargerSalleSuivante();
-	void chargerSalle(std::map<std::string, sf::Texture>& textDictionnary, b2World& world);
+	void checkSalleSuivante(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);
+	void chargerSalle(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);
 	void Attente();
+	void setLevelFlagTrue();
+	void setDeathFlagTrue();
 
 private:
 	int idSalle;
-	int idLastSalle = 1;
+	int idLastSalle = 2;
 	int const delaiMort = 50;	//nombre de boucle while a faire pour "mettre en pause" le jeu lorsque le joueur meurt avant de redemmarer le niveau
 	sf::Clock timerTotal;
 	sf::Clock timerSalle;
@@ -44,6 +46,10 @@ private:
 	void AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);
 	void AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);
 	void AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);
+	void ClearSalle();
+
+	bool levelSuivantFlag = false;
+	bool mortFlag = false;
 
 	//musique
 };

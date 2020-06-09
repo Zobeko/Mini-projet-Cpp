@@ -61,7 +61,7 @@ void Joueur::update() {
 		getSprite().setTextureRect(sf::IntRect(anim.x * dimensions, anim.y * dimensions, dimensions, dimensions));
 	}
 
-	cout << "Speed : " << speed << endl;
+	//cout << "Speed : " << speed << endl;
 	
 	
 }

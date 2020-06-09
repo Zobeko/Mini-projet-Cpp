@@ -17,3 +17,9 @@ void Clef::ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) {
 	sceneManager.RemovePickUp(iDpickUp);
 }
 */
+void Clef::Update(SceneManager& sceneManager, int iDpickUp) {
+	if (intersect(*sceneManager.getJoueur())) {
+		sceneManager.unLockDoor();
+		sceneManager.RemovePickUp(iDpickUp);
+	}
+}

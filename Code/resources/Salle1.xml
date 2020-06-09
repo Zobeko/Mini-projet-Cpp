@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <!-- Dans cette version de format, les coordonnees (x,y) sont exprimees dans un -->
 <!-- repere dont le centre est en bas à gauche de l'écran, les valeurs positives de x -->
-<!-- etant vers la droite, les valeurs positives de y etant vers le haut.       --> 
-<Salle0>
-    <!-- On commence par les propriétés du joueur -->
-    <Joueur x="70" y="400"/>
+<!-- etant vers la droite, les valeurs positives de y etant vers le haut.       -->
+<Salle>
+	<!-- On commence par les propriétés du joueur -->
+	<Joueur x="70" y="400"/>
 	<!-- Ensuite les static -->
 	<Statics>
 		<!-- Sol -->
-	    <Pierre x="0" y="0"/> 
+		<Pierre x="0" y="0"/>
 		<Pierre x="32" y="0"/>
 		<Pierre x="64" y="0"/>
 		<Pierre x="96" y="0"/>
@@ -34,9 +34,9 @@
 		<Pierre x="736" y="0"/>
 		<Pierre x="768" y="0"/>
 
-		
+
 		<!-- Mur de gauche -->
-		<Pierre x="0" y="0"/> 
+		<Pierre x="0" y="0"/>
 		<Pierre x="0" y="32"/>
 		<Pierre x="0" y="64"/>
 		<Pierre x="0" y="96"/>
@@ -55,9 +55,9 @@
 		<Pierre x="0" y="512"/>
 		<Pierre x="0" y="544"/>
 		<Pierre x="0" y="576"/>
-		
+
 		<!-- Mur de doite -->
-		<Pierre x="768" y="0"/> 
+		<Pierre x="768" y="0"/>
 		<Pierre x="768" y="32"/>
 		<Pierre x="768" y="64"/>
 		<Pierre x="768" y="96"/>
@@ -76,9 +76,9 @@
 		<Pierre x="768" y="512"/>
 		<Pierre x="768" y="544"/>
 		<Pierre x="768" y="576"/>
-		
+
 		<!-- Plafond -->
-	    <Pierre x="0" y="568"/> 
+		<Pierre x="0" y="568"/>
 		<Pierre x="32" y="568"/>
 		<Pierre x="64" y="568"/>
 		<Pierre x="96" y="568"/>
@@ -103,19 +103,27 @@
 		<Pierre x="704" y="568"/>
 		<Pierre x="736" y="568"/>
 		<Pierre x="768" y="568"/>
-		
+
+		<!-- Mur de gauche -->
+		<Pierre x="60" y="160"/>
+		<Pierre x="60" y="192"/>
+		<Pierre x="60" y="224"/>
+		<Pierre x="60" y="256"/>
+		<Pierre x="60" y="288"/>
+		<Pierre x="60" y="320"/>
+
 	</Statics>
 	<!-- Puis les pickUp -->
 	<PickUps>
-	    <Porte x="672" y="64"/>
-	    <Clef x="544" y="32"/>
+		<Porte x="672" y="64"/>
+		<Clef x="544" y="32"/>
 		<Piece x="256" y="32" value="1"/>
 		<Piece x="256" y="64" value="5"/>
 		<Piece x="256" y="96" value="10"/>
 	</PickUps>
 	<!-- Enfin les ennemis | On met mortel à 1 pour true, 0 pour false-->
 	<Ennemis>
-		<Ennemi x="384" y="164" h="64" l="64" mortel ="1" />
+		<Ennemi x="384" y="132" h="64" l="64" mortel ="1" />
 	</Ennemis>
 	<!-- On mettrait la musique ici -->
-</Salle0>
+</Salle>

@@ -63,4 +63,7 @@ void UnitePhysic::setXY(int _x, int _y)
 
 }
 
+UnitePhysic::~UnitePhysic() {
+    box->GetWorld()->DestroyBody(box);
+}
 
