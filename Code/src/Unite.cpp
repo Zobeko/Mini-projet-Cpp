@@ -6,7 +6,7 @@
 // à enlever après
 #include <iostream>
 
-#define WINDOW_HEIGHT 568
+#define WINDOW_HEIGHT 568	// A CHANGER AVANT RENDU : REMETTRE à 600
 
 using namespace std;
 
@@ -42,9 +42,6 @@ void Unite::setXY(int _x, int _y) {
 	//Change la position de Unite
 	x = _x;
 	y = _y;
-
-	
-
 	// Change la position de la texture sur celle de Unite
 	sprite.setPosition(x, (WINDOW_HEIGHT - y));
 }

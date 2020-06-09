@@ -18,7 +18,7 @@ using namespace std;
 int myMain()
 {   
     //Création de la fenetre
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Tuto Jeu SFML");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Medusé");
     window.setFramerateLimit(60);   //limite des fps
 
     //Mise en place d'une horloge pour régler l'animation du joueur         //A mettre chez le joueur ?

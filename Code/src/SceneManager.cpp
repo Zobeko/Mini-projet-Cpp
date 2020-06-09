@@ -278,7 +278,11 @@ void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary
         auto st = std::make_unique<Clef>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary);
         pickUps.push_back(std::move(st));
     }
-
+    for (pugi::xml_node _n : n.children("Ombre")) {
+        cout << "Ajout d'une Ombre" << endl;
+        auto st = std::make_unique<Ombre>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), textDictionnary);
+        pickUps.push_back(std::move(st));
+    }
 }
 // Méthode pour supprimer le contenu d'un niveau
 void SceneManager::ClearSalle() {
