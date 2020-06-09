@@ -259,6 +259,7 @@ void SceneManager::ClearSalle() {
     pickUps.erase(pickUps.begin(), pickUps.end());
     tiles.erase(tiles.begin(), tiles.end());
     ennemis.erase(ennemis.begin(), ennemis.end());
+    clefRecupere = false;
 }
 #pragma endregion
 
