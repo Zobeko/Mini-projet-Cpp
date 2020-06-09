@@ -48,5 +48,5 @@ int Dynamic::getVelocityY() {
 
 void Dynamic::update() {
 
-	Unite::setXY(getBox()->GetPosition().x - getL()/2, getBox()->GetPosition().y + getH() / 2);
+	Unite::setXY((getBox()->GetPosition().x*10.f - getL()/2), (getBox()->GetPosition().y*10.f + getH() / 2));
 }

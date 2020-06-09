@@ -116,7 +116,6 @@
 	<!-- Enfin les ennemis | On met mortel à 1 pour true, 0 pour false-->
 	<Ennemis>
 		<EnnemiBlinde x="476" y="32" h="64" l="64"/>
-		<EnnemiBlinde x="32" y="150" h="64" l="64"/>
 		<EnnemiExpose x="384" y="32" h="64" l="64"/>
 	</Ennemis>
 	<!-- On mettrait la musique ici -->

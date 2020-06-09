@@ -10,6 +10,9 @@ Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& wor
 	direction = false;
 	mirror = false;
 	texturePerso.loadFromFile("Hero.png");
+
+
+
 }
 
 
@@ -95,14 +98,33 @@ void Joueur::getInputs() {
 //et changement de sprite
 void Joueur::gestionInputsDir() {
 	if (clockWallJump.getElapsedTime().asSeconds() > 0.8f) {
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && grounded == true) {
 			direction = false;
 			setVelocityXY(-speed, getVelocityY());
 
 		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && grounded == false && getVelocityY() > 0) {
+			direction = false;
+			setVelocityXY(-speed, getVelocityY());
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && grounded == false && getVelocityY() < 20) {
+			direction = false;
+			setVelocityXY(-speed, -speed);
+		}
+
+
+
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && grounded == true) {
 			direction = true;
 			setVelocityXY(speed, getVelocityY());
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && grounded == false && getVelocityY() > 0) {
+			direction = true;
+			setVelocityXY(speed, getVelocityY());
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && grounded == false && getVelocityY() < 0) {
+			direction = true;
+			setVelocityXY(speed, -speed);
 		}
 	}
 }
@@ -114,9 +136,8 @@ void Joueur::gestionInputsJump() {
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && grounded == true) {
 		setVelocityXY(getVelocityX(), jumpForce);
-		
-		
 	}
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && grounded == false && walled == true) {
 		clockWallJump.restart().asSeconds();
 		if (direction == false) {
@@ -125,7 +146,7 @@ void Joueur::gestionInputsJump() {
 		}
 		if (direction == true) {
 
-			setVelocityXY(-speed, jumpForce);
+			setVelocityXY(-jumpForce, jumpForce);
 		}
 	}
 
@@ -135,9 +156,9 @@ void Joueur::gestionInputsJump() {
 //Gestion des inputs de de type de déplacements (marche, course ou mirroir)
 //Modification des vitesses et numéros de sprites adéquat
 void Joueur::gestionInputsTypeDep() {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::LShift) && grounded==true && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))) {
 		anim.y = 0;
-		speed = 1.5f * speedBase;
+		speed = 1.8f * speedBase;
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl) && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))) {
 		anim.y = 1;

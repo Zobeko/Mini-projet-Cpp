@@ -21,8 +21,8 @@ UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string tex
     b2BodyDef bodyDef;
     bodyDef.type = bodyType;
 
-    bodyDef.fixedRotation;
-    bodyDef.position.Set(_x + (_l/2), _y - (_h/2));
+    bodyDef.fixedRotation = true;
+    bodyDef.position.Set((_x + (_l/2))/10.f, (_y - (_h/2))/10.f);
     b2Body* body = world.CreateBody(&bodyDef);
     std::cout << "BodyDef position : (" << bodyDef.position.x << ", " << bodyDef.position.y << ")" << std::endl;
 
@@ -30,7 +30,7 @@ UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string tex
     b2PolygonShape shape;
 
     
-    shape.SetAsBox((_l/2.f), (_h/2.f)); //_h=54 et _l=54 pour que ca marche bien pour le perso
+    shape.SetAsBox((_l/2.f)/10.f, (_h/2.f)/10.f); //_h=54 et _l=54 pour que ca marche bien pour le perso
     // Défini les caractéristiques de notre boite de collision
     b2FixtureDef fixtureDef;
     fixtureDef.shape = &shape;
@@ -38,8 +38,6 @@ UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string tex
     fixtureDef.friction = 0.9f;
     body->CreateFixture(&fixtureDef);
 
-    // Défini le dataUser pour pouvoir gérer les collisions
-    body->SetUserData(this);
 
     box = body;
     std::cout << "Box : (" << getBox()->GetPosition().x << ", " << getBox()->GetPosition().y << ")" << endl;
@@ -57,7 +55,7 @@ void UnitePhysic::setXY(int _x, int _y)
 {
 	Unite::setXY(_x, _y);
     //std::cout << "Unite : (" << Unite::getX() << ", " << Unite::getY() << ")" << endl;
-    box->SetTransform(b2Vec2(_x, _y), 0);
+    box->SetTransform(b2Vec2(_x/10.f, _y/10.f), 0);
     //std::cout << "Box : (" << getBox()->GetPosition().x << ", " << getBox()->GetPosition().y << ")" << endl;
     
 
