@@ -4,7 +4,8 @@
 #include "Unite.h"
 #include "PickUp.h"
 
-
+// Classe des pièces. Lorsqu'elles sont ramassées elles augmentent le compteur de pièce d'une certaine valeur
+// Le nombre de pièce ne change rien au gameplay
 class Piece : public PickUp
 {
 public:
@@ -12,5 +13,5 @@ public:
 	void Update(SceneManager& sceneManager, int iDpickUp) override;
 
 private:
-	int value;
+	int value;	//Valeur de la piève
 };

@@ -5,6 +5,7 @@
 #include <vector>
 class SceneManager;
 
+// Classe du Joueur
 class Joueur : public Dynamic	
 {
 public:
@@ -12,7 +13,7 @@ public:
 	bool getDirection();
 	bool getGrounded();
 	void checkMeduse(SceneManager &sceneManager); // Regarde si le joueur est à l'abri et si il regarde Meduse, 
-													//si il n'est pas à l'abri et regarde Meduse,alors il meurt
+													//si il n'est pas à l'abri et regarde Meduse, alors il meurt
 	void getInputs();
 	void gestionInputsDir();//Gestion des inputs Left et Right qui deplacent le joueur et modifient la direction du joueur
 	void gestionInputsJump();//Gestion des inputs de jump et de wall jump
