@@ -30,7 +30,12 @@ public:
 	void setLevelFlagTrue();
 	void setDeathFlagTrue();
 
+	void finirJeu();
+
 private:
+	sf::Sprite ImageDefond;
+	sf::Texture texture;
+
 	int idSalle;
 	int idLastSalle = 2;
 	int const delaiMort = 50;	//nombre de boucle while a faire pour "mettre en pause" le jeu lorsque le joueur meurt avant de redemmarer le niveau
@@ -50,6 +55,7 @@ private:
 
 	bool levelSuivantFlag = false;
 	bool mortFlag = false;
+	bool gameFlag = true; //se met à false pour indiquer que le jeu est fini
 
 	//musique
 };

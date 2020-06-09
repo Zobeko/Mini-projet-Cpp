@@ -14,8 +14,17 @@
 
 using namespace std;
 
+#define WINDOW_HEIGHT 600
+#define WINDOW_WIDTH 800
+
 // Constructeur
 SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
+    if (!texture.loadFromFile("resources/BackGd.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
+        cout << "Error loading texture : BackGd.png"<< endl;
+    }
+    ImageDefond.setTexture(texture);
+    ImageDefond.setPosition(0,0);
+    ImageDefond.setScale(WINDOW_WIDTH / 312.f, WINDOW_HEIGHT / 162.f);
     joueur = std::make_unique<Joueur>(_textDictionnary, _world);
     idSalle = 0;    
 
@@ -24,50 +33,49 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
 
 // Dessine le jeu (appelé à chaque fin de frame)
 void SceneManager::draw(sf::RenderWindow& window) {
-    for (auto& i : tiles) {
-        i->draw(window);
-        
+    window.draw(ImageDefond);
+    if (gameFlag) {
+        for (auto& i : tiles) {
+            i->draw(window);
+
+        }
+        for (auto& i : pickUps) {
+            i->draw(window);
+        }
+        for (auto& i : ennemis) {
+            i->draw(window);
+        }
+        joueur->draw(window);
     }
-    for (auto& i : pickUps) {
-        i->draw(window);
-    }
-    for (auto& i : ennemis) {
-        i->draw(window);
-    }
-    joueur->draw(window);
-    //std::cout << "Joueur Unite : (" << joueur->getX() << ", " << joueur->getY() << ")" << endl;
-    //std::cout << "Joueur Box : (" << joueur->getBox()->GetPosition().x << ", " << joueur->getBox()->GetPosition().y << ")" << endl;
-    
-    //joueur->getBox()->GetFixtureList();
 }
 
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
 void SceneManager::Update() {
-    joueur->SetGroundedFlag(false);
-    joueur->SetWalledFlag(false);
-	joueur->SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
-    
-    
-    for (int i = 0; i < pickUps.size(); i++) {
-        pickUps[i]->Update(*this,i);
-        //std::cout << joueur->walled << endl;
-    }
-    for (int i = 0; i < ennemis.size(); i++) {
-        ennemis[i]->Update(*this, i);
-    }
-    //std::cout << "--------------------------------------------" << endl;
-    /*for (auto& i : tiles) {
-        i->Update(this);
-        std::cout << joueur->grounded << endl;
-    }*/
-    for (int i = 0; i < tiles.size(); i++) {
-        tiles[i]->Update(*this);
-        //std::cout << joueur->walled << endl;
-    }
+    if (gameFlag) {
+        joueur->SetGroundedFlag(false);
+        joueur->SetWalledFlag(false);
+        joueur->SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
 
-    joueur->update();
-    
-    
+
+        for (int i = 0; i < pickUps.size(); i++) {
+            pickUps[i]->Update(*this, i);
+            //std::cout << joueur->walled << endl;
+        }
+        for (int i = 0; i < ennemis.size(); i++) {
+            ennemis[i]->Update(*this, i);
+        }
+        //std::cout << "--------------------------------------------" << endl;
+        /*for (auto& i : tiles) {
+            i->Update(this);
+            std::cout << joueur->grounded << endl;
+        }*/
+        for (int i = 0; i < tiles.size(); i++) {
+            tiles[i]->Update(*this);
+            //std::cout << joueur->walled << endl;
+        }
+
+        joueur->update();
+    }    
 }
 
 
@@ -123,7 +131,7 @@ void SceneManager::checkSalleSuivante(std::map<std::string, sf::Texture>& _textD
         if (idSalle >= idLastSalle) {
             std::cout << "Fin du jeu ! Vous avez mis : " << std::to_string(timerSalle.getElapsedTime().asSeconds()) << endl;
             idSalle = idLastSalle;
-            // faire finir le jeu
+            finirJeu();
         }
         else {
             chargerSalle(_textDictionnary, _world);
@@ -139,6 +147,18 @@ void SceneManager::setDeathFlagTrue() {
     mortFlag = true;
     cout << "Joueur mort" << endl;
 }
+void SceneManager::finirJeu() {
+    if (!texture.loadFromFile("resources/EcranFin.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
+        cout << "Error loading texture : EcranFin.png" << endl;
+    }
+    ImageDefond.setTexture(texture);
+    ImageDefond.setPosition(0, 0);
+    ImageDefond.setScale(WINDOW_WIDTH / 200.f, WINDOW_HEIGHT / 150.f);   
+    levelSuivantFlag = false;
+    joueur.reset();
+    gameFlag = false;
+}
+
 #pragma endregion
 
 #pragma region Méthodes pour load un niveau

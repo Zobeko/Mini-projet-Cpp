@@ -13,8 +13,6 @@ using namespace std;
 Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture> & textDictionnary) {
 	x = _x;
 	y = _y;
-	h = _h;
-	l = _l;
 
 	setSprite(_h, _l, textureName, textDictionnary);
 	
