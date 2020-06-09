@@ -32,6 +32,12 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 	}
 }
 
+void Joueur::init(float _x, float _y) {
+	setXY(_x, _y);
+	direction = false;
+	setVelocityXY(0, 0);
+}
+
 void Joueur::update(SceneManager& sceneManager) {
 
 	
@@ -169,6 +175,10 @@ void Joueur::gestionInputsTypeDep() {
 		anim.y = 0;
 		speed = speedBase;
 	}
+}
+
+bool Joueur::getGrounded() {
+	return grounded;
 }
 
 
