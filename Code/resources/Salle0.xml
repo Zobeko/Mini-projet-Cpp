@@ -3,6 +3,8 @@
 <!-- repere dont le centre est en bas à gauche de l'écran, les valeurs positives de x -->
 <!-- etant vers la droite, les valeurs positives de y etant vers le haut.       --> 
 <Salle>
+	<!-- Temps accordé pour finir la salle -->
+	<Temps t="60"/>
     <!-- On commence par les propriétés du joueur -->
     <Joueur x="70" y="400"/>
 	<!-- Ensuite les static -->

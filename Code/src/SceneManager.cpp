@@ -29,6 +29,26 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
     idSalle = 0;    
 
     chargerSalle(_textDictionnary, _world);
+
+
+    if (!font.loadFromFile("resources/Pixeled.ttf"))
+    {
+        cout << "Error loading font : Pixeled" << endl;
+    }
+    textIDSalle.setFont(font);
+    textIDSalle.setCharacterSize(10);
+    textIDSalle.setColor(sf::Color::White);
+    textIDSalle.setPosition(10, 5);
+
+    textChronoSalle.setFont(font);
+    textChronoSalle.setCharacterSize(10);
+    textChronoSalle.setColor(sf::Color::White);
+    textChronoSalle.setPosition(10, 20);
+
+    textPiece.setFont(font);
+    textPiece.setCharacterSize(15);
+    textPiece.setColor(sf::Color::Yellow);
+    textPiece.setPosition(750, 10);
 }
 
 // Dessine le jeu (appelé à chaque fin de frame)
@@ -37,7 +57,6 @@ void SceneManager::draw(sf::RenderWindow& window) {
     if (gameFlag) {
         for (auto& i : tiles) {
             i->draw(window);
-
         }
         for (auto& i : pickUps) {
             i->draw(window);
@@ -46,6 +65,12 @@ void SceneManager::draw(sf::RenderWindow& window) {
             i->draw(window);
         }
         joueur->draw(window);
+        textIDSalle.setString("Salle : " + to_string(idSalle));
+        window.draw(textIDSalle);
+        textChronoSalle.setString("Temps Restant : " + to_string(tempsSalle - timerSalle.getElapsedTime().asSeconds()));
+        window.draw(textChronoSalle);
+        textPiece.setString(to_string(nbPiece)+"$");
+        window.draw(textPiece);
     }
 }
 
@@ -75,7 +100,14 @@ void SceneManager::Update() {
         }
 
         joueur->update();
+
+        CheckTimer();
     }    
+}
+void SceneManager::CheckTimer() {
+    if (tempsSalle - timerSalle.getElapsedTime().asSeconds() < 0) {
+        mortFlag = true;
+    }
 }
 
 
@@ -174,13 +206,10 @@ void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& _textDiction
         std::cerr << "Erreur : impossible d'ouvrir le xml" << std::endl;
     }
     else
-    {
-        //Attente();
-
-        
+    {        
         pugi::xml_node node = doc.child("Salle"); // On recupère le noeud XML de la salle à charger
-        //pugi::xml_node node = doc.child("Salle0");
-
+        tempsSalle = node.child("Temps").attribute("t").as_int();
+        cout << tempsSalle << endl;
        
         joueur->setXY(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
 
@@ -244,15 +273,6 @@ void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary
         pickUps.push_back(std::move(st));
     }
 
-}
-// Méthode permettant de faire une petite attente
-void SceneManager::Attente() {
-    // Attente pour qu'il y ait une coupure entre les niveaux (quand joueur meurt ou passe la porte
-    int i = 0;
-    while (i < delaiMort) {
-        //Boucle pour mettre en pause le jeu
-        i++;
-    }
 }
 // Méthode pour supprimer le contenu d'un niveau
 void SceneManager::ClearSalle() {
