@@ -6,7 +6,7 @@
 	<!-- Temps accordé pour finir la salle -->
 	<Temps t="25"/>
 	<!-- On commence par les propriétés du joueur -->
-	<Joueur x="96" y="128"/>
+	<Joueur x="704" y="128"/>
 	<!-- Ensuite les static -->
 	<Statics>
 		<!-- Sol -->
@@ -107,78 +107,58 @@
 		<Pierre x="768" y="600"/>
 
 		<!-- Bloc -->
-		<Pierre x="192" y="64"/>
-		<Pierre x="192" y="96"/>
-		<Pierre x="192" y="128"/>
-		<Pierre x="224" y="64"/>
-		<Pierre x="224" y="96"/>
-		<Pierre x="224" y="128"/>
-		<Pierre x="256" y="64"/>
-		<Pierre x="256" y="96"/>
-		<Pierre x="256" y="128"/>
+		<Pierre x="736" y="192"/>
+		<Pierre x="704" y="192"/>
+
+
+		<Pierre x="736" y="480"/>
+		<Pierre x="704" y="480"/>
+		<Pierre x="736" y="512"/>
+		<Pierre x="704" y="512"/>
+		<Pierre x="672" y="512"/>
+		<Pierre x="736" y="544"/>
+		<Pierre x="704" y="544"/>
+		<Pierre x="672" y="544"/>
+		<Pierre x="640" y="544"/>
+		<Pierre x="736" y="576"/>
+		<Pierre x="704" y="576"/>
+		<Pierre x="672" y="576"/>
+		<Pierre x="640" y="576"/>
+
+		<Pierre x="384" y="160"/>
+		<Pierre x="416" y="160"/>
+
 		<Pierre x="160" y="64"/>
-		<Pierre x="160" y="96"/>
-		<Pierre x="160" y="128"/>
-
-		<!-- Rebord -->
-		<Pierre x="64" y="256"/>
-		<Pierre x="64" y="288"/>
-		<Pierre x="64" y="320"/>
-		<Pierre x="64" y="352"/>
-		<Pierre x="64" y="384"/>
-		<Pierre x="64" y="416"/>
-		<Pierre x="64" y="448"/>
-		<Pierre x="64" y="480"/>
-		<Pierre x="64" y="512"/>
-		<Pierre x="64" y="544"/>
-		<Pierre x="64" y="576"/>
-		<Pierre x="32" y="256"/>
-		<Pierre x="32" y="288"/>
-		<Pierre x="32" y="320"/>
-		<Pierre x="32" y="352"/>
-		<Pierre x="32" y="384"/>
-		<Pierre x="32" y="416"/>
-		<Pierre x="32" y="448"/>
-		<Pierre x="32" y="480"/>
-		<Pierre x="32" y="512"/>
-		<Pierre x="32" y="544"/>
-		<Pierre x="32" y="576"/>
-
-		<!--Plateforme-->
-		<Pierre x="224" y="288"/>
-		<Pierre x="256" y="288"/>
-		<Pierre x="288" y="288"/>
-		<Pierre x="320" y="288"/>
-		<Pierre x="352" y="288"/>
-		<Pierre x="352" y="320"/>
-		<Pierre x="352" y="352"/>
-		<Pierre x="352" y="384"/>
-		<Pierre x="352" y="416"/>
-		<Pierre x="352" y="448"/>
-		<Pierre x="352" y="480"/>
-		<Pierre x="352" y="512"/>
-		<Pierre x="352" y="544"/>
-		<Pierre x="352" y="576"/>
-
+		<Pierre x="192" y="64"/>
 
 
 	</Statics>
 	<!-- Puis les pickUp -->
 	<PickUps>
-		<Porte x="672" y="96"/>
-		<Clef x="320" y="384"/>
-		<Piece x="32" y="192" value="1"/>
-		<Piece x="96" y="320" value="1"/>
-		<Piece x="96" y="448" value="5"/>
-		<Piece x="256" y="416" value="10"/>
+		<Porte x="64" y="96"/>
+		<Clef x="32" y="256"/>
 		<Ombre x="595" y="576" h="545"/>
-		<Ombre x="180" y="576B" h="545"/>
-		<Ombre x="140" y="288" h="256"/>
-		<Ombre x="128" y="128" h="96"/>
+		<Ombre x="467" y="576" h="545"/>
+		<Piece x="608" y="224" value="1"/>
+		<Piece x="736" y="448" value="5"/>
+		<Piece x="256" y="128" value="1"/>
+		<Piece x="64" y="192" value="10"/>
 	</PickUps>
 	<!-- Enfin les ennemis | On met mortel à 1 pour true, 0 pour false-->
 	<Ennemis>
-		<EnnemiPlat x="288" y="352" h="64" l="64"/>
+		<EnnemiWall x="544" y="96" h="64" l="64"/>
+		<EnnemiWall x="544" y="160" h="64" l="64"/>
+		<EnnemiWall x="544" y="224" h="64" l="64"/>
+		<EnnemiWall x="544" y="288" h="64" l="64"/>
+		<EnnemiPlat x="544" y="352" h="64" l="64"/>
+
+		<EnnemiWall x="384" y="224" h="64" l="64"/>
+		<EnnemiWall x="384" y="288" h="64" l="64"/>
+		<EnnemiWall x="384" y="352" h="64" l="64"/>
+		<EnnemiWall x="384" y="416" h="64" l="64"/>
+
+		<EnnemiBlinde x="160" y="128" h="64" l="64"/>
+		<EnnemiPlat x="224" y="96" h="64" l="64"/>
 	</Ennemis>
 	<!-- On mettrait la musique ici -->
 </Salle>
