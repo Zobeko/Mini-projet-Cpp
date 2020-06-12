@@ -110,13 +110,14 @@
 	<!-- Puis les pickUp -->
 	<PickUps>
 		<Porte x="64" y="96"/>
-		<Clef x="256" y="96"/>
+		<Clef x="192" y="64"/>
 		<Piece x="608" y="96" value="1"/>
 		<Ombre x="595" y="576" h="545"/>
 	</PickUps>
 	<!-- Enfin les ennemis | On met mortel à 1 pour true, 0 pour false-->
 	<Ennemis>
-		<EnnemiExpose x="384" y="92" h="64" l="64"/>
+		<EnnemiPlat x="256" y="92" h="64" l="64"/>
+		<EnnemiPlat x="448" y="92" h="64" l="64"/>
 	</Ennemis>
 	<!-- On mettrait la musique ici -->
 </Salle>

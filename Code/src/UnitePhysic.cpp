@@ -16,7 +16,6 @@ using namespace std;
 //Static (bodyType = b2_staticBody)
 UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, b2BodyType bodyType, b2World &world) : Unite(_x, _y, _h, _l, textureName, textDictionnary)
 {
-    std::cout << "Constructeur de UnitePhysic : (" << _h << ", " << _l << ")" << std::endl;
     //Crée une boite de collision et initialise sa position et son bodyType (static ou dynamic)
     b2BodyDef bodyDef;
     bodyDef.type = bodyType;
@@ -24,7 +23,7 @@ UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string tex
     bodyDef.fixedRotation = true;
     bodyDef.position.Set((_x + (_l/2))/10.f, (_y - (_h/2))/10.f);
     b2Body* body = world.CreateBody(&bodyDef);
-    std::cout << "BodyDef position : (" << bodyDef.position.x << ", " << bodyDef.position.y << ")" << std::endl;
+
 
     // Defini la forme de la boite de collision souhaitée (ici un rectangle) et initialise ses dimensions
     b2PolygonShape shape;
@@ -40,8 +39,7 @@ UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string tex
 
 
     box = body;
-    std::cout << "Box : (" << getBox()->GetPosition().x << ", " << getBox()->GetPosition().y << ")" << endl;
-    std::cout << "Box origin : (" << getBox()->GetLocalPoint(b2Vec2 (0, 0)).x << ", " << getBox()->GetLocalPoint(b2Vec2(0, 0)).y << ")" << std::endl;
+
 }
 
 //Permet de récupéré la boite de collision

@@ -21,13 +21,7 @@ int myMain()
     sf::RenderWindow window(sf::VideoMode(800, 600), "Medusé");
     window.setFramerateLimit(60);   //limite des fps
 
-    //Mise en place d'une horloge pour régler l'animation du joueur         //A mettre chez le joueur ?
-    sf::Clock time;
-    float fpsCount = 0,
-        switchFps = 100,
-        fpsSpeed = 500;
-
-    
+     
 
     // Mise en place des paramétres pour la simulation
     // Prepare for simulation. Typically we use a time step of 1/60 of a
@@ -39,49 +33,48 @@ int myMain()
     int32 velocityIterations = 6;
     int32 positionIterations = 2;
 
+	// Dictionnaire conservant toutes les textures
     std::map<std::string, sf::Texture> textDictionnary;
+
+	// Gestionnaire du jeu, c'est lui qui possède tous les éléments
     SceneManager manager(textDictionnary, world);
 
     
 
 
     // Game Loop
-    while (window.isOpen())
-    {
-        #pragma region Update de la fenetre graphique
-        //netoyage de la fenetre
-        window.clear(sf::Color::White);
+	while (window.isOpen())
+	{
 
-        //Evenement de fermeture de la fenetre
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-            {
-                window.close();
-                // nettoyer les variables globales
-            }
-        }
-        #pragma endregion
+		//netoyage de la fenetre
+		window.clear(sf::Color::White);
 
-        // Evolution du monde physique (Avant les updates pour que les inputs du joueur correspondent à la situation)
-        world.Step(timeStep, velocityIterations, positionIterations);
+		//Evenement de fermeture de la fenetre
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+			{
+				window.close();
+			}
+		}
 
-        //On vérifie les flags du SceneManager et si besoin on change de niveau
-        manager.checkSalleSuivante(textDictionnary, world);
-        manager.checkMort(textDictionnary, world);
+		// Evolution du monde physique (Avant les updates pour que les inputs du joueur correspondent à la situation)
+		world.Step(timeStep, velocityIterations, positionIterations);
 
-        // Update des éléments
-        manager.Update();
-        
+		//On vérifie les flags du SceneManager et si besoin on change de niveau
+		manager.checkSalleSuivante(textDictionnary, world);
+		manager.checkMort(textDictionnary, world);
 
-        // Dessin des différents sprites
-        manager.draw(window);
+		// Update des éléments
+		manager.Update();
 
-        // Affichage des elements
-        window.display();
-    }
+		// Dessin des différents sprites
+		manager.draw(window);
 
+		// Affichage des elements
+		window.display();
+	}
     return 0;
 }
 

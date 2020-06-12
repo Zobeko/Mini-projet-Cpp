@@ -3,8 +3,6 @@
 #include "SceneManager.h"
 #include "myMain.h"
 
-//A enlever
-#include <iostream>
 
 Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 64, 64, "Hero.png", textDictionnary, world) {
 	direction = false;
@@ -57,10 +55,7 @@ void Joueur::update(SceneManager& sceneManager) {
 		}
 		fpsCount = 0;
 	}
-
-	//std::cout << "anim.x : " << anim.x << std::endl;
-	//std::cout << "anim.y : " << anim.y  << std::endl;
-
+	
 	if (direction) {
 		getSprite().setTextureRect(sf::IntRect((anim.x+1) * dimensions, anim.y * dimensions, -dimensions, dimensions));
 	}
@@ -68,9 +63,6 @@ void Joueur::update(SceneManager& sceneManager) {
 		getSprite().setTextureRect(sf::IntRect(anim.x * dimensions, anim.y * dimensions, dimensions, dimensions));
 	}
 
-	//cout << "Speed : " << speed << endl;
-	
-	
 }
 
 #pragma region Méthodes liées aux inputs
@@ -80,8 +72,6 @@ void Joueur::update(SceneManager& sceneManager) {
 //la vitesse et les autes gestionInputs dépendent de cette vitesse
 void Joueur::getInputs() {
 
-	//std::cout << "Grounded : " << grounded << std::endl;
-	//std::cout << "Walled : " << walled << std::endl;
 	gestionInputsTypeDep();
 	gestionInputsDir();
 	gestionInputsJump();
@@ -189,9 +179,6 @@ void Joueur::SetALAbri(bool abri) {
 //Permet de dire si oui ou non le joueur est au sol
 void Joueur::SetGroundedFlag(bool GF) {
 	grounded = GF;
-	/*if (GF) {
-		std::cout << grounded << endl;
-	}*/
 }
 //Permet de dire si oui ou non le joueur est sur un mur
 void Joueur::SetWalledFlag(bool WF) {

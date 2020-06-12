@@ -8,8 +8,6 @@
 #include "Clef.h"
 #include "Porte.h"
 #include "Ombre.h"
-
-// à enlever après
 #include <iostream>
 
 using namespace std;
@@ -101,6 +99,8 @@ void SceneManager::Update() {
         CheckTimer();
     }    
 }
+
+//Si le temps est ecoule, le joueur meurt
 void SceneManager::CheckTimer() {
     if (tempsSalle - timerSalle.getElapsedTime().asSeconds() < 0) {
         mortFlag = true;
@@ -127,6 +127,7 @@ void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnar
         chargerSalle(_textDictionnary, _world);
     }
 }
+//Mets joueur.ALabri à true
 void SceneManager::MettreJoueurAbri() {
 	joueur->SetALAbri(true);
 }
@@ -134,9 +135,8 @@ void SceneManager::MettreJoueurAbri() {
 void SceneManager::RemovePickUp(int idPickUp) {
     pickUps.erase(pickUps.begin() + idPickUp);
 }
-// Enlève un ennemi donné du vector + fait sauter le joueur (car si l'ennemi meurt c'est que le joueur lui saute dessus)
+// Enlève un ennemi donné du vector
 void SceneManager::RemoveEnnemi(int idEnnemi) {
-    cout << "Fly you fool ! (Faire sauter le joueur" << endl;
     ennemis.erase(ennemis.begin() + idEnnemi);
 }
 #pragma endregion
@@ -158,7 +158,6 @@ void SceneManager::checkSalleSuivante(std::map<std::string, sf::Texture>& _textD
         ClearSalle();
         // Si le joueur a atteint le dernier niveau, on termine le jeu et affiche son temps total
         if (idSalle >= idLastSalle) {
-            std::cout << "Fin du jeu ! Vous avez mis : " << std::to_string(timerSalle.getElapsedTime().asSeconds()) << endl;
             idSalle = idLastSalle;
             finirJeu();
         }
@@ -197,7 +196,6 @@ void SceneManager::finirJeu() {
 void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
     pugi::xml_document doc;
     std::string nomNoeud = "resources/Salle" + to_string(idSalle) + ".xml";
-    //pugi::xml_parse_result result = doc.load_file("resources/Salle0.xml");
     pugi::xml_parse_result result = doc.load_file(nomNoeud.c_str());
     cout << nomNoeud << endl;
     if (!result)
@@ -224,9 +222,7 @@ void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& _textDiction
 // Ajoute un Static depuis un noeud XML
 void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("Pierre")) {
-        cout << "Ajout d'une pierre" << endl;
         auto st = std::make_unique<Static>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "TilePierre.png", textDictionnary, world);
-        std::cout << "Pierre position : (" << _n.attribute("x").as_int() << ", " << _n.attribute("y").as_int() << ")" << std::endl;
         tiles.push_back(std::move(st));
     }
     // faire une boucle for pour les tiles plus générales, désignées par Static et comportant tous les attributs
@@ -234,22 +230,18 @@ void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary
 // Ajoute un Ennemi depuis un noeud XML
 void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("EnnemiBlinde")) {
-        cout << "Ajout d'un ennemi" << endl;
         auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "Ennemi.png", textDictionnary, world, 0,0,0,0);
         ennemis.push_back(std::move(st));        
     }
     for (pugi::xml_node _n : n.children("EnnemiExpose")) {
-        cout << "Ajout d'un ennemi" << endl;
         auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiMortel.png", textDictionnary, world, 1, 0, 0, 0);
         ennemis.push_back(std::move(st));
     }
     for (pugi::xml_node _n : n.children("EnnemiPlat")) {
-        cout << "Ajout d'un ennemi" << endl;
         auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
         ennemis.push_back(std::move(st));
     }
     for (pugi::xml_node _n : n.children("EnnemiWall")) {
-        cout << "Ajout d'un ennemi" << endl;
         auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiWall.png", textDictionnary, world, 0, 2, 2, 0);
         ennemis.push_back(std::move(st));
     }
@@ -257,22 +249,18 @@ void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary
 // Ajoute un Pickup depuis un noeud XML
 void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("Piece")) {
-        cout << "Ajout d'une piece" << endl;
         auto st = std::make_unique<Piece>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary, _n.attribute("value").as_int());
         pickUps.push_back(std::move(st));     
     }
     for (pugi::xml_node _n : n.children("Porte")) {
-        cout << "Ajout d'une porte" << endl;
         auto st = std::make_unique<Porte>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary);
         pickUps.push_back(std::move(st));
     }
     for (pugi::xml_node _n : n.children("Clef")) {
-        cout << "Ajout d'une clef" << endl;
         auto st = std::make_unique<Clef>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary);
         pickUps.push_back(std::move(st));
     }
     for (pugi::xml_node _n : n.children("Ombre")) {
-        cout << "Ajout d'une Ombre" << endl;
         auto st = std::make_unique<Ombre>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), textDictionnary);
         pickUps.push_back(std::move(st));
     }

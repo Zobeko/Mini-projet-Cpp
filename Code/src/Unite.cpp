@@ -6,7 +6,7 @@
 // à enlever après
 #include <iostream>
 
-#define WINDOW_HEIGHT 568	// A CHANGER AVANT RENDU : REMETTRE à 600
+#define WINDOW_HEIGHT 600
 
 using namespace std;
 
