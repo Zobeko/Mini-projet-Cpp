@@ -3,6 +3,9 @@
 #include "Static.h"
 #include "Joueur.h"
 #include "CoteEnnemi.h"
+#include "CoteEnnemi_Hurt.h"
+#include "CoteEnnemi_kill.h"
+#include "CoteEnnemi_Plateforme.h"
 class SceneManager;
 
 
@@ -17,9 +20,11 @@ public:
 
 private:
 	// Les 4 cotés de l'ennemi : 
-	std::unique_ptr<CoteEnnemi> cote0;
+	std::vector<std::unique_ptr<CoteEnnemi>> cote;
+	/*std::unique_ptr<CoteEnnemi> cote0;
 	std::unique_ptr<CoteEnnemi> cote1;
 	std::unique_ptr<CoteEnnemi> cote2;
-	std::unique_ptr<CoteEnnemi> cote3;
+	std::unique_ptr<CoteEnnemi> cote3;*/
+	void addCote(int _cote, int _type);
 };
 

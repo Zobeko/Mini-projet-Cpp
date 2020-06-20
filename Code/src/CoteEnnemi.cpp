@@ -3,12 +3,12 @@
 
 #include <iostream>
 
-CoteEnnemi::CoteEnnemi(int _cote, int _type, Ennemi* _owner) {
-	cote = _cote;
-	type = _type;	
+CoteEnnemi::CoteEnnemi(int _cote, Ennemi* _owner) {
+	cote = _cote;	
 	owner = _owner;
 }
 
+/*
 // Méthode Update qui regarde si le joueur est en collision avec le coté
 bool CoteEnnemi::Update(SceneManager& sceneManager) {
 	if (CheckCollision(*sceneManager.getJoueur())) {
@@ -31,7 +31,7 @@ bool CoteEnnemi::Update(SceneManager& sceneManager) {
 		}
 	}
 	return false;
-}
+}*/
 
 // Regarde si le joueur "touche" l'ennemi
 bool CoteEnnemi::CheckCollision(Joueur& j) {
