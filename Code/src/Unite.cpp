@@ -38,7 +38,7 @@ sf::Sprite& Unite::getSprite() {
 	return sprite;
 }
 
-void Unite::setXY(int _x, int _y) {
+void Unite::setXY(float _x, float _y) {
 	//Change la position de Unite
 	x = _x;
 	y = _y;
