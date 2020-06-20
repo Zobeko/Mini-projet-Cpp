@@ -224,45 +224,92 @@ void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& _textDiction
 // Fait le chargement de la salle quand 
 void SceneManager::chargerSalleTiled(pugi::xml_node& node, std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
     tempsSalle = node.child("properties").child("property").attribute("value").as_int();
-    int nbTilesHoriz = node.attribute("width").as_int();
-    int nbTilesVert = node.attribute("height").as_int();
-    cout << "On ouvre une salle faite sur Tiled "<< nbTilesHoriz<< " " << nbTilesVert << " " << tempsSalle << endl;
-    /*
-    joueur->init(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
+    int nbTileHoriz = node.attribute("width").as_int();
+    int nbTileVert = node.attribute("height").as_int();
+    cout << "On ouvre une salle faite sur Tiled "<< nbTileHoriz<< " " << nbTileVert << " " << tempsSalle << endl;
+    
+    AddElementTiled(_textDictionnary, _world, node.child("layer").child("data"), nbTileHoriz, nbTileVert);
+}
+// Calcule la position depuis l'indice et le nb de tiles
+int SceneManager::GetXtoPop(int i, int nbTileHoriz) {
+    return (i % nbTileHoriz)*32;
+}
+int SceneManager::GetYtoPop(int i, int nbTileHoriz, int nbTileVert) {
+    return (nbTileVert - (i / nbTileHoriz))*32;
+}
 
-    AddStatic(_textDictionnary, _world, node.child("Statics"));
-    AddEnnemi(_textDictionnary, _world, node.child("Ennemis"));
-    AddPickup(_textDictionnary, _world, node.child("PickUps"));
-    */
+// Ajoute les elements du niveau depuis le xml généré par Tiled
+void SceneManager::AddElementTiled(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n, int nbTileHoriz, int nbTileVert) {
+    int i = -1;  // indice de la tile regardée
+    for (pugi::xml_node _n : n.children("tile")) {
+        i++;
+        if (_n.attribute("gid").as_int() == 1) {
+            // Tile de pierre
+            auto st = std::make_unique<Static>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), 32, 32, "TilePierre.png", textDictionnary, world);
+            tiles.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 2) {
+            // Tile de mur
+            auto st = std::make_unique<Static>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), 32, 32, "TileBrique.png", textDictionnary, world);
+            tiles.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 3) {
+            // Porte
+            auto st = std::make_unique<Porte>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert)+32, textDictionnary);
+            pickUps.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 4) {
+            // C'est le joueur
+            joueur->init(GetXtoPop(i, nbTileHoriz)+32, GetYtoPop(i, nbTileHoriz, nbTileVert) + 32);
+        }
+        else if (_n.attribute("gid").as_int() == 5) {
+            // Ennemi blindé
+            auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "Ennemi.png", textDictionnary, world, 0, 0, 0, 0);
+            ennemis.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 6) {
+            // Ennemi exposé
+            auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiMortel.png", textDictionnary, world, 1, 0, 0, 0);
+            ennemis.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 7) {
+            // Ennemi Plateforme
+            auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
+            ennemis.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 8) {
+            // Ennemi Wall
+            auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiWall.png", textDictionnary, world, 0, 2, 2, 0);
+            ennemis.push_back(std::move(st));
+        }
+
+        else if (_n.attribute("gid").as_int() == 9) {
+            // Clef
+            auto st = std::make_unique<Clef>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary);
+            pickUps.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 10) {
+            // Piece de 1
+            auto st = std::make_unique<Piece>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary, 1);
+            pickUps.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 11) {
+            // Piece de 5
+            auto st = std::make_unique<Piece>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary, 5);
+            pickUps.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 12) {
+            // Piece de 10
+            auto st = std::make_unique<Piece>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary, 10);
+            pickUps.push_back(std::move(st));
+        }
+    }
 }
-// Ajoute un Static depuis un noeud XML
-/*void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
-    for (pugi::xml_node _n : n.children("Pierre")) {
-        auto st = std::make_unique<Static>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "TilePierre.png", textDictionnary, world);
-        tiles.push_back(std::move(st));
-    }
-    // faire une boucle for pour les tiles plus générales, désignées par Static et comportant tous les attributs
-}
-// Ajoute un Ennemi depuis un noeud XML
-void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
-    for (pugi::xml_node _n : n.children("EnnemiBlinde")) {
-        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "Ennemi.png", textDictionnary, world, 0, 0, 0, 0);
-        ennemis.push_back(std::move(st));
-    }
-    for (pugi::xml_node _n : n.children("EnnemiExpose")) {
-        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiMortel.png", textDictionnary, world, 1, 0, 0, 0);
-        ennemis.push_back(std::move(st));
-    }
-    for (pugi::xml_node _n : n.children("EnnemiPlat")) {
-        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
-        ennemis.push_back(std::move(st));
-    }
-    for (pugi::xml_node _n : n.children("EnnemiWall")) {
-        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiWall.png", textDictionnary, world, 0, 2, 2, 0);
-        ennemis.push_back(std::move(st));
-    }
-}
+
+
+
 // Ajoute un Pickup depuis un noeud XML
+/*
 void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("Piece")) {
         auto st = std::make_unique<Piece>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary, _n.attribute("value").as_int());
@@ -291,12 +338,12 @@ void SceneManager::chargerSalleMain(pugi::xml_node& node, std::map<std::string, 
 
     joueur->init(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
 
-    AddStatic(_textDictionnary, _world, node.child("Statics"));
-    AddEnnemi(_textDictionnary, _world, node.child("Ennemis"));
-    AddPickup(_textDictionnary, _world, node.child("PickUps"));
+    AddStaticMain(_textDictionnary, _world, node.child("Statics"));
+    AddEnnemiMain(_textDictionnary, _world, node.child("Ennemis"));
+    AddPickupMain(_textDictionnary, _world, node.child("PickUps"));
 }
 // Ajoute un Static depuis un noeud XML
-void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
+void SceneManager::AddStaticMain(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("Pierre")) {
         auto st = std::make_unique<Static>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "TilePierre.png", textDictionnary, world);
         tiles.push_back(std::move(st));
@@ -304,7 +351,7 @@ void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary
     // faire une boucle for pour les tiles plus générales, désignées par Static et comportant tous les attributs
 }
 // Ajoute un Ennemi depuis un noeud XML
-void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
+void SceneManager::AddEnnemiMain(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("EnnemiBlinde")) {
         auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "Ennemi.png", textDictionnary, world, 0,0,0,0);
         ennemis.push_back(std::move(st));        
@@ -323,7 +370,7 @@ void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary
     }
 }
 // Ajoute un Pickup depuis un noeud XML
-void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
+void SceneManager::AddPickupMain(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
     for (pugi::xml_node _n : n.children("Piece")) {
         auto st = std::make_unique<Piece>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary, _n.attribute("value").as_int());
         pickUps.push_back(std::move(st));     
