@@ -192,12 +192,13 @@ void SceneManager::finirJeu() {
 #pragma endregion
 
 #pragma region Méthodes pour load un niveau
+
 // Charge la salle correspondant à l'idSalle actuel
 void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
     pugi::xml_document doc;
     std::string nomNoeud = "resources/Salle" + to_string(idSalle) + ".xml";
     pugi::xml_parse_result result = doc.load_file(nomNoeud.c_str());
-    cout << nomNoeud << endl;
+    cout << "Fichier " << nomNoeud << endl;
     if (!result)
     {
         std::cerr << "Erreur : impossible d'ouvrir le xml" << std::endl;
@@ -205,19 +206,94 @@ void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& _textDiction
     else
     {        
         pugi::xml_node node = doc.child("Salle"); // On recupère le noeud XML de la salle à charger
-        tempsSalle = node.child("Temps").attribute("t").as_int();
-        cout << tempsSalle << endl;
-        
-        joueur->init(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
-
-        AddStatic(_textDictionnary, _world, node.child("Statics"));
-        AddEnnemi(_textDictionnary, _world, node.child("Ennemis"));
-        AddPickup(_textDictionnary, _world, node.child("PickUps"));
+        if (node == NULL) {
+            // Chargement d'une map éditée sur Tiled
+            chargerSalleTiled(doc.child("map"), _textDictionnary, _world);
+        }
+        else {
+            // Chargement d'une map écrite à la main
+            chargerSalleMain(node, _textDictionnary, _world);
+        }
 
     }
     timerSalle.restart();   // on redemmarre le timer de la salle
     levelSuivantFlag = false;
     mortFlag = false;
+}
+#pragma region Méthodes pour load un niveau avec les xml à la main
+// Fait le chargement de la salle quand 
+void SceneManager::chargerSalleTiled(pugi::xml_node& node, std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
+    tempsSalle = node.child("properties").child("property").attribute("value").as_int();
+    int nbTilesHoriz = node.attribute("width").as_int();
+    int nbTilesVert = node.attribute("height").as_int();
+    cout << "On ouvre une salle faite sur Tiled "<< nbTilesHoriz<< " " << nbTilesVert << " " << tempsSalle << endl;
+    /*
+    joueur->init(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
+
+    AddStatic(_textDictionnary, _world, node.child("Statics"));
+    AddEnnemi(_textDictionnary, _world, node.child("Ennemis"));
+    AddPickup(_textDictionnary, _world, node.child("PickUps"));
+    */
+}
+// Ajoute un Static depuis un noeud XML
+/*void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
+    for (pugi::xml_node _n : n.children("Pierre")) {
+        auto st = std::make_unique<Static>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), 32, 32, "TilePierre.png", textDictionnary, world);
+        tiles.push_back(std::move(st));
+    }
+    // faire une boucle for pour les tiles plus générales, désignées par Static et comportant tous les attributs
+}
+// Ajoute un Ennemi depuis un noeud XML
+void SceneManager::AddEnnemi(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
+    for (pugi::xml_node _n : n.children("EnnemiBlinde")) {
+        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "Ennemi.png", textDictionnary, world, 0, 0, 0, 0);
+        ennemis.push_back(std::move(st));
+    }
+    for (pugi::xml_node _n : n.children("EnnemiExpose")) {
+        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiMortel.png", textDictionnary, world, 1, 0, 0, 0);
+        ennemis.push_back(std::move(st));
+    }
+    for (pugi::xml_node _n : n.children("EnnemiPlat")) {
+        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
+        ennemis.push_back(std::move(st));
+    }
+    for (pugi::xml_node _n : n.children("EnnemiWall")) {
+        auto st = std::make_unique<Ennemi>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), _n.attribute("l").as_int(), "EnnemiWall.png", textDictionnary, world, 0, 2, 2, 0);
+        ennemis.push_back(std::move(st));
+    }
+}
+// Ajoute un Pickup depuis un noeud XML
+void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
+    for (pugi::xml_node _n : n.children("Piece")) {
+        auto st = std::make_unique<Piece>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary, _n.attribute("value").as_int());
+        pickUps.push_back(std::move(st));
+    }
+    for (pugi::xml_node _n : n.children("Porte")) {
+        auto st = std::make_unique<Porte>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary);
+        pickUps.push_back(std::move(st));
+    }
+    for (pugi::xml_node _n : n.children("Clef")) {
+        auto st = std::make_unique<Clef>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary);
+        pickUps.push_back(std::move(st));
+    }
+    for (pugi::xml_node _n : n.children("Ombre")) {
+        auto st = std::make_unique<Ombre>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), textDictionnary);
+        pickUps.push_back(std::move(st));
+    }
+}*/
+#pragma endregion
+
+#pragma region Méthodes pour load un niveau avec les xml à la main
+// Fait le chargement de la salle quand 
+void SceneManager::chargerSalleMain(pugi::xml_node& node, std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
+    tempsSalle = node.child("Temps").attribute("t").as_int();
+    cout << tempsSalle << endl;
+
+    joueur->init(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
+
+    AddStatic(_textDictionnary, _world, node.child("Statics"));
+    AddEnnemi(_textDictionnary, _world, node.child("Ennemis"));
+    AddPickup(_textDictionnary, _world, node.child("PickUps"));
 }
 // Ajoute un Static depuis un noeud XML
 void SceneManager::AddStatic(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
@@ -265,6 +341,9 @@ void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary
         pickUps.push_back(std::move(st));
     }
 }
+#pragma endregion
+
+
 // Méthode pour supprimer le contenu d'un niveau
 void SceneManager::ClearSalle() {
     pickUps.erase(pickUps.begin(), pickUps.end());
