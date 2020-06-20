@@ -273,13 +273,13 @@ void SceneManager::AddElementTiled(std::map<std::string, sf::Texture>& textDicti
             ennemis.push_back(std::move(st));
         }
         else if (_n.attribute("gid").as_int() == 7) {
-            // Ennemi Plateforme
-            auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
+            // Ennemi Wall
+            auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiWall.png", textDictionnary, world, 0, 2, 2, 0);
             ennemis.push_back(std::move(st));
         }
         else if (_n.attribute("gid").as_int() == 8) {
-            // Ennemi Wall
-            auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiWall.png", textDictionnary, world, 0, 2, 2, 0);
+            // Ennemi Plateforme
+            auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
             ennemis.push_back(std::move(st));
         }
 
