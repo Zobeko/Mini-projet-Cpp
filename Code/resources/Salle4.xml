@@ -657,7 +657,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
+   <tile gid="12"/>
    <tile/>
    <tile/>
    <tile/>
@@ -690,7 +690,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
+   <tile gid="13"/>
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="1"/>

@@ -44,19 +44,19 @@ void Static::CheckWalled(Joueur& j) {
 		CheckWalledGauche(j);
 	}
 }
-void Static::CheckWalledDroite(Joueur& j) {
+void Static::CheckWalledDroite(Joueur& j) {		// Utilise l'input pour aller à droite
 	int centreXjoueur = j.getDroite();
 	int centreYjoueur = j.getY() - j.getH() / 2;
 	if (((getX() - margeDetect < centreXjoueur) & (centreXjoueur < getX() + margeDetect)) & ((getY() - margeDetect - getH() < centreYjoueur) & (centreYjoueur < getY() + margeDetect))) {
-		j.SetWalledFlag(true);
+		j.SetWalledFlag(sf::Keyboard::isKeyPressed(sf::Keyboard::Right));
 		getSprite().setColor(sf::Color::Green);
 	}
 }
-void Static::CheckWalledGauche(Joueur& j) {
+void Static::CheckWalledGauche(Joueur& j) {		// Utilise l'input pour aller à gauche
 	int centreXjoueur = j.getGauche();
 	int centreYjoueur = j.getY() - j.getH() / 2;
 	if (((getX() + getL() - margeDetect < centreXjoueur) & (centreXjoueur < getX() + getL() + margeDetect)) & ((getY() - margeDetect - getH() < centreYjoueur) & (centreYjoueur < getY() + margeDetect))) {
-		j.SetWalledFlag(true);
+		j.SetWalledFlag(sf::Keyboard::isKeyPressed(sf::Keyboard::Left));
 		getSprite().setColor(sf::Color::Yellow);
 	}
 }

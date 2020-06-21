@@ -295,13 +295,6 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
-   <tile gid="15"/>
-   <tile gid="17"/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
    <tile gid="15"/>
    <tile gid="16"/>
    <tile gid="17"/>
@@ -309,6 +302,13 @@
    <tile/>
    <tile/>
    <tile/>
+   <tile gid="15"/>
+   <tile gid="16"/>
+   <tile gid="17"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -344,8 +344,8 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
    <tile gid="15"/>
+   <tile gid="16"/>
    <tile gid="17"/>
    <tile/>
    <tile/>

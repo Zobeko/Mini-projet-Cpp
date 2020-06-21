@@ -13,9 +13,13 @@ bool CoteEnnemi_Plateforme::Update(SceneManager& sceneManager) {
 			// c'est le dessus
 			sceneManager.getJoueur()->SetGroundedFlag(true);
 		}
-		else if (cote == 1 || cote == 2) {
+		else if (cote == 1) {
 			// c'est un coté vertical
-			sceneManager.getJoueur()->SetWalledFlag(true);
+			sceneManager.getJoueur()->SetWalledFlag(sf::Keyboard::isKeyPressed(sf::Keyboard::Right));
+		}
+		else if (cote == 2) {
+			// c'est un coté vertical
+			sceneManager.getJoueur()->SetWalledFlag(sf::Keyboard::isKeyPressed(sf::Keyboard::Left));
 		}
 	//Sinon c'est une erreur ou le coté du bas -> on fais rien
 	return false;

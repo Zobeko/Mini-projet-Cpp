@@ -177,11 +177,11 @@ void Joueur::gestionInputsJump() {
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && grounded == false && walled == true) {
 		clockWallJump.restart().asSeconds();
-		if (direction == false) {
+		if (direction == false) {	//& sf::Keyboard::isKeyPressed(sf::Keyboard::Left)
 
 			setVelocityXY(wallJumpForce, wallJumpForce);
 		}
-		if (direction == true) {
+		if (direction == true) {	//& sf::Keyboard::isKeyPressed(sf::Keyboard::Right)
 
 			setVelocityXY(-wallJumpForce, wallJumpForce);
 		}
