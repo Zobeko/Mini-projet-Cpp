@@ -13,6 +13,6 @@ public:
 	b2Body* getBox();
 	void setXY(float _x, float _y) override;	// doit également changer les x et y de la boite physique
 
-private:
+protected:
 	b2Body* box;	// Pointeur vers la boite associée à l'unité
 };

@@ -7,7 +7,34 @@
 Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 64, 64, "Hero.png", textDictionnary, world) {
 	direction = false;
 	mirror = false;
-	texturePerso.loadFromFile("Hero.png");
+	
+	// Pour le joueur on met une boite de collision différente
+	box->DestroyFixture(box->GetFixtureList());
+	
+
+	
+	/*
+	//Ajout de la boite (partie haute)
+	b2PolygonShape shape;
+	shape.SetAsBox((32.f / 2.f) / 10.f, (32.f / 2.f) / 10.f, b2Vec2(0, 1.6f), 0); //_h=54 et _l=54 pour que ca marche bien pour le perso
+	// Défini les caractéristiques de notre boite de collision
+	b2FixtureDef fixtureDef;
+	fixtureDef.shape = &shape;
+	fixtureDef.density = 1.0f;
+	fixtureDef.friction = 0.9f;
+	box->CreateFixture(&fixtureDef);
+	*/
+
+	//Ajout de la sphère (partie basse)
+	b2CircleShape  circle;
+	circle.m_radius = ((64.f / 2.f) / 10.f);
+	// 10.f, b2Vec2(0, 1.6f), 0); //_h=54 et _l=54 pour que ca marche bien pour le perso
+	// Défini les caractéristiques de notre boite de collision
+	b2FixtureDef fixtureCircleDef;
+	fixtureCircleDef.shape = &circle;
+	fixtureCircleDef.density = 1.0f;
+	fixtureCircleDef.friction = 0.9f;
+	box->CreateFixture(&fixtureCircleDef);
 }
 
 

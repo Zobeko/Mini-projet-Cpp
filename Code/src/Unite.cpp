@@ -21,16 +21,16 @@ Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName, std::map<s
 }
 
 
-int Unite::getX() {
+float Unite::getX() {
 	return x;
 }
-int Unite::getY() {
+float Unite::getY() {
 	return y;
 }
-int Unite::getH() {
+float Unite::getH() {
 	return h;
 }
-int Unite::getL() {
+float Unite::getL() {
 	return l;
 }
 
