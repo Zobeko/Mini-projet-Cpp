@@ -35,12 +35,12 @@ void Ennemi::addCote(int _cote, int _type) {
 		cote.push_back(std::make_unique<CoteEnnemi_Hurt>(_cote, this));
 		break;
 	case 1:
-		// Le coté blesse le joueur quand touché
+		// Le coté tue l'ennemi quand touché
 		std::cout << _type << std::endl;
 		cote.push_back(std::make_unique<CoteEnnemi_Kill>(_cote, this));
 		break;
 	case 2:
-		// Le coté blesse le joueur quand touché
+		// Le coté agis comme une plateforme
 		std::cout << _type << std::endl;
 		cote.push_back(std::make_unique<CoteEnnemi_Plateforme>(_cote, this));
 		break;

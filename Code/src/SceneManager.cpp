@@ -303,31 +303,38 @@ void SceneManager::AddElementTiled(std::map<std::string, sf::Texture>& textDicti
             ennemis.push_back(std::move(st));
         }
         else if (_n.attribute("gid").as_int() == 7) {
+            // Ennemi Plafond
+            std::cout << "Ennemi au plafond" << std::endl;
+            auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiPlaf.png", textDictionnary, world, 2, 0, 0, 0);
+            ennemis.push_back(std::move(st));
+        }        
+        else if (_n.attribute("gid").as_int() == 8) {
             // Ennemi Wall
             auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiWall.png", textDictionnary, world, 0, 2, 2, 0);
             ennemis.push_back(std::move(st));
         }
-        else if (_n.attribute("gid").as_int() == 8) {
+        else if (_n.attribute("gid").as_int() == 9) {
             // Ennemi Plateforme
             auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
             ennemis.push_back(std::move(st));
         }
-        else if (_n.attribute("gid").as_int() == 9) {
+        //else if == 10
+        else if (_n.attribute("gid").as_int() == 11) {
             // Clef
             auto st = std::make_unique<Clef>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary);
             pickUps.push_back(std::move(st));
         }
-        else if (_n.attribute("gid").as_int() == 10) {
+        else if (_n.attribute("gid").as_int() == 12) {
             // Piece de 1
             auto st = std::make_unique<Piece>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary, 1);
             pickUps.push_back(std::move(st));
         }
-        else if (_n.attribute("gid").as_int() == 11) {
+        else if (_n.attribute("gid").as_int() == 13) {
             // Piece de 5
             auto st = std::make_unique<Piece>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary, 5);
             pickUps.push_back(std::move(st));
         }
-        else if (_n.attribute("gid").as_int() == 12) {
+        else if (_n.attribute("gid").as_int() == 14) {
             // Piece de 10
             auto st = std::make_unique<Piece>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary, 10);
             pickUps.push_back(std::move(st));
@@ -339,17 +346,17 @@ void SceneManager::AddShadowTiled(std::map<std::string, sf::Texture>& textDictio
     int i = -1;  // indice de la tile regardée
     for (pugi::xml_node _n : n.children("tile")) {
         i++;
-        if (_n.attribute("gid").as_int() == 13) {
+        if (_n.attribute("gid").as_int() == 15) {
             // Tile de pierre
             auto st = std::make_unique<Ombre>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, "OmbreTriangTrue.png", textDictionnary);
             shadows.push_back(std::move(st));
         }
-        else if (_n.attribute("gid").as_int() == 14) {
+        else if (_n.attribute("gid").as_int() == 16) {
             // Tile de pierre
             auto st = std::make_unique<Ombre>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert)+32, "OmbreRect.png", textDictionnary);
             shadows.push_back(std::move(st));
         }
-        else if (_n.attribute("gid").as_int() == 15) {
+        else if (_n.attribute("gid").as_int() == 17) {
             // Tile de pierre
             auto st = std::make_unique<Ombre>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, "OmbreTriangFalse.png", textDictionnary);
             shadows.push_back(std::move(st));

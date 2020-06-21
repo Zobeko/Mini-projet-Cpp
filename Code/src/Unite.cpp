@@ -22,7 +22,7 @@ Unite::Unite(int _x, int _y, int _h, int _l, std::string textureName, std::map<s
 
 
 float Unite::getX() {
-	return x;
+	return x; 
 }
 float Unite::getY() {
 	return y;
