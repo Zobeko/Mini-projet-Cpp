@@ -20,7 +20,7 @@ void Static::Update(SceneManager& sceneManager) {
 
 void Static::CheckGrounded(Joueur& j) {
 	int centre = getY();
-	if (centre - margeDetect < (j.getY() - j.getH()) && (j.getY() - j.getH()) < centre + margeDetect) {
+	if (centre - margeDetect*3 < (j.getY() - j.getH()) && (j.getY() - j.getH()) < centre + margeDetect*3) {
 		getSprite().setColor(sf::Color::Red);
 		// Ok pour la hauteur, checkons sur x
 		int limiteGaucheX = j.getX(); //t;
