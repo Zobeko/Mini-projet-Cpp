@@ -10,9 +10,9 @@ Clef::Clef(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary) 
 }
 
 // Comportement de la clef à chaque frame
-void Clef::Update(SceneManager& sceneManager, int iDpickUp) {
+void Clef::Update(SceneManager& sceneManager) {
 	if (intersect(*sceneManager.getJoueur())) {
 		sceneManager.unLockDoor();
-		sceneManager.RemovePickUp(iDpickUp);
+		deleteFlag = true;
 	}
 }

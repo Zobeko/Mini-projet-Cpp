@@ -15,14 +15,13 @@ Ennemi::Ennemi(int _x, int _y, int _h, int _l, std::string textureName, std::map
 }
 
 // Méthode Update qui regarde si le joueur touche les cotés de l'ennemi et agit en conséquence
-void Ennemi::Update(SceneManager& sceneManager, int idEnnemi) {
+void Ennemi::Update(SceneManager& sceneManager) {
 	bool tue0 = cote[0]->Update(sceneManager);
 	bool tue1 = cote[1]->Update(sceneManager);
 	bool tue2 = cote[2]->Update(sceneManager);
 	bool tue3 = cote[3]->Update(sceneManager);
 	if (tue0 || tue1 || tue2 || tue3) {
-		// C'est que l'ennemi a été tué par le joueur
-		sceneManager.RemoveEnnemi(idEnnemi);
+		deleteFlag = true;
 	}
 }
 
@@ -49,4 +48,8 @@ void Ennemi::addCote(int _cote, int _type) {
 		std::cerr << "Le type de coté demandé n'existe pas ou n'a pas été implémenté dans Ennemi : " << _type << std::endl;
 		break;
 	}	
+}
+
+bool Ennemi::getDeleteFlag() {
+	return deleteFlag;
 }

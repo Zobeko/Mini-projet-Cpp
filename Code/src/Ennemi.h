@@ -15,16 +15,13 @@ class Ennemi : public Static
 {
 public:
 	Ennemi(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, b2World& world, int typeCote0, int typeCote1, int typeCote2, int typeCote3);
-	void Update(SceneManager& sceneManager, int idEnnemi);	// Regarde la collision entre le joueur et chacun des cotés, et agit en conséquence
+	void Update(SceneManager& sceneManager);	// Regarde la collision entre le joueur et chacun des cotés, et agit en conséquence
 	int margeDetect = 5;									// Marge de Detection, car avec les boites on peut avoir un peu de jeu
+	bool getDeleteFlag();
 
 private:
-	// Les 4 cotés de l'ennemi : 
-	std::vector<std::unique_ptr<CoteEnnemi>> cote;
-	/*std::unique_ptr<CoteEnnemi> cote0;
-	std::unique_ptr<CoteEnnemi> cote1;
-	std::unique_ptr<CoteEnnemi> cote2;
-	std::unique_ptr<CoteEnnemi> cote3;*/
+	std::vector<std::unique_ptr<CoteEnnemi>> cote;	// Les 4 cotés de l'ennemi
 	void addCote(int _cote, int _type);
+	bool deleteFlag = false;
 };
 

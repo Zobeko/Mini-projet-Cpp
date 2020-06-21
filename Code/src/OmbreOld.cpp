@@ -27,7 +27,7 @@ bool OmbreOld::intersect(Unite & _unite) {
 	return false;
 }
 
-void OmbreOld::Update(SceneManager& sceneManager, int iDpickUp) {
+void OmbreOld::Update(SceneManager& sceneManager) {
 	if (intersect(*sceneManager.getJoueur())) {
 		sceneManager.MettreJoueurAbri();
 	}

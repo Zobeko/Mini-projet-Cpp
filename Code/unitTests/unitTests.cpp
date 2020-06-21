@@ -16,7 +16,6 @@ TEST(TestUnitaire, TestIntersectPickUp) {
 
     EXPECT_TRUE(pickupTest.intersect(UniteTest1));
     EXPECT_FALSE(pickupTest.intersect(UniteTest2));
-    EXPECT_EQ(1,1);
 }
 
 TEST(TestUnitaire, TestGrounded) {
@@ -37,12 +36,6 @@ TEST(TestUnitaire, TestGrounded) {
 
     EXPECT_TRUE(joueurGrounded.getGrounded());
     EXPECT_FALSE(joueurNotGrounded.getGrounded());
-    EXPECT_EQ(1, 1);
-
-
-
-
-
 }
 
 

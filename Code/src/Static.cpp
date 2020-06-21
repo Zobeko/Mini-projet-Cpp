@@ -21,18 +21,18 @@ void Static::Update(SceneManager& sceneManager) {
 void Static::CheckGrounded(Joueur& j) {
 	int centre = getY();
 	if (centre - margeDetect*3 < (j.getY() - j.getH()) && (j.getY() - j.getH()) < centre + margeDetect*3) {
-		getSprite().setColor(sf::Color::Red);
+		//getSprite().setColor(sf::Color::Red);
 		// Ok pour la hauteur, checkons sur x
 		int limiteGaucheX = j.getX(); //t;
 		int limiteDroiteX = j.getX() + j.getL();  //+margeDetect;
 		if (((limiteGaucheX < getX()) && (getX() < limiteDroiteX)) || ((limiteGaucheX < getX() + getL()) && (getX() + getL() < limiteDroiteX))) {
 			//Le joueur est bien au-dessus de la tile : on le définie comme grounded :
 			j.SetGroundedFlag(true);
-			getSprite().setColor(sf::Color::Blue);
+			//getSprite().setColor(sf::Color::Blue);
 		}
 	}
 	else {
-		getSprite().setColor(sf::Color::White);
+		//getSprite().setColor(sf::Color::White);
 	}
 }
 void Static::CheckWalled(Joueur& j) {
@@ -49,7 +49,7 @@ void Static::CheckWalledDroite(Joueur& j) {
 	int centreYjoueur = j.getY() - j.getH() / 2;
 	if (((getX() - margeDetect < centreXjoueur) & (centreXjoueur < getX() + margeDetect)) & ((getY() - margeDetect - getH() < centreYjoueur) & (centreYjoueur < getY() + margeDetect))) {
 		j.SetWalledFlag(true);
-		getSprite().setColor(sf::Color::Green);
+		//getSprite().setColor(sf::Color::Green);
 	}
 }
 void Static::CheckWalledGauche(Joueur& j) {
@@ -57,6 +57,6 @@ void Static::CheckWalledGauche(Joueur& j) {
 	int centreYjoueur = j.getY() - j.getH() / 2;
 	if (((centreX - margeDetect < j.getX()) & (j.getX() < centreX + margeDetect)) & ((getY() - margeDetect - getH() < centreYjoueur) & (centreYjoueur < getY()  + margeDetect))) {
 		j.SetWalledFlag(true);
-		getSprite().setColor(sf::Color::Green);
+		//getSprite().setColor(sf::Color::Yellow);
 	}
 }

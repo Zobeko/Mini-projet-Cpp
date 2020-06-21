@@ -15,14 +15,15 @@ using namespace std;
 #define WINDOW_HEIGHT 600
 #define WINDOW_WIDTH 800
 
+#pragma region Initialisation
 // Constructeur
 SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
     ComputeIDLastSalle();
     if (!texture.loadFromFile("resources/BackGd.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
-        cout << "Error loading texture : BackGd.png"<< endl;
+        cout << "Error loading texture : BackGd.png" << endl;
     }
     ImageDefond.setTexture(texture);
-    ImageDefond.setPosition(0,0);
+    ImageDefond.setPosition(0, 0);
     ImageDefond.setScale(WINDOW_WIDTH / 312.f, WINDOW_HEIGHT / 162.f);
     joueur = std::make_unique<Joueur>(_textDictionnary, _world);
     idSalle = 0;
@@ -49,7 +50,6 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
     textPiece.setColor(sf::Color::Yellow);
     textPiece.setPosition(750, 10);
 }
-
 //Méthode pour calculer l'ID de la dernière salle => appelée dans le constructeur uniquement
 void SceneManager::ComputeIDLastSalle() {
     pugi::xml_document doc;
@@ -68,7 +68,12 @@ void SceneManager::ComputeIDLastSalle() {
     }
     std::cout << "IdLastSalle = " << idLastSalle << std::endl;
 }
+#pragma endregion
 
+
+
+
+#pragma region Routine de jeu
 // Dessine le jeu (appelé à chaque fin de frame)
 void SceneManager::draw(sf::RenderWindow& window) {
     window.draw(ImageDefond);
@@ -90,7 +95,7 @@ void SceneManager::draw(sf::RenderWindow& window) {
         window.draw(textIDSalle);
         textChronoSalle.setString("Temps Restant : " + to_string(tempsSalle - timerSalle.getElapsedTime().asSeconds()));
         window.draw(textChronoSalle);
-        textPiece.setString(to_string(nbPiece)+"$");
+        textPiece.setString(to_string(nbPiece) + "$");
         window.draw(textPiece);
     }
     else {
@@ -110,10 +115,10 @@ void SceneManager::Update() {
             shadows[i]->Update(*this);
         }
         for (int i = 0; i < pickUps.size(); i++) {
-            pickUps[i]->Update(*this, i);
+            pickUps[i]->Update(*this);
         }
         for (int i = 0; i < ennemis.size(); i++) {
-            ennemis[i]->Update(*this, i);
+            ennemis[i]->Update(*this);
         }
         for (int i = 0; i < tiles.size(); i++) {
             tiles[i]->Update(*this);
@@ -122,19 +127,33 @@ void SceneManager::Update() {
         joueur->update(*this);
 
         CheckTimer();
-    }    
-}
 
-//Si le temps est ecoule, le joueur meurt
-void SceneManager::CheckTimer() {
-    if (tempsSalle - timerSalle.getElapsedTime().asSeconds() < 0) {
-        mortFlag = true;
+        for (int i = 0; i < pickUps.size(); i++) {
+            if (pickUps[i]->getDeleteFlag())
+                pickUps.erase(pickUps.begin() + i);
+        }
+        for (int i = 0; i < ennemis.size(); i++) {
+            if (ennemis[i]->getDeleteFlag())
+                ennemis.erase(ennemis.begin() + i);
+        }
     }
 }
+/*
+// Enlève un pickup donné du vector
+void SceneManager::RemovePickUp(int idPickUp) {
+    pickUps.erase(pickUps.begin() + idPickUp);
+}
+// Enlève un ennemi donné du vector
+void SceneManager::RemoveEnnemi(int idEnnemi) {
+    ennemis.erase(ennemis.begin() + idEnnemi);
+}*/
+#pragma endregion
 
 
 
-#pragma region Méthodes liées à la manipulation des éléments du niveau
+
+
+#pragma region Méthodes à la gestion de la mort du joueur
 // Renvoie une référence vers le joueur
 std::unique_ptr<Joueur>& SceneManager::getJoueur() {
     return joueur;
@@ -152,17 +171,15 @@ void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnar
         chargerSalle(_textDictionnary, _world);
     }
 }
+//Si le temps est ecoule, le joueur meurt
+void SceneManager::CheckTimer() {
+    if (tempsSalle - timerSalle.getElapsedTime().asSeconds() < 0) {
+        mortFlag = true;
+    }
+}
 //Mets joueur.ALabri à true
 void SceneManager::MettreJoueurAbri() {
 	joueur->SetALAbri(true);
-}
-// Enlève un pickup donné du vector
-void SceneManager::RemovePickUp(int idPickUp) {
-    pickUps.erase(pickUps.begin() + idPickUp);
-}
-// Enlève un ennemi donné du vector
-void SceneManager::RemoveEnnemi(int idEnnemi) {
-    ennemis.erase(ennemis.begin() + idEnnemi);
 }
 #pragma endregion
 

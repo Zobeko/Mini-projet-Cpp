@@ -20,7 +20,7 @@ void Porte::ActionOnIntersect(SceneManager& sceneManager, int iDpickUp) {
 	}
 }
 */
-void Porte::Update(SceneManager& sceneManager, int iDpickUp) {
+void Porte::Update(SceneManager& sceneManager) {
 	if (intersect(*sceneManager.getJoueur())) {
 		if (sceneManager.getClefRecupere()) {
 			sceneManager.setLevelFlagTrue();

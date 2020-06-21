@@ -17,11 +17,6 @@ bool PickUp::intersect(Unite & _unite) {
 	bool uniteInterDessus = (getY() - getH() < _unite.getY()) & (getY() > _unite.getY() - _unite.getH());
 		// est-ce qu'il y a correspondance par le dessous (unite plus bas que this)
 	bool uniteInterDessous = (_unite.getY() - _unite.getH() < getY()) & (_unite.getY() > getY() + getH());
-	/*
-	bool uniteInterDessus = (getY() < _unite.getY() + _unite.getH()) & (getY() + getH() > _unite.getY());
-		// est-ce qu'il y a correspondance par le dessous (unite plus bas que this)
-	bool uniteInterDessous = (_unite.getY() < getY() + getH()) & (_unite.getY() + _unite.getH() > getY());
-	*/
 
 	if (uniteInterDessus || uniteInterDessous) {
 		//hauteur : ok => intersection possible => test sur la longueur :
@@ -39,9 +34,12 @@ bool PickUp::intersect(Unite & _unite) {
 }
 
 // Routine de jeu du pickup : par défaut, regarde s'il y a intersection avec le joueur et si oui fait son action
-void PickUp::Update(SceneManager & sceneManager, int iDpickUp) {
-	//Unite* joueur = ;
+void PickUp::Update(SceneManager & sceneManager) {
 	if (intersect(*sceneManager.getJoueur())) {
-		sceneManager.RemovePickUp(iDpickUp);
+		deleteFlag = true;
 	}
+}
+
+bool PickUp::getDeleteFlag() {
+	return deleteFlag;
 }

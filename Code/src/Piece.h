@@ -10,7 +10,7 @@ class Piece : public PickUp
 {
 public:
 	Piece(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary, int _value);
-	void Update(SceneManager& sceneManager, int iDpickUp) override;
+	void Update(SceneManager& sceneManager) override;
 
 private:
 	int value;	//Valeur de la piève
