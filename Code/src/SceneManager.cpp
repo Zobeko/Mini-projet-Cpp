@@ -17,6 +17,7 @@ using namespace std;
 
 // Constructeur
 SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
+    ComputeIDLastSalle();
     if (!texture.loadFromFile("resources/BackGd.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
         cout << "Error loading texture : BackGd.png"<< endl;
     }
@@ -24,7 +25,7 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
     ImageDefond.setPosition(0,0);
     ImageDefond.setScale(WINDOW_WIDTH / 312.f, WINDOW_HEIGHT / 162.f);
     joueur = std::make_unique<Joueur>(_textDictionnary, _world);
-    idSalle = 0;    
+    idSalle = 0;
 
     chargerSalle(_textDictionnary, _world);
 
@@ -47,6 +48,25 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
     textPiece.setCharacterSize(15);
     textPiece.setColor(sf::Color::Yellow);
     textPiece.setPosition(750, 10);
+}
+
+//Méthode pour calculer l'ID de la dernière salle => appelée dans le constructeur uniquement
+void SceneManager::ComputeIDLastSalle() {
+    pugi::xml_document doc;
+    std::string nomNoeud;
+    idLastSalle = 0;
+    bool canOpen = true;
+    while (canOpen) {
+        nomNoeud = "resources/Salle" + to_string(idLastSalle) + ".xml";
+        pugi::xml_parse_result result = doc.load_file(nomNoeud.c_str());
+        cout << "Fichier " << nomNoeud << endl;
+        if (!result)
+        {
+            canOpen = false;
+        }
+        idLastSalle++;
+    }
+    std::cout << "IdLastSalle = " << idLastSalle << std::endl;
 }
 
 // Dessine le jeu (appelé à chaque fin de frame)
@@ -319,9 +339,19 @@ void SceneManager::AddShadowTiled(std::map<std::string, sf::Texture>& textDictio
     int i = -1;  // indice de la tile regardée
     for (pugi::xml_node _n : n.children("tile")) {
         i++;
-        if (_n.attribute("gid").as_int() == 14) {
+        if (_n.attribute("gid").as_int() == 13) {
             // Tile de pierre
-            auto st = std::make_unique<Ombre>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert)+32, textDictionnary);
+            auto st = std::make_unique<Ombre>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, "OmbreTriangTrue.png", textDictionnary);
+            shadows.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 14) {
+            // Tile de pierre
+            auto st = std::make_unique<Ombre>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert)+32, "OmbreRect.png", textDictionnary);
+            shadows.push_back(std::move(st));
+        }
+        else if (_n.attribute("gid").as_int() == 15) {
+            // Tile de pierre
+            auto st = std::make_unique<Ombre>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, "OmbreTriangFalse.png", textDictionnary);
             shadows.push_back(std::move(st));
         }
     }

@@ -3,10 +3,6 @@
 #include <iostream>
 #include "SceneManager.h"
 
-// Constructeur : version pour les ombres rectangulaires
-Ombre::Ombre(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary) : Unite(_x, _y, 64, 32, "OmbreRect.png", textDictionnary) {
-}
-
 // Constructeur : version à override pour les enfants
 Ombre::Ombre(int _x, int _y, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary) : Unite(_x, _y, 64, 32, textureName, textDictionnary) {
 }

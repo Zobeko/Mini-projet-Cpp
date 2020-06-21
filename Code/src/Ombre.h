@@ -7,7 +7,6 @@ class SceneManager;
 class Ombre : public Unite
 {
 public:
-	Ombre(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary);
 	Ombre(int _x, int _y, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary);
 	virtual bool intersect(Unite & _unite);
 	void Update(SceneManager& sceneManager);

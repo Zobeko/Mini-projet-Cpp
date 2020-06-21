@@ -74,5 +74,6 @@ private:
 	bool mortFlag = false;
 	bool gameFlag = true; //se met à false pour indiquer que le jeu est fini
 
+	void ComputeIDLastSalle();
 	//musique
 };
