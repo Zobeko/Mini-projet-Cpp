@@ -1,28 +1,25 @@
-#include "Ombre.h"
+#include "OmbreOld.h"
 #include "Unite.h"
 #include <iostream>
-#include "SceneManager.h"
 
-// Constructeur : version pour les ombres rectangulaires
-Ombre::Ombre(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary) : Unite(_x, _y, 64, 32, "OmbreRect.png", textDictionnary) {
-}
-
-// Constructeur : version à override pour les enfants
-Ombre::Ombre(int _x, int _y, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary) : Unite(_x, _y, 64, 32, textureName, textDictionnary) {
+// Constructeur : la largeur est calculée automatique à partir de la hauteur : on prend un angle de 30°
+OmbreOld::OmbreOld(int _x, int _y, int _h, std::map<std::string, sf::Texture>& textDictionnary) : PickUp(_x, _y, _h, abs(_h*tan(60)), "Ombre.png", textDictionnary) {
+	getSprite().setScale(abs(_h * tan(60) / 32), _h / 32);
 }
 
 /* Pour les ombres, on considère que le joueur est à l'ombre si le point
  * situé à son centre sur l'axe x et à l'extremité haute sur y est dans
  * le triangle (pour le moment c'est le point (x+l/2 ; y+h)
  */
-bool Ombre::intersect(Unite & _unite) {
+bool OmbreOld::intersect(Unite & _unite) {
 	// On commence par enregistrer les coordonnées du point à tester (comme ce sont les mêmes x et y pour les 2 conditions autant les sauvegarder pour faire moins d'appels
 	int xATester = _unite.getX() + _unite.getL()/2;
 	int yATester = _unite.getY();
 	// Puis on vérifie si le y est ok
-	if ((getY() - getH() - marge <= yATester) & (yATester<= getY() + marge)) {
+	if ((getY() - getH() < yATester) & (yATester< getY())) {
 		// Alors on teste sur x
-		if ((getX()-marge <= xATester) & (xATester <= getX() + getL() + marge)) {
+		// C'est un triangle d'angle 30 : il faut utiliser de la trigonométrie
+		if ((getX() < xATester) & (xATester < (abs(tan(60))*((getY() - yATester) + getH() ) + getX()))) {
 			//std::cout<< "Joueur A l'abri" << std::endl;
 			return true;
 		}			
@@ -30,7 +27,7 @@ bool Ombre::intersect(Unite & _unite) {
 	return false;
 }
 
-void Ombre::Update(SceneManager& sceneManager) {
+void OmbreOld::Update(SceneManager& sceneManager, int iDpickUp) {
 	if (intersect(*sceneManager.getJoueur())) {
 		sceneManager.MettreJoueurAbri();
 	}

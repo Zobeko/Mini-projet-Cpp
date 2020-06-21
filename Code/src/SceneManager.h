@@ -7,6 +7,7 @@
 #include "Joueur.h"
 #include "PickUp.h"
 #include "Ennemi.h"
+#include "Ombre.h"
 
 class SceneManager
 {
@@ -52,15 +53,15 @@ private:
 	std::vector<std::unique_ptr<Ennemi>> ennemis;
 	std::vector<std::unique_ptr<Static>> tiles;
 	std::vector<std::unique_ptr<PickUp>> pickUps;
+	std::vector<std::unique_ptr<Ombre>> shadows;
 	bool clefRecupere = false;
 
 
 	void chargerSalleTiled(pugi::xml_node& node, std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);
 	int GetXtoPop(int i, int nbTileHoriz);
 	int GetYtoPop(int i, int nbTileHoriz, int nbTileVert);
-	void AddElementTiled(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n, int nbTileHoriz, int nbTileVert);// Ajoute un Static depuis un noeud XML
-	void AddEnnemiTiled(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n, int nbTileHoriz, int nbTileVert);// Ajoute un Ennemi depuis un noeud XML
-	void AddPickupTiled(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n, int nbTileHoriz, int nbTileVert);// Ajoute un Pickup depuis un noeud XML
+	void AddElementTiled(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n, int nbTileHoriz, int nbTileVert);// Ajoute tous les éléments sauf les ombres depuis un noeud XML
+	void AddShadowTiled(std::map<std::string, sf::Texture>& textDictionnary, pugi::xml_node n, int nbTileHoriz, int nbTileVert);// Ajoutetoutes les ombres depuis un noeud XML
 	
 	void chargerSalleMain(pugi::xml_node& node, std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);
 	void AddStaticMain(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n);// Ajoute un Static depuis un noeud XML

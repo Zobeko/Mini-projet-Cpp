@@ -7,7 +7,7 @@
 #include "Piece.h"
 #include "Clef.h"
 #include "Porte.h"
-#include "Ombre.h"
+#include "OmbreOld.h"
 #include <iostream>
 
 using namespace std;
@@ -53,6 +53,9 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
 void SceneManager::draw(sf::RenderWindow& window) {
     window.draw(ImageDefond);
     if (gameFlag) {
+        for (auto& i : shadows) {
+            i->draw(window);
+        }
         for (auto& i : tiles) {
             i->draw(window);
         }
@@ -83,7 +86,9 @@ void SceneManager::Update() {
         joueur->SetWalledFlag(false);
         joueur->SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
 
-
+        for (int i = 0; i < shadows.size(); i++) {
+            shadows[i]->Update(*this);
+        }
         for (int i = 0; i < pickUps.size(); i++) {
             pickUps[i]->Update(*this, i);
         }
@@ -220,7 +225,7 @@ void SceneManager::chargerSalle(std::map<std::string, sf::Texture>& _textDiction
     levelSuivantFlag = false;
     mortFlag = false;
 }
-#pragma region Méthodes pour load un niveau avec les xml à la main
+#pragma region Méthodes pour load un niveau avec les xml faits sur Tiled
 // Fait le chargement de la salle quand 
 void SceneManager::chargerSalleTiled(pugi::xml_node& node, std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
     tempsSalle = node.child("properties").child("property").attribute("value").as_int();
@@ -228,7 +233,12 @@ void SceneManager::chargerSalleTiled(pugi::xml_node& node, std::map<std::string,
     int nbTileVert = node.attribute("height").as_int();
     cout << "On ouvre une salle faite sur Tiled "<< nbTileHoriz<< " " << nbTileVert << " " << tempsSalle << endl;
     
-    AddElementTiled(_textDictionnary, _world, node.child("layer").child("data"), nbTileHoriz, nbTileVert);
+    for (pugi::xml_node _l : node.children("layer")) {
+        if (_l.attribute("id").as_int() == 1)
+            AddElementTiled(_textDictionnary, _world, _l.child("data"), nbTileHoriz, nbTileVert);
+        else
+            AddShadowTiled(_textDictionnary, _l.child("data"), nbTileHoriz, nbTileVert);
+    }
 }
 // Calcule la position depuis l'indice et le nb de tiles
 int SceneManager::GetXtoPop(int i, int nbTileHoriz) {
@@ -282,7 +292,6 @@ void SceneManager::AddElementTiled(std::map<std::string, sf::Texture>& textDicti
             auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
             ennemis.push_back(std::move(st));
         }
-
         else if (_n.attribute("gid").as_int() == 9) {
             // Clef
             auto st = std::make_unique<Clef>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary);
@@ -305,29 +314,18 @@ void SceneManager::AddElementTiled(std::map<std::string, sf::Texture>& textDicti
         }
     }
 }
-
-
-
-// Ajoute un Pickup depuis un noeud XML
-/*
-void SceneManager::AddPickup(std::map<std::string, sf::Texture>& textDictionnary, b2World& world, pugi::xml_node n) {
-    for (pugi::xml_node _n : n.children("Piece")) {
-        auto st = std::make_unique<Piece>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary, _n.attribute("value").as_int());
-        pickUps.push_back(std::move(st));
+// Ajoute les ombres du niveau depuis le xml généré par Tiled
+void SceneManager::AddShadowTiled(std::map<std::string, sf::Texture>& textDictionnary, pugi::xml_node n, int nbTileHoriz, int nbTileVert) {
+    int i = -1;  // indice de la tile regardée
+    for (pugi::xml_node _n : n.children("tile")) {
+        i++;
+        if (_n.attribute("gid").as_int() == 14) {
+            // Tile de pierre
+            auto st = std::make_unique<Ombre>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert)+32, textDictionnary);
+            shadows.push_back(std::move(st));
+        }
     }
-    for (pugi::xml_node _n : n.children("Porte")) {
-        auto st = std::make_unique<Porte>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary);
-        pickUps.push_back(std::move(st));
-    }
-    for (pugi::xml_node _n : n.children("Clef")) {
-        auto st = std::make_unique<Clef>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), textDictionnary);
-        pickUps.push_back(std::move(st));
-    }
-    for (pugi::xml_node _n : n.children("Ombre")) {
-        auto st = std::make_unique<Ombre>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), textDictionnary);
-        pickUps.push_back(std::move(st));
-    }
-}*/
+}
 #pragma endregion
 
 #pragma region Méthodes pour load un niveau avec les xml à la main
@@ -384,7 +382,7 @@ void SceneManager::AddPickupMain(std::map<std::string, sf::Texture>& textDiction
         pickUps.push_back(std::move(st));
     }
     for (pugi::xml_node _n : n.children("Ombre")) {
-        auto st = std::make_unique<Ombre>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), textDictionnary);
+        auto st = std::make_unique<OmbreOld>(_n.attribute("x").as_int(), _n.attribute("y").as_int(), _n.attribute("h").as_int(), textDictionnary);
         pickUps.push_back(std::move(st));
     }
 }
@@ -396,6 +394,7 @@ void SceneManager::ClearSalle() {
     pickUps.erase(pickUps.begin(), pickUps.end());
     tiles.erase(tiles.begin(), tiles.end());
     ennemis.erase(ennemis.begin(), ennemis.end());
+    shadows.erase(shadows.begin(), shadows.end());
     clefRecupere = false;
 }
 #pragma endregion
