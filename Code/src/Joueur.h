@@ -28,6 +28,9 @@ public:
 									//et sa position(récupérée dans le xmldans SceneManager::chargerSalle()
 
 	void update(SceneManager &sceneManager);//update du joueur
+
+	float getDroite();
+	float getGauche();
 	
 
 private:
@@ -55,5 +58,6 @@ private:
 	sf::Clock clockWallJump;//Horloge du wall jump
 	float fpsCount = 0, fpsSpeed = 700, fpsSwitch = 100; //Constantes pour reduire la fréquence d'affichage des animations
 
+	float const affineCote = 10.f;
 };
 

@@ -8,61 +8,34 @@ CoteEnnemi::CoteEnnemi(int _cote, Ennemi* _owner) {
 	owner = _owner;
 }
 
-/*
-// Méthode Update qui regarde si le joueur est en collision avec le coté
-bool CoteEnnemi::Update(SceneManager& sceneManager) {
-	if (CheckCollision(*sceneManager.getJoueur())) {
-		if (type == 0) {
-			sceneManager.setDeathFlagTrue();
-		}
-		else if (type == 1) {
-			return true;	// l'ennemi est à tuer
-		}
-		else if (type == 2) {
-			if (cote == 0) {
-				// c'est le dessus
-				sceneManager.getJoueur()->SetGroundedFlag(true);
-			}
-			else if (cote == 1 || cote == 2) {
-				// c'est un coté vertical
-				sceneManager.getJoueur()->SetWalledFlag(true);
-			}
-			//Sinon c'est une erreur ou le coté du bas -> on fais rien
-		}
-	}
-	return false;
-}*/
-
 // Regarde si le joueur "touche" l'ennemi
 bool CoteEnnemi::CheckCollision(Joueur& j) {
-
-	int marge = owner->margeDetect;
 	if (cote == 0) {
 		//Cote haut
-		bool hauteur = (owner->getY() - marge < j.getY() - j.getH()) & (j.getY() - j.getH() < owner->getY() + marge);
-		bool gauche = owner->getX() < j.getX() + j.getL();
-		bool droite = j.getX()  < owner->getX() + owner->getL();
+		bool hauteur = (owner->getY() - margeDetectDept < j.getY() - j.getH()) & (j.getY() - j.getH() < owner->getY() + margeDetectDept);
+		bool gauche = owner->getX() < j.getDroite();
+		bool droite = j.getGauche() < owner->getX() + owner->getL();
 		return (hauteur & gauche & droite);
 	}
 	else if (cote == 1) {
 		//Cote gauche
-		bool haut = owner->getY() > j.getY() - j.getH();
-		bool bas = j.getY() > owner->getY() - owner->getH();
-		bool gauche = (owner->getX()-marge < j.getX() + j.getL()) && (j.getX() + j.getL() < owner->getX() + marge);
+		bool haut = owner->getY() - margeDetectWidth > j.getY() - j.getH();
+		bool bas = j.getY() > owner->getY() - owner->getH() + margeDetectWidth;
+		bool gauche = (owner->getX()-margeDetectDept < j.getDroite()) && (j.getDroite() < owner->getX() + margeDetectDept);
 		return (haut & bas & gauche);
 	}
 	else if (cote == 2) {
 		//Cote Droit
-		bool haut = owner->getY() > j.getY() - j.getH();
-		bool bas = j.getY() > owner->getY() - owner->getH();
-		bool droite = (owner->getX() + owner->getL() - marge < j.getX()) && (j.getX() < owner->getX() + owner->getL() + marge);
+		bool haut = owner->getY() - margeDetectWidth > j.getY() - j.getH();
+		bool bas = j.getY() > owner->getY() - owner->getH() + margeDetectWidth;
+		bool droite = (owner->getX() + owner->getL() - margeDetectDept < j.getGauche()) && (j.getGauche() < owner->getX() + owner->getL() + margeDetectDept);
 		return (haut & bas & droite);
 	}
 	else if (cote == 3) {
 		//Cote bas
-		bool bas = (owner->getY() - owner->getH() - marge < j.getY()) & (j.getY() < owner->getY() - owner->getH() + marge);
-		bool gauche = owner->getX() < j.getX() + j.getL();
-		bool droite = j.getX() < owner->getX() + owner->getL();
+		bool bas = (owner->getY() - owner->getH() - margeDetectDept < j.getY()) & (j.getY() < owner->getY() - owner->getH() + margeDetectDept);
+		bool gauche = owner->getX() < j.getDroite();
+		bool droite = j.getGauche() < owner->getX() + owner->getL();
 		return (bas & gauche & droite);
 	}
 

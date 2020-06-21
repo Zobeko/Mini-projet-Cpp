@@ -4,28 +4,15 @@
 #include "myMain.h"
 
 
+
 Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 64, 64, "Hero.png", textDictionnary, world) {
 	direction = false;
 	mirror = false;
 	
 	// Pour le joueur on met une boite de collision différente
 	box->DestroyFixture(box->GetFixtureList());
-	
 
-	
-	/*
-	//Ajout de la boite (partie haute)
-	b2PolygonShape shape;
-	shape.SetAsBox((32.f / 2.f) / 10.f, (32.f / 2.f) / 10.f, b2Vec2(0, 1.6f), 0); //_h=54 et _l=54 pour que ca marche bien pour le perso
-	// Défini les caractéristiques de notre boite de collision
-	b2FixtureDef fixtureDef;
-	fixtureDef.shape = &shape;
-	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 0.9f;
-	box->CreateFixture(&fixtureDef);
-	*/
-
-	//Ajout de la sphère (partie basse)
+	/*//Ajout de la sphère (partie basse)
 	b2CircleShape  circle;
 	circle.m_radius = ((64.f / 2.f) / 10.f);
 	// 10.f, b2Vec2(0, 1.6f), 0); //_h=54 et _l=54 pour que ca marche bien pour le perso
@@ -34,10 +21,39 @@ Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& wor
 	fixtureCircleDef.shape = &circle;
 	fixtureCircleDef.density = 1.0f;
 	fixtureCircleDef.friction = 0.9f;
-	box->CreateFixture(&fixtureCircleDef);
+	box->CreateFixture(&fixtureCircleDef);*/
+
+	//Ajout de la sphère (partie basse)
+	b2CircleShape  circle1;
+	circle1.m_radius = ((64.f - affineCote*2.f) / 2.f) / 10.f;
+	circle1.m_p.Set(0, -(affineCote / 10.f));
+	// 10.f, b2Vec2(0, 1.6f), 0); //_h=54 et _l=54 pour que ca marche bien pour le perso
+	// Défini les caractéristiques de notre boite de collision
+	b2FixtureDef fixtureCircleDef1;
+	fixtureCircleDef1.shape = &circle1;
+	fixtureCircleDef1.density = 1.0f;
+	fixtureCircleDef1.friction = 0.9f;
+	box->CreateFixture(&fixtureCircleDef1);
+
+	//Ajout de la sphère (partie haute)
+	b2CircleShape  circle2;
+	circle2.m_radius = ((64.f - affineCote*2.f) / 2.f) / 10.f;
+	circle2.m_p.Set(0, (affineCote-1) / 10.f);
+	// 10.f, b2Vec2(0, 1.6f), 0); //_h=54 et _l=54 pour que ca marche bien pour le perso
+	// Défini les caractéristiques de notre boite de collision
+	b2FixtureDef fixtureCircleDef2;
+	fixtureCircleDef2.shape = &circle2;
+	fixtureCircleDef2.density = 1.0f;
+	fixtureCircleDef2.friction = 0.9f;
+	box->CreateFixture(&fixtureCircleDef2);
 }
 
-
+float Joueur::getDroite() {
+	return getX() + getL() - affineCote;
+}
+float Joueur::getGauche() {
+	return getX() + affineCote;	
+}
 
 //Méthode renvoyant le bool de la direction du joueur
 bool Joueur::getDirection() {
@@ -194,8 +210,6 @@ void Joueur::gestionInputsTypeDep() {
 bool Joueur::getGrounded() {
 	return grounded;
 }
-
-
 #pragma endregion
 
 #pragma region Méthodes de mise des drapeaux

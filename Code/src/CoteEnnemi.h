@@ -19,5 +19,6 @@ protected:
 
 private:	
 	Ennemi* owner;
+	int margeDetectDept = 5;
+	int margeDetectWidth = 20;
 };
-

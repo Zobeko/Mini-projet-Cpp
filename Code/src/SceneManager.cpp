@@ -64,7 +64,8 @@ void SceneManager::ComputeIDLastSalle() {
         {
             canOpen = false;
         }
-        idLastSalle++;
+        else
+            idLastSalle++;
     }
     std::cout << "IdLastSalle = " << idLastSalle << std::endl;
 }
