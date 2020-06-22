@@ -41,10 +41,10 @@ int myMain()
     SceneManager manager(textDictionnary, world);
 
 	//Mise en place de la musique 
-	/*sf::Music musique;
-	if (!musique.openFromFile("musique_base.mp3"))
+	sf::Music musique;
+	if (!musique.openFromFile("resources/musique_base.ogg"))
 		return -1;
-    */
+	musique.play();
 
 
     // Game Loop
@@ -69,7 +69,7 @@ int myMain()
 
 		//On vérifie les flags du SceneManager et si besoin on change de niveau
 		manager.checkSalleSuivante(textDictionnary, world);
-		manager.checkMort(textDictionnary, world, window);
+		manager.checkMort(textDictionnary, world, window, musique);
 
 		// Update des éléments
 		manager.Update();
