@@ -71,7 +71,7 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 }
 
 void Joueur::checkCadre(SceneManager& sceneManager) {
-	if (getX() < -32 || getX() > 832 || getY() < -64 || getY() > 664) {
+	if (getX() < -64 || getX() > 864 || getY() < -64 || getY() > 664) {
 		sceneManager.setDeathFlagTrue();
 
 	}
@@ -209,6 +209,7 @@ void Joueur::gestionInputsTypeDep() {
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::LControl) && grounded==true && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Left))) {
 		anim.y = 1;
 		speed = - 0.5f * speedBase;
+		mirror = true;
 	}
 	else {
 		anim.y = 0;
@@ -233,5 +234,9 @@ void Joueur::SetGroundedFlag(bool GF) {
 //Permet de dire si oui ou non le joueur est sur un mur
 void Joueur::SetWalledFlag(bool WF) {
 	walled = WF;
+}
+
+void Joueur::SetMirror(bool MF) {
+	mirror = MF;
 }
 #pragma endregion

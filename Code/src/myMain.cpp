@@ -2,6 +2,7 @@
 
 #include "pugixml.hpp"
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "box2d/box2d.h"
 #include "SceneManager.h"
 
@@ -39,7 +40,11 @@ int myMain()
 	// Gestionnaire du jeu, c'est lui qui possède tous les éléments
     SceneManager manager(textDictionnary, world);
 
-    
+	//Mise en place de la musique 
+	/*sf::Music musique;
+	if (!musique.openFromFile("musique_base.mp3"))
+		return -1;
+    */
 
 
     // Game Loop

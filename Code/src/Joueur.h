@@ -25,6 +25,7 @@ public:
 	void SetALAbri(bool abri); // Modifie le bool aLAbri
 	void SetGroundedFlag(bool GF);// Modifie le bool grounded
 	void SetWalledFlag(bool WF);// Modifie le bool walled
+	void SetMirror(bool MF);
 
 	void init(float _x, float _y);//initialise la vitesse du joueur à (0,0), sa direction à false (gauche) 
 									//et sa position(récupérée dans le xmldans SceneManager::chargerSalle()
@@ -49,7 +50,7 @@ private:
 	float jumpForce = 90;//Force de saut du joueur
 	float wallJumpForce = 40.f;// Force de wall jump du joueur
 	bool direction; // direction = false : regarde vers la gauche, direction = true : regarde vers la droite
-	bool mirror; //mirror = true : mirroir activé ; mirror = false : désactivé
+	bool mirror = false; //mirror = true : mirroir activé ; mirror = false : désactivé
 	 //Vecteur dont x contient les numéro de sprite à afficher (de 1 à 3) et y un bool disant que quelle direction on est
 	enum animationStates {Marcher, Mirroir, Mourir, Jump, WallJump }; //Enum des différents types de déplacement, et donc différents sprites
 	sf::Vector2i anim = { 1, Marcher};//Vecteur dont x contient les numéro de sprite à afficher (de 1 à 3) et y un bool disant que quelle direction on est

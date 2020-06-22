@@ -108,6 +108,7 @@ void SceneManager::draw(sf::RenderWindow& window) {
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
 void SceneManager::Update() {
     if (gameFlag) {
+        joueur->SetMirror(false);
         joueur->SetGroundedFlag(false);
         joueur->SetWalledFlag(false);
         joueur->SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
