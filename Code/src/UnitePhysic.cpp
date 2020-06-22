@@ -1,11 +1,6 @@
-#include "Unite.h"
 #include "UnitePhysic.h"
 #include <vector>
 #include <SFML/Graphics.hpp>
-
-// à enlever après
-#include <iostream>
-//#include "myMain.h"
 
 using namespace std;
 
@@ -25,11 +20,10 @@ UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string tex
     b2Body* body = world.CreateBody(&bodyDef);
 
 
-    // Defini la forme de la boite de collision souhaitée (ici un rectangle) et initialise ses dimensions
-    b2PolygonShape shape;
+    // Defini la forme de la boite de collision souhaitée qui est un rectangle (on modifiera les fixtures dans les sous-classes si besoin) et initialise ses dimensions
+    b2PolygonShape shape;    
+    shape.SetAsBox((_l/2.f)/10.f, (_h/2.f)/10.f);
 
-    
-    shape.SetAsBox((_l/2.f)/10.f, (_h/2.f)/10.f); //_h=54 et _l=54 pour que ca marche bien pour le perso
     // Défini les caractéristiques de notre boite de collision
     b2FixtureDef fixtureDef;
     fixtureDef.shape = &shape;
@@ -37,9 +31,7 @@ UnitePhysic::UnitePhysic(float _x, float _y, float _h, float _l, std::string tex
     fixtureDef.friction = 0.9f;
     body->CreateFixture(&fixtureDef);
 
-
     box = body;
-
 }
 
 //Permet de récupéré la boite de collision
@@ -52,13 +44,10 @@ b2Body* UnitePhysic::getBox()
 void UnitePhysic::setXY(float _x, float _y)
 {
 	Unite::setXY(_x, _y);
-    //std::cout << "Unite : (" << Unite::getX() << ", " << Unite::getY() << ")" << endl;
     box->SetTransform(b2Vec2(_x/10.f, _y/10.f), 0);
-    //std::cout << "Box : (" << getBox()->GetPosition().x << ", " << getBox()->GetPosition().y << ")" << endl;
-    
-
 }
 
+//Destructeur qui doit détruire la boite physique
 UnitePhysic::~UnitePhysic() {
     box->GetWorld()->DestroyBody(box);
 }

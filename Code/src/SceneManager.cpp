@@ -16,14 +16,14 @@ using namespace std;
 #define WINDOW_HEIGHT 600
 #define WINDOW_WIDTH 800
 
-#pragma region Initialisation
-// Constructeur
+#pragma region Initialisation et Routine
+// Constructeur => mets en place tous les éléments SFML de SceneManager
 SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
     ComputeIDLastSalle();
-    if (!texture.loadFromFile("resources/BackGd.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
+    if (!texture.loadFromFile("resources/BackGd.png")) {
         cerr << "Error loading texture : BackGd.png" << endl;
     }
-    if (!textureTuto.loadFromFile("resources/Tuto.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
+    if (!textureTuto.loadFromFile("resources/Tuto.png")) {
         cerr << "Error loading texture : Tuto.png" << endl;
     }
     ImageDefond.setTexture(texture);
@@ -42,13 +42,6 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
     if (!font.loadFromFile("resources/Pixeled.ttf"))
     {
         cerr << "Error loading font : Pixeled" << endl;
-        cerr << "Error loading font : Pixeled" << endl;
-        cerr << "Error loading font : Pixeled" << endl;
-        cerr << "Error loading font : Pixeled" << endl;
-        cerr << "Error loading font : Pixeled" << endl;
-        cerr << "Error loading font : Pixeled" << endl;
-        cerr << "Error loading font : Pixeled" << endl;
-        cerr << "Error loading font : Pixeled" << endl;
     }
     textIDSalle.setFont(font);
     textIDSalle.setCharacterSize(10);
@@ -66,15 +59,15 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
     textPiece.setPosition(720, 10);
 
     if (!bufferClef.loadFromFile("resources/Key.wav"))
-        cerr << "Error loading font : Key.wav" << endl;
+        cerr << "Error loading sound : Key.wav" << endl;
     if (!bufferMort.loadFromFile("resources/Death.wav"))
-        cerr << "Error loading font : Death.wav" << endl;
+        cerr << "Error loading sound : Death.wav" << endl;
     if (!bufferCoin.loadFromFile("resources/Coin.wav"))
-        cerr << "Error loading font : Coin.wav" << endl;
+        cerr << "Error loading sound : Coin.wav" << endl;
     if (!bufferKill.loadFromFile("resources/Kill.wav"))
-        cerr << "Error loading font : Kill.wav" << endl;
+        cerr << "Error loading sound : Kill.wav" << endl;
     if (!bufferDoor.loadFromFile("resources/Door.wav"))
-        cerr << "Error loading font : Door.wav" << endl;
+        cerr << "Error loading sound : Door.wav" << endl;
     soundClef.setBuffer(bufferClef);
     soundMort.setBuffer(bufferMort);
     soundCoin.setBuffer(bufferCoin);
@@ -90,7 +83,6 @@ void SceneManager::ComputeIDLastSalle() {
     while (canOpen) {
         nomNoeud = "resources/Salle" + to_string(idLastSalle) + ".xml";
         pugi::xml_parse_result result = doc.load_file(nomNoeud.c_str());
-        cout << "Fichier " << nomNoeud << endl;
         if (!result)
         {
             canOpen = false;
@@ -102,11 +94,8 @@ void SceneManager::ComputeIDLastSalle() {
 }
 #pragma endregion
 
-
-
-
 #pragma region Routine de jeu
-// Dessine le jeu (appelé à chaque fin de frame)
+// Dessine le jeu (appelé à chaque fin de frame) + les éléments de HUD
 void SceneManager::draw(sf::RenderWindow& window) {
     window.draw(ImageDefond);
     if (gameFlag) {
@@ -141,10 +130,11 @@ void SceneManager::draw(sf::RenderWindow& window) {
 // Méthode appelée à chaque frame pour mettre à jour l'état du jeu
 void SceneManager::Update() {
     if (gameFlag) {
+        //On réinitialise les drapeaux du joueur
         joueur->SetMirror(false);
         joueur->SetGroundedFlag(false);
         joueur->SetWalledFlag(false);
-        joueur->SetALAbri(false); //On réinitialise le bool indiquant que le joueur est à l'abri ; s'il l'est toujours il le redeviendra à l'update des pickups
+        joueur->SetALAbri(false); 
 
         for (int i = 0; i < shadows.size(); i++) {
             shadows[i]->Update(*this);
@@ -159,10 +149,13 @@ void SceneManager::Update() {
             tiles[i]->Update(*this);
         }
 
+        //On update le joueur en dernier pour que les drapeaux soient dans l'état qu'il faut
         joueur->update(*this);
 
+        //On vérifie le timer de la salle (on mis le flag de mort sur true si le temps est dépassé)
         CheckTimer();
 
+        //On supprime les pickups et les ennemis qui doivent l'être en jouant un son adapté
         for (int i = 0; i < pickUps.size(); i++) {
             if (pickUps[i]->getDeleteFlag()) {
                 soundCoin.play();
@@ -178,10 +171,6 @@ void SceneManager::Update() {
     }
 }
 #pragma endregion
-
-
-
-
 
 #pragma region Méthodes à la gestion de la mort du joueur
 // Renvoie une référence vers le joueur
@@ -221,7 +210,7 @@ void SceneManager::MettreJoueurAbri() {
 #pragma endregion
 
 #pragma region Méthodes liées à la porte et la clef
-// Débloque la porte (appelé lorsqu'une clef est attrapée)
+// Débloque la porte (appelé lorsqu'une clef est attrapée) + joue un son pour différencier la clef du ramassage d'un autre pickup en plus
 void SceneManager::unLockDoor() {
     soundClef.play();
     clefRecupere = true;
@@ -230,14 +219,14 @@ void SceneManager::unLockDoor() {
 bool SceneManager::getClefRecupere() {
     return clefRecupere;
 }
-// Méthode appelée lorsqu'on veut passer au niveau suivant
+// Méthode appelée pour vérifier s'il faut passer au niveau suivant
 void SceneManager::checkSalleSuivante(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
     // On regarde s'il faut changer de salle
     if (levelSuivantFlag) {
         idSalle += 1;
         soundDoor.play();
         ClearSalle();
-        // Si le joueur a atteint le dernier niveau, on termine le jeu et affiche son temps total
+        // Si le joueur a atteint le dernier niveau, on termine le jeu
         if (idSalle >= idLastSalle) {
             idSalle = idLastSalle;
             finirJeu();
@@ -254,11 +243,11 @@ void SceneManager::setLevelFlagTrue() {
 // Mets le bool indiquant que le joueur est mort à true
 void SceneManager::setDeathFlagTrue() {
     mortFlag = true;
-    cout << "Joueur mort" << endl;
 }
+// Affiche l'écran de fin + le temps total et met le drapeau de jeu à false (== fin du jeu)
 void SceneManager::finirJeu() {
-    if (!texture.loadFromFile("resources/EcranFin.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
-        cout << "Error loading texture : EcranFin.png" << endl;
+    if (!texture.loadFromFile("resources/EcranFin.png")) {
+        cerr << "Error loading texture : EcranFin.png" << endl;
     }
     ImageDefond.setTexture(texture);
     ImageDefond.setPosition(0, 0);
@@ -307,7 +296,6 @@ void SceneManager::chargerSalleTiled(pugi::xml_node& node, std::map<std::string,
     tempsSalle = node.child("properties").child("property").attribute("value").as_int();
     int nbTileHoriz = node.attribute("width").as_int();
     int nbTileVert = node.attribute("height").as_int();
-    cout << "On ouvre une salle faite sur Tiled "<< nbTileHoriz<< " " << nbTileVert << " " << tempsSalle << endl;
     
     for (pugi::xml_node _l : node.children("layer")) {
         if (_l.attribute("id").as_int() == 1)
@@ -373,7 +361,7 @@ void SceneManager::AddElementTiled(std::map<std::string, sf::Texture>& textDicti
             auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiPlat.png", textDictionnary, world, 2, 0, 0, 0);
             ennemis.push_back(std::move(st));
         }
-        //else if == 10
+        //else if == 10 => de la place pour un autre ennemi
         else if (_n.attribute("gid").as_int() == 11) {
             // Clef
             auto st = std::make_unique<Clef>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert), textDictionnary);
@@ -424,7 +412,6 @@ void SceneManager::AddShadowTiled(std::map<std::string, sf::Texture>& textDictio
 // Fait le chargement de la salle quand 
 void SceneManager::chargerSalleMain(pugi::xml_node& node, std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
     tempsSalle = node.child("Temps").attribute("t").as_int();
-    cout << tempsSalle << endl;
 
     joueur->init(node.child("Joueur").attribute("x").as_int(), node.child("Joueur").attribute("y").as_int());
 

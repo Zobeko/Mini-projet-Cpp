@@ -3,7 +3,8 @@
 #include "Unite.h"
 #include "PickUp.h"
 
-// Classe des Ombres. Lorsque la tête du joueur est dans l'ombre, il est protégé de Méduse et peut donc regarder dans les 2 directions sans craintes
+// [Depréciée] Ancienne lasse des Ombres. Lorsque la tête du joueur est dans l'ombre, il est protégé de Méduse et peut donc regarder dans les 2 directions sans craintes
+// Toujours existante pour assurer la lecture des anciens fichiers XML si besoin
 class OmbreOld : public PickUp
 {
 public:

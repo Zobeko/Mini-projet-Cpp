@@ -1,7 +1,7 @@
 #include "CoteEnnemi.h"
+#include "Joueur.h"
 #include "SceneManager.h"
 
-#include <iostream>
 
 CoteEnnemi::CoteEnnemi(int _cote, Ennemi* _owner) {
 	cote = _cote;	

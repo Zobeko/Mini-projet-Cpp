@@ -8,10 +8,10 @@ class Ombre : public Unite
 {
 public:
 	Ombre(int _x, int _y, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary);
-	virtual bool intersect(Unite & _unite);
-	void Update(SceneManager& sceneManager);
+	bool intersect(Unite & _unite);						// Méthode pour savoir si le joueur est en intersection avec l'ombre
+	void Update(SceneManager& sceneManager);			// Méthode appelée pour chaque ombre à chaque frame pour savoir si le joueur est à l'abri
 
 protected:
-	int const marge = 3;
+	int const marge = 3;								// Marge de détection des ombres
 };
 

@@ -14,9 +14,9 @@ public:
 	float getH();
 	float getL();
 	sf::Sprite& getSprite();
-	virtual void setXY(float _x, float _y);			// Est virtual pour pouvoir être override dans UnitePhysic
-	void setSprite(int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary);		// Permet de modifier la texture du sprite
-	void draw(sf::RenderWindow & window);		// Dessine le sprite dans la fenetre
+	virtual void setXY(float _x, float _y);																			// Est virtual pour pouvoir être override dans UnitePhysic
+	void setSprite(int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary);	// Permet de modifier la texture du sprite
+	void draw(sf::RenderWindow & window);																			// Dessine le sprite dans la fenetre
 
 private:
 	float x;				// Position X de l'unité

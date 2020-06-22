@@ -20,7 +20,6 @@ bool OmbreOld::intersect(Unite & _unite) {
 		// Alors on teste sur x
 		// C'est un triangle d'angle 30 : il faut utiliser de la trigonométrie
 		if ((getX() < xATester) & (xATester < (abs(tan(60))*((getY() - yATester) + getH() ) + getX()))) {
-			//std::cout<< "Joueur A l'abri" << std::endl;
 			return true;
 		}			
 	}

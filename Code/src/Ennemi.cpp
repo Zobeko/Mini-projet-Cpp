@@ -1,13 +1,9 @@
 #include "Ennemi.h"
 #include "SceneManager.h"
-#include <iostream>
+#include <iostream>	// Car on a un message console d'erreur
 
 
 Ennemi::Ennemi(int _x, int _y, int _h, int _l, std::string textureName, std::map<std::string, sf::Texture>& textDictionnary, b2World& world, int typeCote0, int typeCote1, int typeCote2, int typeCote3) : Static(_x, _y, _h, _l, textureName, textDictionnary, world) {
-	/*cote0 = std::make_unique<CoteEnnemi>(0, typeCote0, this);
-	cote1 = std::make_unique<CoteEnnemi>(1, typeCote1, this);
-	cote2 = std::make_unique<CoteEnnemi>(2, typeCote2, this);
-	cote3 = std::make_unique<CoteEnnemi>(3, typeCote3, this);*/
 	addCote(0, typeCote0);
 	addCote(1, typeCote1);
 	addCote(2, typeCote2);
@@ -21,26 +17,24 @@ void Ennemi::Update(SceneManager& sceneManager) {
 	bool tue2 = cote[2]->Update(sceneManager);
 	bool tue3 = cote[3]->Update(sceneManager);
 	if (tue0 || tue1 || tue2 || tue3) {
-		deleteFlag = true;
+		deleteFlag = true;	// si l'un des cotés dit que l'ennemi doit mourrir, on active son drapeau
 	}
 }
 
+// Selon la valeur de _type, on crée un CoteEnnemi de la classe dérivée correspondante
 void Ennemi::addCote(int _cote, int _type) {
 	switch (_type)
 	{
 	case 0:
 		// Le coté blesse le joueur quand touché
-		std::cout << _type << std::endl;
 		cote.push_back(std::make_unique<CoteEnnemi_Hurt>(_cote, this));
 		break;
 	case 1:
 		// Le coté tue l'ennemi quand touché
-		std::cout << _type << std::endl;
 		cote.push_back(std::make_unique<CoteEnnemi_Kill>(_cote, this));
 		break;
 	case 2:
 		// Le coté agis comme une plateforme
-		std::cout << _type << std::endl;
 		cote.push_back(std::make_unique<CoteEnnemi_Plateforme>(_cote, this));
 		break;
 	default:

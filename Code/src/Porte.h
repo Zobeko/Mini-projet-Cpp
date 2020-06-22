@@ -9,5 +9,5 @@ class Porte : public PickUp
 {
 public:
 	Porte(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary);
-	void Update(SceneManager& sceneManager) override;
+	void Update(SceneManager& sceneManager) override;	// En cas de collision, doit vérifier si une clef a été ramassée et si oui amener à la salle suivante
 };

@@ -1,8 +1,6 @@
 #include "CoteEnnemi_Plateforme.h"
 #include "SceneManager.h"
 
-#include <iostream>
-
 CoteEnnemi_Plateforme::CoteEnnemi_Plateforme(int _cote, Ennemi* _owner) : CoteEnnemi(_cote, _owner){
 }
 

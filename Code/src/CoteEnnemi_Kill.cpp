@@ -1,8 +1,6 @@
 #include "CoteEnnemi_Kill.h"
 #include "SceneManager.h"
 
-#include <iostream>
-
 CoteEnnemi_Kill::CoteEnnemi_Kill(int _cote, Ennemi* _owner) : CoteEnnemi(_cote, _owner){
 }
 

@@ -1,11 +1,8 @@
 #include "Piece.h"
 
-#include "PickUp.h"
-#include "SceneManager.h"
-
 using namespace std;
 
-// Constructeur : associe une valeur et un sprite correspondant /!\ en l'état seules les pièces 1,5 et 10 ont un sprite
+// Constructeur : associe une valeur et un sprite correspondant /!\ en l'état seules les pièces 1, 5 et 10 ont un sprite
 Piece::Piece(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary, int _value) : PickUp(_x, _y, 32, 32, "Piece" + std::to_string(_value) + ".png", textDictionnary) {
 	value = _value;
 }

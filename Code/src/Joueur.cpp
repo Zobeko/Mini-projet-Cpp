@@ -1,7 +1,6 @@
 #include "Joueur.h"
 #include <vector>
 #include "SceneManager.h"
-#include "myMain.h"
 #include <SFML/audio.hpp>
 
 #include <iostream>
@@ -12,10 +11,15 @@ Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& wor
 	direction = false;
 	mirror = false;
 
+	// On charge le son du saut
 	if (!bufferSaut.loadFromFile("resources/Jump.wav"))
-		cerr << "Error loading font : Jump.wav" << endl;
+		std::cerr << "Error loading sound : Jump.wav" << std::endl;
 	soundSaut.setBuffer(bufferSaut);
 	
+	// On remplace la boite de collision carrée par 2 cercle de rayon 64 - affineCote
+		// => permet de régler le bug arrivant parfois du blocage entre 2 tiles du sol qui obligeait au joueur à retourner en arrière
+		// + permet de réduire la largeur de la boit de collision pour qu'elle soit + conforme au visuel et que le joueur soit plus à l'aise avec
+	#pragma region Boite de collision
 	// Pour le joueur on met une boite de collision différente
 	box->DestroyFixture(box->GetFixtureList());
 	//Ajout de la sphère (partie basse)
@@ -41,6 +45,7 @@ Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& wor
 	fixtureCircleDef2.density = 1.0f;
 	fixtureCircleDef2.friction = 0.9f;
 	box->CreateFixture(&fixtureCircleDef2);
+#pragma endregion
 }
 
 float Joueur::getDroite() {
@@ -57,7 +62,6 @@ bool Joueur::getDirection() {
 
 //Méthode qui tue le joueur si il regarde Meduse sans utiliser le mirroir o etre à l'abri
 void Joueur::checkMeduse(SceneManager& sceneManager) {
-
 	//Si le joueur regarde à droite et qu'il n'est pas à l'abri 
 	//et que le mirroir n'est pas activé, alors il meurt
 	if ( direction == true && aLAbri == false && mirror == false) {
@@ -66,11 +70,10 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 }
 
 void Joueur::checkCadre(SceneManager& sceneManager) {
-	if (getX() < -64 || getX() > 864 || getY() < -64 || getY() > 664) {
+	// si le joueur n'est plus dans le cadre (avec une marge de sa taille) on le tue
+	if (getX() < -dimensions || getX() > 800+ dimensions || getY() < -dimensions || getY() > 600+dimensions) {
 		sceneManager.setDeathFlagTrue();
-
 	}
-
 }
 
 void Joueur::init(float _x, float _y) {
@@ -79,20 +82,17 @@ void Joueur::init(float _x, float _y) {
 	setVelocityXY(0, 0);
 }
 
-void Joueur::update(SceneManager& sceneManager) {
-
-	
+void Joueur::update(SceneManager& sceneManager) {	
 	Dynamic::update();
 	getInputs();
 	checkMeduse(sceneManager);
 	checkCadre(sceneManager);
 
-
 	//Gestion animation personnage déplacements
 	playAnim();
-
 }
 
+#pragma region Lecture des animations
 void Joueur::setDeathAnim() {
 	if (direction) {
 		getSprite().setTextureRect(sf::IntRect(dimensions, 2 * dimensions, -dimensions, dimensions));
@@ -100,7 +100,6 @@ void Joueur::setDeathAnim() {
 	else {
 		getSprite().setTextureRect(sf::IntRect(dimensions, 2 * dimensions, dimensions, dimensions));
 	}
-	std::cout << "On a mis l'anim de mort" << std::endl;
 }
 void Joueur::playAnim() {
 	fpsCount += fpsSpeed * clockAnimation.restart().asSeconds();
@@ -120,6 +119,7 @@ void Joueur::playAnim() {
 		getSprite().setTextureRect(sf::IntRect(anim.x * dimensions, anim.y * dimensions, dimensions, dimensions));
 	}
 }
+#pragma endregion
 
 #pragma region Méthodes liées aux inputs
 
@@ -140,41 +140,36 @@ void Joueur::getInputs() {
 	//l'animation de wall jump tant qu'il est collé au mur
 	if (!grounded && walled) {
 		anim.y = 4;
-	}
-	
+	}	
 }
 
 //Gestions des inputs de direction, changement de vitesse adéquat
 //et changement de sprite
 void Joueur::gestionInputsDir() {
 	if (clockWallJump.getElapsedTime().asSeconds() > 0.8f) {
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && grounded == true) {
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+			if (grounded == true) {
+				setVelocityXY(-speed, getVelocityY());
+			}
+			else if (getVelocityY() > 0) {
+				setVelocityXY(-speed, getVelocityY());
+			}
+			else if (getVelocityY() < 20) {				
+				setVelocityXY(-speed, -speed);
+			}
 			direction = false;
-			setVelocityXY(-speed, getVelocityY());
-
 		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && grounded == false && getVelocityY() > 0) {
-			direction = false;
-			setVelocityXY(-speed, getVelocityY());
-		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && grounded == false && getVelocityY() < 20) {
-			direction = false;
-			setVelocityXY(-speed, -speed);
-		}
-
-
-
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && grounded == true) {
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+			if (grounded == true) {
+				setVelocityXY(speed, getVelocityY());
+			}
+			else if (getVelocityY() > 0) {
+				setVelocityXY(speed, getVelocityY());
+			}
+			else if (getVelocityY() < 0) {
+				setVelocityXY(speed, -speed);
+			}
 			direction = true;
-			setVelocityXY(speed, getVelocityY());
-		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && grounded == false && getVelocityY() > 0) {
-			direction = true;
-			setVelocityXY(speed, getVelocityY());
-		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && grounded == false && getVelocityY() < 0) {
-			direction = true;
-			setVelocityXY(speed, -speed);
 		}
 	}
 }
@@ -191,17 +186,15 @@ void Joueur::gestionInputsJump() {
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && grounded == false && walled == true) {
 		clockWallJump.restart().asSeconds();
-		if (direction == false) {	//& sf::Keyboard::isKeyPressed(sf::Keyboard::Left)
+		if (direction == false) {
 			soundSaut.play();
 			setVelocityXY(wallJumpForce, wallJumpForce);
 		}
-		if (direction == true) {	//& sf::Keyboard::isKeyPressed(sf::Keyboard::Right)
+		if (direction == true) {
 			soundSaut.play();
 			setVelocityXY(-wallJumpForce, wallJumpForce);
 		}
 	}
-
-
 }
 
 //Gestion des inputs de de type de déplacements (marche, course ou mirroir)
@@ -240,7 +233,6 @@ void Joueur::SetGroundedFlag(bool GF) {
 void Joueur::SetWalledFlag(bool WF) {
 	walled = WF;
 }
-
 void Joueur::SetMirror(bool MF) {
 	mirror = MF;
 }

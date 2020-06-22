@@ -10,8 +10,8 @@ class Piece : public PickUp
 {
 public:
 	Piece(int _x, int _y, std::map<std::string, sf::Texture>& textDictionnary, int _value);
-	void Update(SceneManager& sceneManager) override;
+	void Update(SceneManager& sceneManager) override;					// La pièce doit incrémenter le compteur de pièce de sa valeur + se détruire si il y a contact
 
 private:
-	int value;	//Valeur de la piève
+	int value;	//Valeur de la pièce
 };

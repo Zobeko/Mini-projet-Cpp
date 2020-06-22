@@ -24,7 +24,7 @@ int Dynamic::getVelocityY() {
 	return vel.y;
 }
 
-
+// A chaque instant on replace l'unite là où se situe sa boite de collision en faisant la conversion des échelles
 void Dynamic::update() {
 	Unite::setXY((getBox()->GetPosition().x*10.f - getL()/2), (getBox()->GetPosition().y*10.f + getH() / 2));
 }

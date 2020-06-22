@@ -1,8 +1,5 @@
 #include "Clef.h"
 
-#include "PickUp.h"
-#include "SceneManager.h"
-
 using namespace std;
 
 // Constructeur : associe une valeur et un sprite correspondant /!\ en l'état seules les pièces 1,5 et 10 ont un sprite

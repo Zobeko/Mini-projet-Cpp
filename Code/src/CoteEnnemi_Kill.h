@@ -1,13 +1,8 @@
 #pragma once
 
-#include "Joueur.h"
 #include "CoteEnnemi.h"
-class Ennemi;	//Permet d'avoir l'owner 
 
-// Classe désignant un des4 cotés d'un ennemi
-// Permet d'implémenter le design Pattern Stratégie
-// Lorsue le joueur est au contact d'un coté, selon son type
-	// cela tue le joueur, tue l'ennemi ou le coté agit comme une plateforme (dont on peut sauter)
+// Coté tuant l'ennemi le possédant au contact
 class CoteEnnemi_Kill : public CoteEnnemi
 {
 public:
