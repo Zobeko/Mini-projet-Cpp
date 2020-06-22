@@ -15,6 +15,8 @@ public:
 
 	void checkMeduse(SceneManager &sceneManager); // Regarde si le joueur est à l'abri et si il regarde Meduse, 
 													//si il n'est pas à l'abri et regarde Meduse, alors il meurt
+	void checkCadre(SceneManager& seneManager);
+
 	void getInputs();
 	void gestionInputsDir();//Gestion des inputs Left et Right qui deplacent le joueur et modifient la direction du joueur
 	void gestionInputsJump();//Gestion des inputs de jump et de wall jump

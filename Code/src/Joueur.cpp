@@ -70,6 +70,14 @@ void Joueur::checkMeduse(SceneManager& sceneManager) {
 	}
 }
 
+void Joueur::checkCadre(SceneManager& sceneManager) {
+	if (getX() < -32 || getX() > 832 || getY() < -64 || getY() > 664) {
+		sceneManager.setDeathFlagTrue();
+
+	}
+
+}
+
 void Joueur::init(float _x, float _y) {
 	setXY(_x, _y);
 	direction = false;
@@ -82,6 +90,7 @@ void Joueur::update(SceneManager& sceneManager) {
 	Dynamic::update();
 	getInputs();
 	checkMeduse(sceneManager);
+	checkCadre(sceneManager);
 
 
 	//Gestion animation personnage déplacements
