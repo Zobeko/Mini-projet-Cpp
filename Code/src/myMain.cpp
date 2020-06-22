@@ -41,10 +41,10 @@ int myMain()
     SceneManager manager(textDictionnary, world);
 
 	//Mise en place de la musique 
-	/*sf::Music musique;
-	if (!musique.openFromFile("musique_base.mp3"))
+	sf::Music musique;
+	if (!musique.openFromFile("resources/musique_base.ogg"))
 		return -1;
-    */
+	musique.play();
 
 
     // Game Loop
