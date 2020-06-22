@@ -21,10 +21,10 @@ using namespace std;
 SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
     ComputeIDLastSalle();
     if (!texture.loadFromFile("resources/BackGd.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
-        cout << "Error loading texture : BackGd.png" << endl;
+        cerr << "Error loading texture : BackGd.png" << endl;
     }
     if (!textureTuto.loadFromFile("resources/Tuto.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
-        cout << "Error loading texture : Tuto.png" << endl;
+        cerr << "Error loading texture : Tuto.png" << endl;
     }
     ImageDefond.setTexture(texture);
     ImageDefond.setPosition(0, 0);
@@ -41,7 +41,14 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
 
     if (!font.loadFromFile("resources/Pixeled.ttf"))
     {
-        cout << "Error loading font : Pixeled" << endl;
+        cerr << "Error loading font : Pixeled" << endl;
+        cerr << "Error loading font : Pixeled" << endl;
+        cerr << "Error loading font : Pixeled" << endl;
+        cerr << "Error loading font : Pixeled" << endl;
+        cerr << "Error loading font : Pixeled" << endl;
+        cerr << "Error loading font : Pixeled" << endl;
+        cerr << "Error loading font : Pixeled" << endl;
+        cerr << "Error loading font : Pixeled" << endl;
     }
     textIDSalle.setFont(font);
     textIDSalle.setCharacterSize(10);
@@ -57,6 +64,22 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
     textPiece.setCharacterSize(15);
     textPiece.setColor(sf::Color::Yellow);
     textPiece.setPosition(720, 10);
+
+    if (!bufferClef.loadFromFile("resources/Key.wav"))
+        cerr << "Error loading font : Key.wav" << endl;
+    if (!bufferMort.loadFromFile("resources/Death.wav"))
+        cerr << "Error loading font : Death.wav" << endl;
+    if (!bufferCoin.loadFromFile("resources/Coin.wav"))
+        cerr << "Error loading font : Coin.wav" << endl;
+    if (!bufferKill.loadFromFile("resources/Kill.wav"))
+        cerr << "Error loading font : Kill.wav" << endl;
+    if (!bufferDoor.loadFromFile("resources/Door.wav"))
+        cerr << "Error loading font : Door.wav" << endl;
+    soundClef.setBuffer(bufferClef);
+    soundMort.setBuffer(bufferMort);
+    soundCoin.setBuffer(bufferCoin);
+    soundKill.setBuffer(bufferKill);
+    soundDoor.setBuffer(bufferDoor);
 }
 //Méthode pour calculer l'ID de la dernière salle => appelée dans le constructeur uniquement
 void SceneManager::ComputeIDLastSalle() {
@@ -141,12 +164,16 @@ void SceneManager::Update() {
         CheckTimer();
 
         for (int i = 0; i < pickUps.size(); i++) {
-            if (pickUps[i]->getDeleteFlag())
+            if (pickUps[i]->getDeleteFlag()) {
+                soundCoin.play();
                 pickUps.erase(pickUps.begin() + i);
+            }
         }
         for (int i = 0; i < ennemis.size(); i++) {
-            if (ennemis[i]->getDeleteFlag())
+            if (ennemis[i]->getDeleteFlag()) {
+                soundKill.play();
                 ennemis.erase(ennemis.begin() + i);
+            }
         }
     }
 }
@@ -168,6 +195,7 @@ void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnar
         window.clear(sf::Color::White);
         draw(window);
         window.display();
+        soundMort.play();
         ClearSalle();
         idSalle -= 1;
         if (idSalle < 0) {
@@ -195,6 +223,7 @@ void SceneManager::MettreJoueurAbri() {
 #pragma region Méthodes liées à la porte et la clef
 // Débloque la porte (appelé lorsqu'une clef est attrapée)
 void SceneManager::unLockDoor() {
+    soundClef.play();
     clefRecupere = true;
 }
 // Renvoie un bool indiquant si la porte est ouverte ou non
@@ -206,6 +235,7 @@ void SceneManager::checkSalleSuivante(std::map<std::string, sf::Texture>& _textD
     // On regarde s'il faut changer de salle
     if (levelSuivantFlag) {
         idSalle += 1;
+        soundDoor.play();
         ClearSalle();
         // Si le joueur a atteint le dernier niveau, on termine le jeu et affiche son temps total
         if (idSalle >= idLastSalle) {

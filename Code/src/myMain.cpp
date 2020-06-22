@@ -46,6 +46,9 @@ int myMain()
 		return -1;
 	musique.play();
 
+	
+
+
 
     // Game Loop
 	while (window.isOpen())

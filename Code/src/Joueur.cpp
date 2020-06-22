@@ -2,28 +2,22 @@
 #include <vector>
 #include "SceneManager.h"
 #include "myMain.h"
+#include <SFML/audio.hpp>
 
 #include <iostream>
+
 
 
 Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 64, 64, "Hero.png", textDictionnary, world) {
 	direction = false;
 	mirror = false;
+
+	if (!bufferSaut.loadFromFile("resources/Jump.wav"))
+		cerr << "Error loading font : Jump.wav" << endl;
+	soundSaut.setBuffer(bufferSaut);
 	
 	// Pour le joueur on met une boite de collision différente
 	box->DestroyFixture(box->GetFixtureList());
-
-	/*//Ajout de la sphère (partie basse)
-	b2CircleShape  circle;
-	circle.m_radius = ((64.f / 2.f) / 10.f);
-	// 10.f, b2Vec2(0, 1.6f), 0); //_h=54 et _l=54 pour que ca marche bien pour le perso
-	// Défini les caractéristiques de notre boite de collision
-	b2FixtureDef fixtureCircleDef;
-	fixtureCircleDef.shape = &circle;
-	fixtureCircleDef.density = 1.0f;
-	fixtureCircleDef.friction = 0.9f;
-	box->CreateFixture(&fixtureCircleDef);*/
-
 	//Ajout de la sphère (partie basse)
 	b2CircleShape  circle1;
 	circle1.m_radius = ((64.f - affineCote*2.f) / 2.f) / 10.f;
@@ -191,17 +185,18 @@ void Joueur::gestionInputsDir() {
 void Joueur::gestionInputsJump() {
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && grounded == true) {
+		soundSaut.play();
 		setVelocityXY(getVelocityX(), jumpForce);
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && grounded == false && walled == true) {
 		clockWallJump.restart().asSeconds();
 		if (direction == false) {	//& sf::Keyboard::isKeyPressed(sf::Keyboard::Left)
-
+			soundSaut.play();
 			setVelocityXY(wallJumpForce, wallJumpForce);
 		}
 		if (direction == true) {	//& sf::Keyboard::isKeyPressed(sf::Keyboard::Right)
-
+			soundSaut.play();
 			setVelocityXY(-wallJumpForce, wallJumpForce);
 		}
 	}

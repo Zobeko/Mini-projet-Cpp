@@ -3,6 +3,7 @@
 #include "Dynamic.h"
 #include "Unite.h"
 #include <vector>
+#include <SFML/audio.hpp>
 class SceneManager;
 
 // Classe du Joueur
@@ -40,6 +41,9 @@ public:
 	
 
 private:
+	sf::SoundBuffer bufferSaut;
+	sf::Sound soundSaut;
+
 	bool grounded = false;//False : le joueur ne touche pas le sol
 							//True : le joueur touche le sol
 	bool walled = false;//false : le joueur ne touche pas de mur

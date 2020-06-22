@@ -45,6 +45,17 @@ private:
 	sf::Text textPiece;
 	sf::Font font;
 
+	sf::SoundBuffer bufferClef;
+	sf::SoundBuffer bufferMort;
+	sf::SoundBuffer bufferCoin;
+	sf::SoundBuffer bufferKill;
+	sf::SoundBuffer bufferDoor;
+	sf::Sound soundClef;
+	sf::Sound soundMort;
+	sf::Sound soundCoin;
+	sf::Sound soundKill;
+	sf::Sound soundDoor;
+
 	int idSalle;
 	int idLastSalle = 5;		//Nombre de salles à change avant rendu
 	int const delaiMort = 50;	//nombre de boucle while a faire pour "mettre en pause" le jeu lorsque le joueur meurt avant de redemmarer le niveau
