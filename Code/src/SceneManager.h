@@ -19,7 +19,7 @@ public:
 	void CheckTimer();//Si le temps est ecoule, le joueur meurt
 
 	std::unique_ptr<Joueur> &getJoueur();// Renvoie une référence vers le joueur
-	void checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);// Bloque le jeu pendant un certain temps puis recharge la salle précédente
+	void checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world, sf::RenderWindow& window);// Bloque le jeu pendant un certain temps puis recharge la salle précédente
 	void MettreJoueurAbri();//Mets joueur.ALabri à true
 	//void RemovePickUp(int idPickUp);// Enlève un pickup donné du vector
 	//void RemoveEnnemi(int idEnnemi);// Enlève un ennemi donné du vector + fait sauter le joueur (car si l'ennemi meurt c'est que le joueur lui saute dessus)
@@ -48,6 +48,9 @@ private:
 	int idLastSalle = 5;		//Nombre de salles à change avant rendu
 	int const delaiMort = 50;	//nombre de boucle while a faire pour "mettre en pause" le jeu lorsque le joueur meurt avant de redemmarer le niveau
 	sf::Clock timerTotal;
+	sf::Clock timerTransition;
+	void attenteChangementSalle();
+	int tempsAttente = 250;
 	sf::Clock timerSalle;
 	int tempsSalle;
 	

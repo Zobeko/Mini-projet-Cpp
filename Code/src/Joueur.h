@@ -34,6 +34,9 @@ public:
 
 	float getDroite();
 	float getGauche();
+
+	void setDeathAnim();
+	void playAnim();
 	
 
 private:

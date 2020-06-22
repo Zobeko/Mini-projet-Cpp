@@ -3,6 +3,7 @@
 #include "SceneManager.h"
 #include "myMain.h"
 
+#include <iostream>
 
 
 Joueur::Joueur(std::map<std::string, sf::Texture>& textDictionnary, b2World& world) : Dynamic(400, 400, 64, 64, "Hero.png", textDictionnary, world) {
@@ -94,27 +95,36 @@ void Joueur::update(SceneManager& sceneManager) {
 
 
 	//Gestion animation personnage déplacements
+	playAnim();
 
+}
+
+void Joueur::setDeathAnim() {
+	if (direction) {
+		getSprite().setTextureRect(sf::IntRect(dimensions, 2 * dimensions, -dimensions, dimensions));
+	}
+	else {
+		getSprite().setTextureRect(sf::IntRect(dimensions, 2 * dimensions, dimensions, dimensions));
+	}
+	std::cout << "On a mis l'anim de mort" << std::endl;
+}
+void Joueur::playAnim() {
 	fpsCount += fpsSpeed * clockAnimation.restart().asSeconds();
-
-
 
 	if (fpsCount >= fpsSwitch) {
 		anim.x++;
 		if (anim.x * 32 >= 96) {
 			anim.x = 0;
-
 		}
 		fpsCount = 0;
 	}
-	
+
 	if (direction) {
-		getSprite().setTextureRect(sf::IntRect((anim.x+1) * dimensions, anim.y * dimensions, -dimensions, dimensions));
+		getSprite().setTextureRect(sf::IntRect((anim.x + 1) * dimensions, anim.y * dimensions, -dimensions, dimensions));
 	}
 	else {
 		getSprite().setTextureRect(sf::IntRect(anim.x * dimensions, anim.y * dimensions, dimensions, dimensions));
 	}
-
 }
 
 #pragma region Méthodes liées aux inputs

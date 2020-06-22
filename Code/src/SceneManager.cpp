@@ -149,15 +149,6 @@ void SceneManager::Update() {
         }
     }
 }
-/*
-// Enlève un pickup donné du vector
-void SceneManager::RemovePickUp(int idPickUp) {
-    pickUps.erase(pickUps.begin() + idPickUp);
-}
-// Enlève un ennemi donné du vector
-void SceneManager::RemoveEnnemi(int idEnnemi) {
-    ennemis.erase(ennemis.begin() + idEnnemi);
-}*/
 #pragma endregion
 
 
@@ -170,10 +161,14 @@ std::unique_ptr<Joueur>& SceneManager::getJoueur() {
     return joueur;
 }
 // Bloque le jeu pendant un certain temps puis recharge la salle précédente
-void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
-    if (mortFlag) {
-        idSalle -= 1;
+void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world, sf::RenderWindow& window) {
+    if (mortFlag) {        
+        joueur->setDeathAnim();
+        window.clear(sf::Color::White);
+        draw(window);
+        window.display();
         ClearSalle();
+        idSalle -= 1;
         if (idSalle < 0) {
             idSalle = 0;    //On vérifies que le joueur n'aille pas à une salle inexistante
         }
@@ -452,9 +447,16 @@ void SceneManager::AddPickupMain(std::map<std::string, sf::Texture>& textDiction
 }
 #pragma endregion
 
+void SceneManager::attenteChangementSalle() {
+    timerTransition.restart();
+    while (timerTransition.getElapsedTime().asMilliseconds() < tempsAttente) {
+        // on attends
+    }
+}
 
 // Méthode pour supprimer le contenu d'un niveau
 void SceneManager::ClearSalle() {
+    attenteChangementSalle();
     pickUps.erase(pickUps.begin(), pickUps.end());
     tiles.erase(tiles.begin(), tiles.end());
     ennemis.erase(ennemis.begin(), ennemis.end());
