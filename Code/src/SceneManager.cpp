@@ -22,9 +22,16 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
     if (!texture.loadFromFile("resources/BackGd.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
         cout << "Error loading texture : BackGd.png" << endl;
     }
+    if (!textureTuto.loadFromFile("resources/Tuto.png")) {                                       // la ressource doit être dans build/MainLauncher, au niveau des .vcxproj
+        cout << "Error loading texture : Tuto.png" << endl;
+    }
     ImageDefond.setTexture(texture);
     ImageDefond.setPosition(0, 0);
     ImageDefond.setScale(WINDOW_WIDTH / 312.f, WINDOW_HEIGHT / 162.f);
+    ImageTuto.setTexture(textureTuto);
+    ImageTuto.setPosition(0, 0);
+    ImageTuto.setScale(WINDOW_WIDTH / 620.f, WINDOW_HEIGHT / 471.f);
+
     joueur = std::make_unique<Joueur>(_textDictionnary, _world);
     idSalle = 0;
 
@@ -48,7 +55,7 @@ SceneManager::SceneManager(std::map<std::string, sf::Texture>& _textDictionnary,
     textPiece.setFont(font);
     textPiece.setCharacterSize(15);
     textPiece.setColor(sf::Color::Yellow);
-    textPiece.setPosition(750, 10);
+    textPiece.setPosition(720, 10);
 }
 //Méthode pour calculer l'ID de la dernière salle => appelée dans le constructeur uniquement
 void SceneManager::ComputeIDLastSalle() {
@@ -98,6 +105,8 @@ void SceneManager::draw(sf::RenderWindow& window) {
         window.draw(textChronoSalle);
         textPiece.setString(to_string(nbPiece) + "$");
         window.draw(textPiece);
+        if(idSalle==0)
+            window.draw(ImageTuto);
     }
     else {
         // On affiche le score du joueur à savoir le temps qu'il a fait
@@ -323,7 +332,6 @@ void SceneManager::AddElementTiled(std::map<std::string, sf::Texture>& textDicti
         }
         else if (_n.attribute("gid").as_int() == 7) {
             // Ennemi Plafond
-            std::cout << "Ennemi au plafond" << std::endl;
             auto st = std::make_unique<Ennemi>(GetXtoPop(i, nbTileHoriz), GetYtoPop(i, nbTileHoriz, nbTileVert) + 32, 64, 64, "EnnemiPlaf.png", textDictionnary, world, 2, 0, 0, 0);
             ennemis.push_back(std::move(st));
         }        

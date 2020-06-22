@@ -36,7 +36,9 @@ public:
 
 private:
 	sf::Sprite ImageDefond;
+	sf::Sprite ImageTuto;
 	sf::Texture texture;
+	sf::Texture textureTuto;
 	sf::Text textIDSalle;
 	sf::Text textChronoSalle;
 	sf::Text textPiece;
