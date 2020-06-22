@@ -3,6 +3,7 @@
 
 #include "pugixml.hpp"
 #include <SFML/Graphics.hpp>
+#include <SFML/audio.hpp>
 
 #include "Piece.h"
 #include "Clef.h"
@@ -170,7 +171,7 @@ std::unique_ptr<Joueur>& SceneManager::getJoueur() {
     return joueur;
 }
 // Bloque le jeu pendant un certain temps puis recharge la salle précédente
-void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world) {
+void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world, sf::Music& musique) {
     if (mortFlag) {
         idSalle -= 1;
         ClearSalle();
@@ -179,6 +180,8 @@ void SceneManager::checkMort(std::map<std::string, sf::Texture>& _textDictionnar
         }
         //joueur => animation de mort + set velocity à 0
         //trouver un moyen d'afficher la fenetre
+        musique.stop();
+        musique.play();
         chargerSalle(_textDictionnary, _world);
     }
 }

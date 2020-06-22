@@ -2,6 +2,7 @@
 #include <vector>
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "pugixml.hpp"
 
 #include "Joueur.h"
@@ -19,7 +20,7 @@ public:
 	void CheckTimer();//Si le temps est ecoule, le joueur meurt
 
 	std::unique_ptr<Joueur> &getJoueur();// Renvoie une référence vers le joueur
-	void checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world);// Bloque le jeu pendant un certain temps puis recharge la salle précédente
+	void checkMort(std::map<std::string, sf::Texture>& _textDictionnary, b2World& _world, sf::Music& musique);// Bloque le jeu pendant un certain temps puis recharge la salle précédente
 	void MettreJoueurAbri();//Mets joueur.ALabri à true
 	//void RemovePickUp(int idPickUp);// Enlève un pickup donné du vector
 	//void RemoveEnnemi(int idEnnemi);// Enlève un ennemi donné du vector + fait sauter le joueur (car si l'ennemi meurt c'est que le joueur lui saute dessus)

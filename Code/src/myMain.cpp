@@ -69,7 +69,7 @@ int myMain()
 
 		//On vérifie les flags du SceneManager et si besoin on change de niveau
 		manager.checkSalleSuivante(textDictionnary, world);
-		manager.checkMort(textDictionnary, world);
+		manager.checkMort(textDictionnary, world, musique);
 
 		// Update des éléments
 		manager.Update();
