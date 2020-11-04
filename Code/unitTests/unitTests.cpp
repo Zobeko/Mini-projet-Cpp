@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "PickUp.h"
+#include "Piece.h"
 #include "Unite.h"
 #include "box2d/box2d.h"
 #include "Joueur.h"
@@ -10,12 +10,12 @@ namespace myNameSpace {
 TEST(TestUnitaire, TestIntersectPickUp) {
     std::map<std::string, sf::Texture> textDictionnary;
 
-    PickUp pickupTest(0,0,32,32,"Pierre.png",textDictionnary);
+    Piece pieceTest(0,0, textDictionnary, 1);   // On peut utiliser Piece pour tester la methode intersect de la classe abstraite PickUp car elle n'est pas reecrite
     Unite UniteTest1(10, 0, 32, 32, "Pierre.png", textDictionnary);
     Unite UniteTest2(100, 0, 32, 32, "Pierre.png", textDictionnary);
 
-    EXPECT_TRUE(pickupTest.intersect(UniteTest1));
-    EXPECT_FALSE(pickupTest.intersect(UniteTest2));
+    EXPECT_TRUE(pieceTest.intersect(UniteTest1));
+    EXPECT_FALSE(pieceTest.intersect(UniteTest2));
 }
 
 TEST(TestUnitaire, TestGrounded) {
